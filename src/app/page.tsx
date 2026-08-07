@@ -11,11 +11,11 @@ export default function Home() {
             Eat<span>Right</span>
           </Link>
           <div className="nav-links">
-            <Link href="#menu" className="nav-link">Our Menu</Link>
-            <Link href="#nutrition" className="nav-link">Nutrition Info</Link>
-            <Link href="#about" className="nav-link">Our Story</Link>
+            <Link href="#features" className="nav-link">Features</Link>
+            <Link href="#sync" className="nav-link">Sync</Link>
+            <Link href="#download" className="nav-link">Download</Link>
           </div>
-          <Link href="#menu" className="btn-primary">Order Now</Link>
+          <Link href="#download" className="btn-primary">Get the App</Link>
         </div>
       </nav>
 
@@ -25,33 +25,46 @@ export default function Home() {
         <div className="hero-bg-glow-2"></div>
         <div className="container hero-container">
           <div className="hero-content">
-            <div className="hero-tag">✨ Premium Nutrition</div>
+            <div className="hero-tag">✨ Now Available on iOS & Android</div>
             <h1 className="hero-title">
-              Fuel your body with <span>vibrant</span> foods.
+              Nutrition, Simplified. Meet <span>Eat Right.</span>
             </h1>
             <p className="hero-desc">
-              Experience the perfect harmony of taste and health. Eat Right brings you chef-crafted, nutritionally balanced bowls that energize your day and delight your senses.
+              Track your daily intake, get smart reminders, and sync your diet seamlessly—all from your pocket. The ultimate personal nutritionist is here.
             </p>
-            <div className="hero-actions">
-              <Link href="#menu" className="btn-primary">Explore Menu</Link>
-              <Link href="#video" className="btn-secondary">Watch Video</Link>
+            <div className="hero-actions app-download-actions" id="download">
+              <Link href="#" className="btn-store">
+                <span className="store-icon">🍎</span> 
+                <div className="store-text">
+                  <span className="store-sub">Download on the</span>
+                  <span className="store-main">App Store</span>
+                </div>
+              </Link>
+              <Link href="#" className="btn-store">
+                <span className="store-icon">▶️</span> 
+                <div className="store-text">
+                  <span className="store-sub">GET IT ON</span>
+                  <span className="store-main">Google Play</span>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="hero-visual">
-            <div className="image-card">
+            <div className="phone-mockup">
               <Image 
-                src="/healthy_hero_bowl.jpg" 
-                alt="Vibrant healthy food bowl with avocado and quinoa"
-                width={800}
-                height={600}
+                src="/app_mockup.jpg" 
+                alt="Eat Right App UI Dashboard"
+                width={400}
+                height={800}
+                className="phone-screen"
                 priority
               />
             </div>
             <div className="float-card">
-              <div className="float-icon">🥗</div>
+              <div className="float-icon">🔥</div>
               <div className="float-text">
-                <h4>100% Organic</h4>
-                <p>Locally sourced ingredients</p>
+                <h4>Smart Sync</h4>
+                <p>Lightning-fast cloud saves</p>
               </div>
             </div>
           </div>
@@ -59,91 +72,50 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="nutrition" className="features">
+      <section id="features" className="features">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Why Eat Right?</h2>
-            <p className="section-desc">We believe that healthy food shouldn't be boring. Our culinary experts have designed a menu that maximizes both nutritional value and extraordinary flavor profiles.</p>
+            <h2 className="section-title">Built For Your Health</h2>
+            <p className="section-desc">We've engineered Eat Right to be the most frictionless way to track and manage your daily nutritional intake.</p>
           </div>
           <div className="features-grid">
             <div className="feature-card">
-              <div className="feature-icon">✨</div>
-              <h3 className="feature-title">Nutrient Dense</h3>
-              <p className="feature-desc">Every meal is packed with essential vitamins, minerals, and antioxidants to support your immune system and overall vitality.</p>
+              <div className="feature-icon">🔔</div>
+              <h3 className="feature-title">Smart Reminders</h3>
+              <p className="feature-desc">Never miss a meal with perfectly timed local & push notifications tailored to your specific schedule.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
-              <h3 className="feature-title">Sustained Energy</h3>
-              <p className="feature-desc">Balanced macronutrients designed to give you long-lasting energy without the afternoon crash.</p>
+              <h3 className="feature-title">Daily Intake Sync</h3>
+              <p className="feature-desc">Batched Firestore syncing means lightning-fast updates to your dietary tracking without eating your battery.</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">🌱</div>
-              <h3 className="feature-title">Plant-Forward</h3>
-              <p className="feature-desc">Emphasizing whole foods, vibrant vegetables, and sustainable plant-based proteins that are good for you and the planet.</p>
+              <div className="feature-icon">🔗</div>
+              <h3 className="feature-title">Deep Links</h3>
+              <p className="feature-desc">Share your favorite meals and custom intake plans instantly with friends using seamless App Links.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🔒</div>
+              <h3 className="feature-title">Secure & Private</h3>
+              <p className="feature-desc">Frictionless Google Sign-In combined with robust Firebase security rules keeps your health data private.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bento Grid Gallery Section */}
-      <section id="menu" className="bento-section">
+      {/* Footer */}
+      <footer className="footer">
         <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Taste The Vibrant Life</h2>
-            <p className="section-desc">A sneak peek into our stunning, chef-crafted selections.</p>
+          <div className="footer-links">
+            <Link href="/documents/privacy_policies.md">Privacy Policy</Link>
+            <Link href="/documents/terms_of_service.md">Terms of Service</Link>
+            <Link href="/documents/legal_and_complience.md">Legal & Compliance</Link>
           </div>
-          <div className="bento-grid">
-            <div className="bento-item bento-large">
-              <Image 
-                src="/healthy_hero_bowl.jpg" 
-                alt="Signature Quinoa Bowl"
-                width={800}
-                height={800}
-              />
-              <div className="bento-overlay">
-                <div className="bento-subtitle">Best Seller</div>
-                <h3 className="bento-title">Signature Quinoa Bowl</h3>
-              </div>
-            </div>
-            <div className="bento-item">
-              <Image 
-                src="/fresh_smoothie.jpg" 
-                alt="Detox Green Smoothie"
-                width={400}
-                height={400}
-              />
-              <div className="bento-overlay">
-                <div className="bento-subtitle">Refresh</div>
-                <h3 className="bento-title">Detox Green</h3>
-              </div>
-            </div>
-            <div className="bento-item">
-              <Image 
-                src="/fresh_ingredients.jpg" 
-                alt="Fresh Organic Ingredients"
-                width={400}
-                height={400}
-              />
-              <div className="bento-overlay">
-                <div className="bento-subtitle">Sourced</div>
-                <h3 className="bento-title">Farm Fresh</h3>
-              </div>
-            </div>
-            <div className="bento-item bento-wide">
-              <Image 
-                src="/fresh_ingredients.jpg" 
-                alt="Culinary Excellence"
-                width={800}
-                height={400}
-              />
-              <div className="bento-overlay">
-                <div className="bento-subtitle">Process</div>
-                <h3 className="bento-title">Culinary Excellence</h3>
-              </div>
-            </div>
+          <div className="footer-copyright">
+            <p>&copy; {new Date().getFullYear()} Eat Right App. All rights reserved.</p>
           </div>
         </div>
-      </section>
+      </footer>
     </main>
   )
 }
