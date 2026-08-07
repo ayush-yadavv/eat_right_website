@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.eat_right",
+      "sha256_cert_fingerprints": [
+        "6E:77:BA:23:6F:3E:FD:DB:BC:8C:FF:DE:B2:25:E3:C0:A3:93:DD:4F:19:F0:B0:A6:6A:7F:EE:97:A5:EF:93:56"
+      ]
+    }
+  }
+]
