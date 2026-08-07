@@ -107,9 +107,8 @@ export default function Home() {
       <footer className="footer">
         <div className="container">
           <div className="footer-links">
-            <Link href="/documents/privacy_policies.md">Privacy Policy</Link>
-            <Link href="/documents/terms_of_service.md">Terms of Service</Link>
-            <Link href="/documents/legal_and_complience.md">Legal & Compliance</Link>
+            <Link href="/legal/privacy_policies">Privacy Policy</Link>
+            <Link href="/legal/terms_of_service">Terms of Service</Link>
           </div>
           <div className="footer-copyright">
             <p>&copy; {new Date().getFullYear()} Eat Right App. All rights reserved.</p>
