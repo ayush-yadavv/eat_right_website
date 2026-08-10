@@ -11,6 +11,15 @@ export function generateStaticParams() {
   ];
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const title = slug.split('_').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  return {
+    title: `${title} | Eat Right`,
+    description: `Read the ${title} for Eat Right.`,
+  };
+}
+
 export default async function LegalPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   
