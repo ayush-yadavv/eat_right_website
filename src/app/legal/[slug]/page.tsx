@@ -42,7 +42,7 @@ export default async function LegalPage({ params }: { params: Promise<{ slug: st
         </Link>
       </div>
       <div className="shell utility-page__shell">
-        <div className="prose prose-emerald max-w-none">
+        <div className="prose prose-emerald dark:prose-invert max-w-none">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
         </div>
       </div>
