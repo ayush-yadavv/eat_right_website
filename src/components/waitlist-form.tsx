@@ -2,6 +2,9 @@
 
 import Link from 'next/link'
 import { FormEvent, useState } from 'react'
+import { AnnuraButton } from '@/components/annura-button'
+import { AnnuraTextField } from '@/components/annura-text-field'
+import { siteConfig } from '@/data/site'
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -45,18 +48,18 @@ export function WaitlistForm() {
       <div className="waitlist-form__fields">
         <div className="field">
           <label htmlFor="waitlist-name">Name</label>
-          <input id="waitlist-name" name="name" type="text" autoComplete="name" placeholder="Your name" />
+          <AnnuraTextField id="waitlist-name" name="name" type="text" autoComplete="name" placeholder="Your name" />
         </div>
         <div className="field">
           <label htmlFor="waitlist-email">Email address</label>
-          <input id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
+          <AnnuraTextField id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
         </div>
       </div>
-      <button className="button" type="submit" disabled={status === 'submitting'}>
+      <AnnuraButton type="submit" isLoading={status === 'submitting'} className="w-full mt-4">
         {status === 'submitting' ? 'Joining waitlist' : 'Join waitlist'}
-      </button>
+      </AnnuraButton>
       <p className="form-note">
-        By joining, you agree to receive Eat Right updates. Read our{' '}
+        By joining, you agree to receive {siteConfig.name} updates. Read our{' '}
         <Link href="/legal/privacy_policies">privacy policy</Link>.
       </p>
       {status !== 'idle' && (

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AnnuraButton } from '@/components/annura-button'
 
 export const metadata: Metadata = {
   title: 'App link',
@@ -16,9 +17,9 @@ export default function AppFallbackPage() {
           If you are here before the app is available, join the waitlist and we will send the next update by email.
         </p>
         <div className="utility-page__actions">
-          <Link href="/#waitlist" className="button">
-            Join the waitlist
-          </Link>
+          <AnnuraButton asChild>
+            <Link href="/#invite">Join the waitlist</Link>
+          </AnnuraButton>
           <Link href="/" className="text-link">
             Return to home
           </Link>

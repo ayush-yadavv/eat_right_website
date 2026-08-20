@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'Eat Right',
+  name: 'EatRight',
   description: 'Nutrition that fits your day.',
   url: 'https://app.ay7.me',
   ogImage: 'https://app.ay7.me/og-image.jpg',

@@ -1,64 +1,87 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
 @plugin "@tailwindcss/typography";
 
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/ibm-plex-sans-400.woff2') format('woff2');
-}
 
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/ibm-plex-sans-500.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/ibm-plex-sans-600.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/ibm-plex-sans-700.woff2') format('woff2');
-}
-
-:root {
-  --canvas: #f5f8f4;
-  --surface: #ffffff;
-  --surface-muted: #e8f0e9;
-  --ink: #15251a;
-  --ink-soft: #536458;
-  --accent: #237a4a;
-  --accent-strong: #185c36;
-  --accent-soft: #dceddb;
-  --line: #d8e2d8;
-  --shadow: 0 24px 60px rgb(25 61 35 / 0.11);
-  --radius: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --canvas: #101812;
-    --surface: #17231a;
-    --surface-muted: #1f3023;
-    --ink: #edf5ed;
-    --ink-soft: #b9c9ba;
-    --accent: #80c797;
-    --accent-strong: #b2e3bd;
-    --accent-soft: #24482f;
-    --line: #2b3d2e;
-    --shadow: 0 24px 60px rgb(0 0 0 / 0.28);
+    /* --- Light Theme ("Oat Milk Canvas") --- */
+    --background: 60 20% 98%; /* #FBFBF9 */
+    --surface: 0 0% 100%; /* #FFFFFF */
+    
+    --sage: 153 16% 55%; /* #7A9D8C */
+    --slate: 210 29% 42%; /* #4B6B8A */
+    --text-main: 180 8% 19%; /* #2C3333 */
+    --text-muted: 220 9% 46%; /* #6B7280 */
+    --border: 220 13% 91%; /* #E5E7EB */
+    --amber-fill: 36 61% 68%; /* #E2B97B */
+
+    /* Semantic Roles */
+    --primary: 141 20% 30%; /* #3E5D49 Deep Matcha */
+    --primary-foreground: 0 0% 100%; 
+    --primary-soft: 144 20% 42%; /* #558066 */
+    
+    --success: 141 20% 30%; 
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 36 61% 68%; 
+    --warning-text: 38 56% 31%; /* #7A5A22 */
+    
+    --error: 12 53% 40%; /* #9C4530 Warm Terracotta */
+    --error-foreground: 0 0% 100%;
+
+    --info: 210 29% 42%; 
+    --info-foreground: 0 0% 100%;
+
+    --radius: 1rem; /* 16px */
+
+    /* Mapping old BEM vars to new theme to prevent breakage */
+    --canvas: hsl(var(--background));
+    --surface-muted: hsl(var(--background));
+    --ink: hsl(var(--text-main));
+    --ink-soft: hsl(var(--text-muted));
+    --accent: hsl(var(--primary));
+    --accent-strong: hsl(var(--primary-soft));
+    --accent-soft: hsl(var(--primary-soft) / 0.1);
+    --line: hsl(var(--border));
+    --shadow: 0 10px 30px -5px hsl(var(--sage) / 0.15);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* --- Dark Theme ("Night Aura Canvas") --- */
+      --background: 180 10% 8%; /* #121616 */
+      --surface: 180 12% 12%; /* #1A2121 */
+      --surface-hi: 180 10% 15%; /* #232B2B */
+      
+      --sage: 141 24% 64%; /* #8EBB9F */
+      --slate: 208 30% 60%; /* #769CBE */
+      --text-main: 180 14% 95%; /* #F0F4F4 */
+      --text-muted: 180 6% 61%; /* #94A3A3 */
+      --border: 0 0% 100% / 0.12; 
+      
+      --amber-fill: 36 71% 75%; /* #ECC894 */
+
+      /* Semantic Roles */
+      --primary: 141 24% 64%; 
+      --primary-foreground: 180 10% 8%;
+      
+      --success: 141 24% 64%; 
+      --success-foreground: 180 10% 8%;
+      
+      --warning: 36 71% 75%;
+      --warning-text: 36 71% 75%;
+      
+      --error: 15 67% 68%; /* #E39478 */
+      --error-foreground: 180 10% 8%;
+
+      --info: 208 30% 60%;
+      --info-foreground: 180 10% 8%;
+      
+      --shadow: 0 0 25px 0 hsl(var(--sage) / 0.12);
+    }
   }
 }
 
@@ -69,14 +92,21 @@ body {
   margin: 0;
   background: var(--canvas);
   color: var(--ink);
-  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-family: var(--font-inter), sans-serif;
   text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-jakarta), sans-serif;
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
 }
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 
 .shell { width: min(100% - 2rem, 74rem); margin-inline: auto; }
-.site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--canvas) 90%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent); backdrop-filter: blur(12px); }
+.site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--canvas) 85%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); backdrop-filter: blur(16px); box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.6); }
 .site-header__inner { min-height: 4.25rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; }
 .wordmark { font-size: 1.15rem; font-weight: 720; letter-spacing: -0.06em; white-space: nowrap; }
 .wordmark span { color: var(--accent); }
@@ -90,8 +120,9 @@ button, input { font: inherit; }
 .button:focus-visible, input:focus-visible, .text-link:focus-visible, .site-nav a:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 46%, transparent); outline-offset: 3px; }
 .button--small { min-height: 2.5rem; padding-inline: .9rem; font-size: .86rem; }
 
-.hero { min-height: min(48rem, calc(100dvh - 4.25rem)); display: grid; align-items: center; padding: 3rem 0 4rem; overflow: clip; }
-.hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(18rem, .95fr); align-items: center; gap: clamp(2rem, 7vw, 7rem); }
+.hero { position: relative; min-height: min(48rem, calc(100dvh - 4.25rem)); display: grid; align-items: center; padding: 3rem 0 4rem; overflow: clip; }
+.hero::before { content: ""; position: absolute; top: -10%; left: -5%; width: 60%; height: 80%; background: radial-gradient(circle, hsl(var(--sage) / 0.15) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+.hero__grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(18rem, .95fr); align-items: center; gap: clamp(2rem, 7vw, 7rem); }
 .hero__content { max-width: 40rem; }
 .hero h1, h2, h3, p { margin-top: 0; }
 .hero h1 { max-width: 10ch; margin-bottom: 1.35rem; font-size: clamp(3.25rem, 6.2vw, 5.75rem); letter-spacing: -.075em; line-height: .97; font-weight: 720; }
@@ -183,4 +214,97 @@ h2 { margin-bottom: 1rem; font-size: clamp(2.2rem, 4vw, 3.8rem); letter-spacing:
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+@theme inline {
+  --font-heading: var(--font-jakarta), sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+  
+  --color-background: hsl(var(--background));
+  --color-surface: hsl(var(--surface));
+  --color-surface-hi: hsl(var(--surface-hi));
+  
+  --color-text-main: hsl(var(--text-main));
+  --color-text-muted: hsl(var(--text-muted));
+  --color-foreground: hsl(var(--text-main)); /* Fallback for Shadcn */
+  
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-soft: hsl(var(--primary-soft));
+  
+  --color-sage: hsl(var(--sage));
+  --color-slate: hsl(var(--slate));
+  --color-amber: hsl(var(--amber-fill));
+  --color-border: hsl(var(--border));
+  
+  --color-success: hsl(var(--success));
+  --color-success-foreground: hsl(var(--success-foreground));
+  
+  --color-warning: hsl(var(--warning));
+  --color-warning-text: hsl(var(--warning-text));
+  
+  --color-error: hsl(var(--error));
+  --color-error-foreground: hsl(var(--error-foreground));
+  --color-destructive: hsl(var(--error));
+  --color-destructive-foreground: hsl(var(--error-foreground));
+  
+  --color-info: hsl(var(--info));
+  --color-info-foreground: hsl(var(--info-foreground));
+
+  --color-card: hsl(var(--surface));
+  --color-card-foreground: hsl(var(--text-main));
+  --color-popover: hsl(var(--surface));
+  --color-popover-foreground: hsl(var(--text-main));
+  --color-muted: hsl(var(--background));
+  --color-muted-foreground: hsl(var(--text-muted));
+  --color-secondary: hsl(var(--sage));
+  --color-secondary-foreground: hsl(var(--surface));
+  --color-accent: hsl(var(--amber-fill));
+  --color-accent-foreground: hsl(var(--text-main));
+  --color-input: hsl(var(--border));
+  --color-ring: hsl(var(--primary));
+
+  --radius-pill: 9999px;
+  --radius-xxl: 2rem;
+  --radius-xl: 1.5rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-xs: 0.25rem;
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-matcha-cta {
+    @apply bg-gradient-to-br from-[hsl(var(--primary-soft))] to-[hsl(var(--primary))] dark:from-[#9ECEAF] dark:to-[#7A9E8B];
+  }
+  
+  .bg-gradient-matcha-fill {
+    @apply bg-gradient-to-br from-[#8BAE9D] to-[#6B8E7D] dark:from-[#9ECEAF] dark:to-[#7A9E8B];
+  }
+  
+  .shadow-aura-sage {
+    @apply shadow-[0_10px_30px_-5px_hsl(var(--sage)/0.15)] dark:shadow-[0_0_25px_0_hsl(var(--sage)/0.12)];
+  }
+  .shadow-aura-error {
+    @apply shadow-[0_10px_30px_-5px_hsl(var(--error)/0.15)] dark:shadow-[0_0_25px_0_hsl(var(--error)/0.12)];
+  }
+  .shadow-aura-slate {
+    @apply shadow-[0_10px_30px_-5px_hsl(var(--slate)/0.15)] dark:shadow-[0_0_25px_0_hsl(var(--slate)/0.12)];
+  }
+  .shadow-aura-amber {
+    @apply shadow-[0_10px_30px_-5px_hsl(var(--warning)/0.15)] dark:shadow-[0_0_25px_0_hsl(var(--warning)/0.12)];
+  }
 }

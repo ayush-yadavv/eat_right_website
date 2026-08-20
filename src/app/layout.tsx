@@ -1,13 +1,26 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
-import { siteConfig } from '@/config/site'
+import { siteConfig } from '@/data/site'
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+
+const jakarta = Plus_Jakarta_Sans({ 
+  subsets: ["latin"], 
+  variable: "--font-jakarta",
+  display: "swap"
+})
+
+const inter = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-inter",
+  display: "swap"
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: 'Eat Right',
-    template: '%s | Eat Right',
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   openGraph: {
@@ -43,9 +56,14 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
-      <body>
-        {children}
+    <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
+      <body className="font-sans bg-background text-text-main">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-surface focus:text-primary focus:rounded-lg focus:shadow-md">
+          Skip to main content
+        </a>
+        <div id="main-content" tabIndex={-1} className="outline-none">
+          {children}
+        </div>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-322ZCZXYX8" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`

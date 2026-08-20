@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { AnnuraButton } from '@/components/annura-button'
 
 export default function GlobalError({
   error,
@@ -20,9 +21,9 @@ export default function GlobalError({
               Please try again. If the problem continues, return home and reopen the route.
             </p>
             <div className="utility-page__actions">
-              <button className="button" onClick={reset} type="button">
+              <AnnuraButton onClick={() => reset()} type="button">
                 Try again
-              </button>
+              </AnnuraButton>
               <Link href="/" className="text-link">
                 Back to home
               </Link>

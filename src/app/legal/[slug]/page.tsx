@@ -4,6 +4,8 @@ import Link from 'next/link'
 import path from 'path'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { siteConfig } from '@/data/site'
+import { ArrowLeft } from 'lucide-react'
 
 export function generateStaticParams() {
   return [{ slug: 'privacy_policies' }, { slug: 'terms_of_service' }]
@@ -18,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `${title}`,
-    description: `Read the ${title} for Eat Right.`,
+    description: `Read the ${title} for ${siteConfig.name}.`,
   }
 }
 
@@ -36,9 +38,13 @@ export default async function LegalPage({ params }: { params: Promise<{ slug: st
 
   return (
     <main className="legal-page">
-      <div className="shell legal-page__nav">
-        <Link href="/" className="wordmark" aria-label="Eat Right home">
-          Eat <span>Right</span>
+      <div className="shell legal-page__nav flex items-center justify-between">
+        <Link href="/" className="wordmark" aria-label={`${siteConfig.name} home`}>
+          {siteConfig.name.substring(0, 3)}<span>{siteConfig.name.substring(3)}</span>
+        </Link>
+        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-primary transition-colors">
+          <ArrowLeft className="w-4 h-4 rtl:-scale-x-100" />
+          Back to home
         </Link>
       </div>
       <div className="shell utility-page__shell">
