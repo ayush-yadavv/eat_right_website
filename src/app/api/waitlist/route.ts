@@ -1,5 +1,5 @@
 import { getResendClient } from '@/lib/resend'
-
+import { siteConfig } from '@/data/site'
 export const runtime = 'nodejs'
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px 20px; background-color: #ffffff;">
       <div style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
         <div style="background-color: #111827; padding: 24px; text-align: center;">
-          <h2 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">Eat Right</h2>
+          <h2 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">${siteConfig.name}</h2>
           <p style="color: #9ca3af; margin: 8px 0 0 0; font-size: 14px;">New Waitlist Signup</p>
         </div>
         <div style="padding: 32px 24px;">
@@ -73,7 +73,7 @@ export async function POST(request: Request) {
         </div>
       </div>
       <p style="text-align: center; color: #9ca3af; font-size: 12px; margin-top: 24px;">
-        This is an automated notification from your Eat Right website.
+        This is an automated notification from your ${siteConfig.name} website.
       </p>
     </div>
   `
@@ -82,17 +82,17 @@ export async function POST(request: Request) {
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px 20px; background-color: #ffffff;">
       <div style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
         <div style="background-color: #111827; padding: 32px 24px; text-align: center;">
-          <h2 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.025em;">Eat Right</h2>
+          <h2 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.025em;">${siteConfig.name}</h2>
         </div>
         <div style="padding: 40px 32px;">
           <h3 style="color: #111827; font-size: 20px; font-weight: 600; margin: 0 0 20px 0;">You're on the list! 🎉</h3>
           <p style="color: #4b5563; font-size: 16px; margin: 0 0 24px 0; line-height: 1.6;">
             Hi ${safeName || 'there'},<br><br>
-            Thanks for joining the waitlist for Eat Right. We're working hard to get things ready and will let you know as soon as we launch!
+            Thanks for joining the waitlist for ${siteConfig.name}. We're working hard to get things ready and will let you know as soon as we launch!
           </p>
           <p style="color: #4b5563; font-size: 16px; margin: 0; line-height: 1.6;">
             Stay tuned,<br>
-            <strong>The Eat Right Team</strong>
+            <strong>The ${siteConfig.name} Team</strong>
           </p>
         </div>
       </div>
@@ -106,14 +106,14 @@ export async function POST(request: Request) {
       replyTo: email,
       subject: `🚀 New Waitlist Signup: ${safeEmail}`,
       html: adminHtmlContent,
-      text: `New waitlist signup for Eat Right.\n\nName: ${safeName || 'Not provided'}\nEmail: ${safeEmail}`,
+      text: `New waitlist signup for ${siteConfig.name}.\n\nName: ${safeName || 'Not provided'}\nEmail: ${safeEmail}`,
     }),
     resend.emails.send({
       from,
       to: email,
-      subject: "You're on the Eat Right waitlist! 🎉",
+      subject: `You're on the ${siteConfig.name} waitlist! 🎉`,
       html: userHtmlContent,
-      text: `Hi ${safeName || 'there'},\n\nThanks for joining the waitlist for Eat Right. We're working hard to get things ready and will let you know as soon as we launch!\n\nStay tuned,\nThe Eat Right Team`,
+      text: `Hi ${safeName || 'there'},\n\nThanks for joining the waitlist for ${siteConfig.name}. We're working hard to get things ready and will let you know as soon as we launch!\n\nStay tuned,\nThe ${siteConfig.name} Team`,
     })
   ])
 
