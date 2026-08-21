@@ -18,6 +18,7 @@ export function WaitlistForm() {
     const formData = new FormData(form)
     const email = String(formData.get('email') ?? '').trim()
     const name = String(formData.get('name') ?? '').trim()
+    const address = String(formData.get('address') ?? '').trim()
 
     setStatus('submitting')
     setMessage('')
@@ -26,7 +27,7 @@ export function WaitlistForm() {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name, email, address }),
       })
       const body = (await response.json()) as { error?: string; message?: string }
 
@@ -53,6 +54,12 @@ export function WaitlistForm() {
         <div className="field">
           <label htmlFor="waitlist-email">Email address</label>
           <AnnuraTextField id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
+        </div>
+        
+        {/* Honeypot field - Bots will fill this, humans won't see it */}
+        <div className="field" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
+          <label htmlFor="waitlist-address">Address</label>
+          <input id="waitlist-address" name="address" type="text" tabIndex={-1} autoComplete="off" />
         </div>
       </div>
       <AnnuraButton type="submit" isLoading={status === 'submitting'} className="w-full mt-4">
