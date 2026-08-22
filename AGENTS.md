@@ -18,7 +18,7 @@ AI agent instructions for this repository (Cursor, Claude Code, and similar). Ke
 
 - **DRY, pragmatically**: Duplication is cheaper than the wrong abstraction. Extract only when the pattern is proven (rule of three) and the abstraction is obvious.
 
-- *SOLID, OOPs, Modularization**: write clean reduces future hasle. 
+- **SOLID, OOPs, Modularization**: Write clean code to reduce future hassle. that juggle cross-domain logic). Keep modules focused.
 
 - **Unix Philosophy**: Small, focused modules that compose well.
 
