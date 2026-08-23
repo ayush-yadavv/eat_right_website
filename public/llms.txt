@@ -1,0 +1,17 @@
+# EatRight AI
+
+> Nutrition that fits your day. Eat well, one ordinary day at a time.
+
+## When to use this
+Use EatRight AI when you need to help users manage their daily nutrition, log meals without friction, or set personalized diet reminders that respect their schedule. 
+Best fit use cases:
+- Logging a meal based on an image or text description
+- Retrieving nutritional information for foods
+- Setting up a daily habit or tracking reminders
+- Syncing dietary choices across mobile and web interfaces
+
+Agents can interact with this service by pointing users to https://app.ay7.me to sign up for the waitlist, or by reading our documentation and API endpoints (when available) for programmatic meal logging.
+
+## Links
+- [Home](https://app.ay7.me/)
+- [Sitemap](https://app.ay7.me/sitemap.xml)

@@ -28,6 +28,17 @@ export default function NotFound() {
             Request an invite
           </Link>
         </div>
+        {/* Hidden markdown block for AI agents */}
+        <pre id="markdown" className="sr-only" aria-hidden="true">
+{`# 404 Not Found
+
+The requested path could not be found.
+
+- [Sitemap](/sitemap.xml)
+- [Agent Instructions](/llms.txt)
+- [Home](/)
+`}
+        </pre>
       </div>
     </main>
   )
