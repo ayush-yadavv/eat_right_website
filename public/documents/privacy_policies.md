@@ -73,11 +73,18 @@ Our Service is not directed to individuals under the age of 18. We do not knowin
 
 ---
 
-## 8. Changes to This Privacy Policy
+
+## 8. Medical Disclaimer
+Eat Right is not a medical device and does not diagnose, treat, cure, or prevent any medical condition. Any health-related features, insights, or AI suggestions provided by the App are for informational purposes only. Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment before making any significant changes to your diet, exercise, or lifestyle.
+
+---
+
+## 9. Changes to This Privacy Policy
+
 We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date. We encourage you to review this policy periodically to stay informed about how we protect your information.
 
 ---
 
-## 9. Contact Us
+## 10. Contact Us
 If you have any questions or concerns about this Privacy Policy or our data practices, please contact our Data Protection Officer at:
 * **Email:** privacy@eatrightai.example.com
