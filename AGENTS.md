@@ -18,7 +18,7 @@ AI agent instructions for this repository (Cursor, Claude Code, and similar). Ke
 
 - **DRY, pragmatically**: Duplication is cheaper than the wrong abstraction. Extract only when the pattern is proven (rule of three) and the abstraction is obvious.
 
-- **SOLID, OOPs, Modularization**: Write clean code to reduce future hassle. that juggle cross-domain logic). Keep modules focused.
+- **SOLID, OOPs, Modularization**: Write clean code to reduce future hassle. Keep modules focused.
 
 - **Unix Philosophy**: Small, focused modules that compose well.
 
@@ -54,5 +54,10 @@ AI agent instructions for this repository (Cursor, Claude Code, and similar). Ke
 
 ---
 
-./DESIGN.md
-./docs/*
+## Additional Instruction Files
+
+AI agents MUST read and adhere to:
+
+- `./DESIGN.md`
+- `./laws_of_ux.md`
+- `./docs/*` *(Optional — reference when needed as it may contain legacy or updated docs)*
