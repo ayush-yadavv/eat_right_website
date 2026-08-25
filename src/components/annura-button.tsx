@@ -25,12 +25,14 @@ interface AnnuraButtonProps
     VariantProps<typeof annuraButtonVariants> {
   isLoading?: boolean;
   asChild?: boolean;
+  nativeButton?: boolean;
 }
 
 export function AnnuraButton({ 
   variant,
   isLoading = false, 
   asChild = false,
+  nativeButton,
   className,
   children,
   ...props 
@@ -46,6 +48,7 @@ export function AnnuraButton({
     <Button 
       className={cn(annuraButtonVariants({ variant, className }))}
       disabled={isLoading || props.disabled}
+      nativeButton={nativeButton ?? (asChild ? false : undefined)}
       render={asChild && React.isValidElement(children) ? children : undefined}
       {...props}
     >

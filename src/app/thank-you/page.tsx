@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
+import { Link001 } from '@/components/skiper40'
 
 export const metadata: Metadata = {
   title: 'Thank you',
@@ -20,9 +21,9 @@ export default function ThankYouPage() {
           <AnnuraButton asChild>
             <Link href="/">Back to home</Link>
           </AnnuraButton>
-          <Link href="/#invite" className="text-link">
+          <Link001 href="/#invite" className="text-primary font-medium">
             Join the waitlist
-          </Link>
+          </Link001>
         </div>
       </div>
     </main>

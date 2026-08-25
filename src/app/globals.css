@@ -49,8 +49,41 @@
     --shadow: 0 10px 30px -5px hsl(var(--sage) / 0.15);
   }
 
+  .dark {
+    /* --- Dark Theme ("Night Aura Canvas") --- */
+    --background: 180 10% 8%; /* #121616 */
+    --surface: 180 12% 12%; /* #1A2121 */
+    --surface-hi: 180 10% 15%; /* #232B2B */
+    
+    --sage: 141 24% 64%; /* #8EBB9F */
+    --slate: 208 30% 60%; /* #769CBE */
+    --text-main: 180 14% 95%; /* #F0F4F4 */
+    --text-muted: 180 6% 61%; /* #94A3A3 */
+    --border: 0 0% 100% / 0.12; 
+    
+    --amber-fill: 36 71% 75%; /* #ECC894 */
+
+    /* Semantic Roles */
+    --primary: 141 24% 64%; 
+    --primary-foreground: 180 10% 8%;
+    
+    --success: 141 24% 64%; 
+    --success-foreground: 180 10% 8%;
+    
+    --warning: 36 71% 75%;
+    --warning-text: 36 71% 75%;
+    
+    --error: 15 67% 68%; /* #E39478 */
+    --error-foreground: 180 10% 8%;
+
+    --info: 208 30% 60%;
+    --info-foreground: 180 10% 8%;
+    
+    --shadow: 0 0 25px 0 hsl(var(--sage) / 0.12);
+  }
+
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light) {
       /* --- Dark Theme ("Night Aura Canvas") --- */
       --background: 180 10% 8%; /* #121616 */
       --surface: 180 12% 12%; /* #1A2121 */
@@ -306,5 +339,27 @@ h2 { margin-bottom: 1rem; font-size: clamp(2.2rem, 4vw, 3.8rem); letter-spacing:
   }
   .shadow-aura-amber {
     @apply shadow-[0_10px_30px_-5px_hsl(var(--warning)/0.15)] dark:shadow-[0_0_25px_0_hsl(var(--warning)/0.12)];
+  }
+
+  /* Auto-Hiding Slim Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+    transition: background-color 0.25s ease;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--text-muted) / 0.6);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
   }
 }

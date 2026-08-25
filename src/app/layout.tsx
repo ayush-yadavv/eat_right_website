@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   },
 }
 
+import { ThemeProvider } from '@/components/theme-provider';
+
 export default function RootLayout({
   children,
 }: {
@@ -56,14 +58,16 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${jakarta.variable} ${inter.variable}`}>
       <body className="font-sans bg-background text-text-main">
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-surface focus:text-primary focus:rounded-lg focus:shadow-md">
-          Skip to main content
-        </a>
-        <div id="main-content" tabIndex={-1} className="outline-none">
-          {children}
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange={false}>
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-surface focus:text-primary focus:rounded-lg focus:shadow-md">
+            Skip to main content
+          </a>
+          <div id="main-content" tabIndex={-1} className="outline-none">
+            {children}
+          </div>
+        </ThemeProvider>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-322ZCZXYX8" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`

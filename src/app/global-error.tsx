@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
+import { Link001 } from '@/components/skiper40'
 
 export default function GlobalError({
   error,
@@ -24,9 +24,9 @@ export default function GlobalError({
               <AnnuraButton onClick={() => reset()} type="button">
                 Try again
               </AnnuraButton>
-              <Link href="/" className="text-link">
+              <Link001 href="/" className="text-primary font-medium">
                 Back to home
-              </Link>
+              </Link001>
             </div>
             {process.env.NODE_ENV === 'development' ? (
               <p className="form-note">Error: {error.message}</p>

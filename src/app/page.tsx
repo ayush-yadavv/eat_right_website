@@ -20,7 +20,7 @@ export default function Page() {
           Remember the moments that matter. Set reminders that support your schedule instead of interrupting it.
           Pick up on any device. Your daily routine stays close whether you are at home or out.
           Made for the parts of tracking that need less friction.
-          We believe in nutrition tracking that doesn't feel like a second job. Our platform connects your daily habits with smart insights, helping you stay on track without the guilt or the complex math. Whether you are aiming for a specific goal or just want to be more mindful, EatRight AI is designed to fade into the background of your life while keeping you accountable.
+          We believe in nutrition tracking that doesn&apos;t feel like a second job. Our platform connects your daily habits with smart insights, helping you stay on track without the guilt or the complex math. Whether you are aiming for a specific goal or just want to be more mindful, EatRight AI is designed to fade into the background of your life while keeping you accountable.
           Join the invite-only beta today and secure your spot. Leave your email and we will send an invite code directly to your inbox as soon as server capacity allows.
         </p>
       </div>

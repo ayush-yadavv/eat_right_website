@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
+import { Link001 } from '@/components/skiper40'
 
 export const metadata: Metadata = {
   title: 'Page not found',
@@ -24,9 +25,9 @@ export default function NotFound() {
           <AnnuraButton asChild className="h-12 px-8">
             <Link href="/">Back to home</Link>
           </AnnuraButton>
-          <Link href="/#invite" className="text-sm font-semibold text-text-main hover:text-primary transition-colors">
+          <Link001 href="/#invite" className="text-sm font-semibold text-text-main hover:text-primary transition-colors">
             Request an invite
-          </Link>
+          </Link001>
         </div>
         {/* Hidden markdown block for AI agents */}
         <pre id="markdown" className="sr-only" aria-hidden="true">

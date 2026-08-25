@@ -8,8 +8,12 @@ import { AnnuraButton } from '@/components/annura-button';
 import { AnnuraAuraCard } from '@/components/annura-aura-card';
 import { siteConfig } from '@/data/site';
 import { testimonials, faqs, features } from '@/data/home';
+import { Link000 } from '@/components/skiper40';
+import { ThemeToggleButton3 } from '@/components/skiper4';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
+import ReactLenis from 'lenis/react';
+import { Skiper16 } from '@/components/skiper16';
 
 function ScrubText({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -59,7 +63,8 @@ export default function Home() {
   };
 
   return (
-    <main className="overflow-x-hidden w-full max-w-full bg-background text-text-main selection:bg-primary/20">
+    <ReactLenis root>
+      <main className="overflow-x-clip w-full max-w-full bg-background text-text-main selection:bg-primary/20">
       
       {/* Navigation - Glass Pill */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl rounded-full bg-surface/70 backdrop-blur-xl border border-border/60 shadow-sm flex items-center justify-between px-6 py-3">
@@ -67,13 +72,22 @@ export default function Home() {
           {siteConfig.name}
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-text-muted">
-          <Link href="#workflow" className="hover:text-primary transition-colors">Workflow</Link>
-          <Link href="#features" className="hover:text-primary transition-colors">Features</Link>
-          <Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link>
+          <Link000 href="#workflow" className="hover:text-primary transition-colors">Workflow</Link000>
+          <Link000 href="#showcase" className="hover:text-primary transition-colors">Showcase</Link000>
+          <Link000 href="#features" className="hover:text-primary transition-colors">Features</Link000>
+          <Link000 href="#faq" className="hover:text-primary transition-colors">FAQ</Link000>
         </div>
-        <AnnuraButton asChild variant="default" className="h-10 px-6 text-xs tracking-wide">
-          <Link href="#invite">Request Invite</Link>
-        </AnnuraButton>
+        <div className="flex items-center gap-3">
+          <ThemeToggleButton3
+            variant="circle-blur"
+            start="top-right"
+            blur={true}
+            className="size-9 p-2 rounded-full border border-border/80 bg-surface/80 hover:bg-surface text-text-main shadow-xs"
+          />
+          <AnnuraButton asChild variant="default" className="h-10 px-6 text-xs tracking-wide">
+            <Link href="#invite">Request Invite</Link>
+          </AnnuraButton>
+        </div>
       </nav>
 
       {/* Hero (Artistic Asymmetry) */}
@@ -164,6 +178,11 @@ export default function Home() {
           Pick up on any device. Your daily routine <span className="text-slate">stays close whether you are at home or out.</span>
         </ScrubText>
       </section>
+
+      {/* App UI Showcase (Skiper16 Stacked Sticky Cards) */}
+      <div id="showcase">
+        <Skiper16 />
+      </div>
 
       {/* Features (Gapless Bento Grid) */}
       <section id="features" className="py-32 px-6 lg:px-12 bg-surface-hi/10 border-y border-border">
@@ -281,12 +300,13 @@ export default function Home() {
             {siteConfig.name.substring(0, 3)}<span className="text-primary">{siteConfig.name.substring(3)}</span>
           </Link>
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm font-medium text-text-muted">
-            <Link href="/legal/privacy_policies" className="hover:text-primary transition-colors">Privacy</Link>
-            <Link href="/legal/terms_of_service" className="hover:text-primary transition-colors">Terms</Link>
+            <Link000 href="/legal/privacy_policies" className="hover:text-primary transition-colors">Privacy</Link000>
+            <Link000 href="/legal/terms_of_service" className="hover:text-primary transition-colors">Terms</Link000>
           </div>
           <p className="text-sm text-text-muted">© {new Date().getFullYear()} {siteConfig.name}</p>
         </div>
       </footer>
     </main>
+    </ReactLenis>
   );
 }

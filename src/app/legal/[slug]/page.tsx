@@ -7,30 +7,38 @@ import remarkGfm from 'remark-gfm'
 import { siteConfig } from '@/data/site'
 import { ArrowLeft } from 'lucide-react'
 
-export function generateStaticParams() {
-  return [{ slug: 'privacy_policies' }, { slug: 'terms_of_service' }]
+import { Link000 } from '@/components/skiper40'
+
+export async function generateStaticParams() {
+  return [
+    { slug: 'privacy_policies' },
+    { slug: 'terms_of_service' },
+  ]
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
   const { slug } = await params
-  const title = slug
-    .split('_')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-
+  const title = slug === 'privacy_policies' ? 'Privacy Policy' : 'Terms of Service'
   return {
-    title: `${title}`,
-    description: `Read the ${title} for ${siteConfig.name}.`,
+    title,
+    description: `${title} for ${siteConfig.name}.`,
   }
 }
 
-export default async function LegalPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function LegalPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
   const { slug } = await params
-
+  const filePath = path.join(process.cwd(), 'public', 'documents', `${slug}.md`)
   let content = ''
 
   try {
-    const filePath = path.join(process.cwd(), 'public', 'documents', `${slug}.md`)
     content = fs.readFileSync(filePath, 'utf8')
   } catch {
     content = '# Document Not Found\n\nThe requested legal document could not be found.'
@@ -42,10 +50,10 @@ export default async function LegalPage({ params }: { params: Promise<{ slug: st
         <Link href="/" className="wordmark" aria-label={`${siteConfig.name} home`}>
           {siteConfig.name.substring(0, 3)}<span>{siteConfig.name.substring(3)}</span>
         </Link>
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-primary transition-colors">
+        <Link000 href="/" className="inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-primary transition-colors">
           <ArrowLeft className="w-4 h-4 rtl:-scale-x-100" />
           Back to home
-        </Link>
+        </Link000>
       </div>
       <div className="shell utility-page__shell">
         <div className="prose prose-emerald dark:prose-invert max-w-none">
