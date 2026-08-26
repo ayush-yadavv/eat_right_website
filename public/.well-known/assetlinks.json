@@ -3,9 +3,12 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.example.eat_right",
+      "package_name": "com.annura.ai",
       "sha256_cert_fingerprints": [
-        "6E:77:BA:23:6F:3E:FD:DB:BC:8C:FF:DE:B2:25:E3:C0:A3:93:DD:4F:19:F0:B0:A6:6A:7F:EE:97:A5:EF:93:56"
+        "CF:A4:3F:CC:B6:6E:92:03:CA:28:1F:7C:39:D4:AF:47:4A:C0:DA:16:48:E6:5E:F4:30:3F:A9:54:FC:3F:CE:21",
+        "70:A7:A4:19:9E:A7:CB:C2:0D:5D:3A:3E:A3:E3:11:B2:0D:78:5C:AD:1C:F6:67:66:D7:4B:D4:81:1F:E0:1C:A4",
+        "0A:9C:DB:4A:4A:EC:7C:1D:5D:53:1A:6E:44:C9:82:2B:BA:1C:9E:FD:33:65:15:92:49:4C:1B:24:9C:F3:C2:2A",
+        "46:43:D3:AA:11:07:63:4A:40:92:9F:49:AE:89:77:BA:37:83:DA:61:FD:9B:29:A0:BB:B1:78:A0:DF:21:D6:EE"
       ]
     }
   }
