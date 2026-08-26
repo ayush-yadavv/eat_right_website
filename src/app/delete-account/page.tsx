@@ -32,7 +32,7 @@ export default function DeleteAccountPage() {
           If you no longer have the app installed, please send an email to our data privacy team:
         </p>
         <div className="p-4 bg-slate-950 rounded-lg border border-slate-800 text-emerald-400 font-mono text-sm">
-          Email: support@ay7.me (Subject: "Account Deletion Request - Annura AI")
+          Email: play.ay11@gmail.com (Subject: "Account Deletion Request - Annura AI")
         </div>
         <p className="text-slate-400 text-sm mt-4">
           Please include the email address associated with your Annura AI account. We will process your request within 48 hours.
