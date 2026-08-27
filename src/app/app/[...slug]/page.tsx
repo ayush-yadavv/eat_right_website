@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
 import { Link001 } from '@/components/skiper40'
+import { siteConfig } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'App link',
@@ -13,7 +14,7 @@ export default function AppFallbackPage() {
     <main className="utility-page">
       <div className="shell utility-page__shell">
         <p className="section-kicker">App route</p>
-        <h1>This link opens in the Eat Right app.</h1>
+        <h1>This link opens in the {siteConfig.name} app.</h1>
         <p className="section-intro">
           If you are here before the app is available, join the waitlist and we will send the next update by email.
         </p>

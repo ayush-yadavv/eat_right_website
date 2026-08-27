@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.annura.ai",
+        "paths": [
+          "/app/*",
+          "/app"
+        ]
+      }
+    ]
+  }
+}
