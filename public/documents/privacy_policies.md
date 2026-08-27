@@ -1,90 +1,84 @@
-# EatRight AI: Privacy Policy
+# Annura AI: Privacy Policy
 
-**Last Updated: August 6, 2026**
+**Last Updated: August 27, 2026**
 
-At **EatRight AI** ("we", "us", "our"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the EatRight AI mobile application (the "App" or "Service"). 
+At **Annura AI** ("we", "us", "our"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Annura AI mobile application (the "App" or "Service"). 
 
 By using the Service, you consent to the data practices described in this policy.
 
 ---
 
 ## 1. Information We Collect
-We collect information that you directly provide to us, as well as data automatically retrieved through your device integrations and third-party APIs.
+We collect information that you directly provide to us, data processing from device integrations, and diagnostic data.
 
-### A. Information You Provide
-* **Account Onboarding:** When you create an account, we collect profile details such as age, gender, height, weight, dietary restrictions (e.g., allergies, preferences), and fitness goals.
-* **User Input & AI Queries:** We collect text inputs, food logs, and questions you submit to the EatRight AI assistant.
+### A. Personal Information You Provide
+* **Account Credentials & Contact:** Email address, Name, and optional Phone number when managing your profile.
+* **User Identifiers:** Unique user IDs (Firebase UID) to associate your data with your account securely.
+* **User Input & Meal Photos:** Text inputs, food photos uploaded for AI vision meal scanning, meal logs, and queries submitted to the Annura AI assistant.
+* **Health & Profile Measurements:** Profile details such as age, biological sex/gender, height, weight, dietary restrictions (e.g., allergies), and fitness goals.
 
-### B. Google Health Connect Data
-With your explicit consent, EatRight reads and writes health and fitness data via Google Health Connect. We limit our data collection to the minimum required for the App's core features:
-* **Metrics Accessed:** Calories burned, body weight, step count, sleep duration, and workout logs.
-* **Disclosure:** A prominent disclosure is displayed in-app before requesting permissions, ensuring you understand why each metric is needed.
+### B. Google Health Connect Data (Processed 100% Locally)
+With your explicit consent, Annura AI reads health metrics via Google Health Connect.
+* **Metrics Accessed:** Step count, body weight, active energy burned, basal energy burned, water/hydration, body fat percentage, height, sleep duration, and workout logs.
+* **On-Device Processing:** In compliance with Google Play Health Connect Data Minimization policies, all metrics retrieved via Health Connect are **processed 100% locally on your device** for dashboard visualization and on-device nutritional math.
 
-### C. Technical and Usage Data
-* **App Performance:** We use Firebase Crashlytics and Firebase Performance Monitoring to collect anonymous diagnostic data, crash reports, and app execution speed.
-* **Device Info:** Operating system version and unique device identifiers to assist with notifications and authentication.
+### C. Technical, Performance and Device Identifiers
+* **App Performance & Crash Logs:** Anonymous crash logs and diagnostic metrics collected via Firebase Crashlytics and Firebase Performance Monitoring.
+* **Device Identifiers:** Push notification tokens (Firebase Cloud Messaging - FCM) to send meal, fasting, and hydration reminders.
 
 ---
 
 ## 2. How We Use Your Information
 We use the collected information for the following purposes:
-* **Personalized Nutrition & Coaching:** To generate customized meal plans, nutrition estimates, and wellness insights.
-* **Generative AI Analysis:** We securely transmit your profile details (e.g., weight, dietary restrictions) and query text to Google's Gemini 2.5 Flash backend to construct accurate AI nutrition advice.
-* **Progress Tracking:** To visualize your health metrics over time by syncing with Google Health Connect.
-* **App Optimization:** To debug crashes, analyze usage, and improve the user experience.
+* **App Functionality & Account Management:** To authenticate users, enable profile management, manage accounts, and deliver push notifications.
+* **Personalized AI Nutrition & Coaching:** To generate customized meal advice, estimate calories/macros from food photos, and power the Annura AI Chat Assistant.
+* **Analytics & Performance:** To monitor app health, diagnose bugs, and improve system performance.
 
 ---
 
 ## 3. Google Health Connect Data Compliance
 Because health data is highly sensitive, we adhere to strict Google Play Health Connect developer policies:
 
-* **Limited Use Requirement:** Data retrieved from Health Connect (Sleep, Weight, Steps, Calories, Workouts) is used **solely** to provide, maintain, and improve the nutrition tracking and health-coaching features of the EatRight App.
-* **Strict Prohibition on Data Sale:** We will **never** sell, rent, license, or broker your Health Connect data to any third party, including advertising platforms, data brokers, or information resellers.
-* **No Advertising or Marketing:** Health Connect data is never used to display advertisements, target promotional offers, or construct marketing profiles.
-* **Secure Storage:** All health-related data synced from your device is encrypted in transit and at rest when stored in our backend databases.
+* **Limited Use Requirement:** Data retrieved from Health Connect is used **solely** to provide and display nutrition tracking and wellness metrics within the App.
+* **On-Device Processing:** Health Connect data is handled locally on your device and is not sold, transferred, or used for external profiling.
+* **Strict Prohibition on Data Sale:** We will **never** sell, rent, license, or broker your health data to any third party, advertising platform, or information reseller.
+* **No Advertising or Marketing:** Health data is never used to target advertisements or commercial promotions.
 
 ---
 
 ## 4. How Your Data is Shared and Processed
-* **Google Gemini AI API:** To provide AI responses, relevant context (such as your weight, allergies, and query) is sent to Google's generative AI API. Google processes this data securely in accordance with its enterprise privacy commitments, and it is not used to train public models.
-* **Firebase Backend:** User profiles and log histories are stored securely using Firebase Firestore. Firebase provides enterprise-grade physical and logical security measures.
-* **Legal Disclosures:** We will only disclose your data if required to do so by law or in the good faith belief that such action is necessary to comply with legal obligations.
+* **Google Gemini AI API:** Text queries and food photos submitted to the AI assistant are processed securely via Google's Gemini AI API for instant nutritional analysis. Data processed via Gemini API is subject to enterprise privacy commitments and is not used to train public models.
+* **Firebase Cloud Infrastructure:** Account profile details and meal log histories are stored securely using Firebase Firestore. All data in transit is encrypted using HTTPS / TLS 1.3 protocols.
+* **No Third-Party Ad Networks:** We do not include third-party ad networks or data-broker trackers in Annura AI.
 
 ---
 
 ## 5. Security of Your Data
-We implement robust administrative, technical, and physical security measures to protect your personal and health data:
-* All database communications are secured via HTTPS / TLS encryption.
-* Firebase Firestore rules are strictly configured to ensure only you can read or write your own data.
-* Data stored on your local device is handled using secure on-device storage options.
+We implement administrative, technical, and physical security measures to protect your personal data:
+* All network communications are encrypted in transit via HTTPS / TLS 1.3.
+* Firebase Firestore security rules enforce strict authentication checks ensuring users can only access their own data.
 
 ---
 
-## 6. Your Rights and Data Deletion (GDPR & CCPA Compliance)
-Depending on your location, you may have specific rights regarding your personal information, including the right to access, rectify, or restrict processing of your data.
+## 6. User Rights & Account / Data Deletion (GDPR & CCPA Compliance)
+You have complete control over your personal data:
 
-* **Right to be Forgotten (Deletion):** We believe all users should control their data. You can delete your account and all associated data at any time through the in-app settings menu. Clicking "Delete Account" executes a direct database command (`deleteUserData()`) that permanently wipes your profile, logs, and synced health data from Firebase Firestore and local device storage.
-* **Revoking Permissions:** You can revoke EatRight's access to Google Health Connect at any time via your Android system settings.
-
----
-
-## 7. Children's Privacy
-Our Service is not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we learn that we have collected information from a child under 18, we will take immediate steps to delete that data from our servers.
+* **In-App Account Deletion:** You can delete your account and all associated data at any time via **Settings > Account > Delete Account** in the Annura AI app. This immediately purges your account, profile, meal history, and local cached data.
+* **Web Deletion Request:** If you do not have the app installed, you can submit a public deletion request on our website at: [https://app.ay7.me/delete-account](https://app.ay7.me/delete-account) or by emailing support.
+* **Revoking Permissions:** You can revoke Annura AI's access to Health Connect or Notification permissions at any time through your Android System Settings.
 
 ---
 
+## 7. Age Restriction (18+ Only)
+Annura AI is **exclusively intended for adults aged 18 and older**. We do not knowingly collect personal information from individuals under the age of 18. Age verification is enforced during onboarding. If we learn that an account belongs to a minor under 18, we will immediately terminate the account and purge associated data.
+
+---
 
 ## 8. Medical Disclaimer
-Eat Right is not a medical device and does not diagnose, treat, cure, or prevent any medical condition. Any health-related features, insights, or AI suggestions provided by the App are for informational purposes only. Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment before making any significant changes to your diet, exercise, or lifestyle.
+**Annura AI is not a medical device and does not diagnose, treat, cure, or prevent any medical condition.** All nutritional estimates, macro breakdowns, and AI recommendations are provided for informational and educational purposes only. Always consult a qualified physician or healthcare professional before making diet, fasting, or lifestyle changes.
 
 ---
 
-## 9. Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date. We encourage you to review this policy periodically to stay informed about how we protect your information.
-
----
-
-## 10. Contact Us
-If you have any questions or concerns about this Privacy Policy or our data practices, please contact our Data Protection Officer at:
-* **Email:** privacy@eatrightai.example.com
+## 9. Contact Us
+If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact our support team at:
+* **Support Email:** play.ay11@gmail.com
