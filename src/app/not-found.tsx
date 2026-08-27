@@ -37,6 +37,7 @@ The requested path could not be found.
 
 - [Sitemap](/sitemap.xml)
 - [Agent Instructions](/llms.txt)
+- [Full LLM Documentation](/llms-full.txt)
 - [Home](/)
 `}
         </pre>

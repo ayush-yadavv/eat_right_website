@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: 'EatRight AI',
+  name: 'Annura AI',
   description: 'Nutrition that fits your day.',
   url: 'https://app.ay7.me',
   ogImage: 'https://app.ay7.me/og-image.jpg',
   contact: {
-    email: 'support@app.ay7.me',
+    email: 'play.ay11@gmail.com',
     phone: '+1 (234) 567-890',
     address: {
       street: '123 Health Way',

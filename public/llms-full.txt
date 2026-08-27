@@ -1,0 +1,145 @@
+# Annura AI — Full Product & System Documentation for LLMs
+
+> Nutrition that fits your day. Eat well, one ordinary day at a time.
+> Official Website: https://app.ay7.me
+
+---
+
+## 1. Overview & Business Model
+
+Annura AI is a modern nutrition and dietary tracking application designed to eliminate friction in meal logging and personal health coaching.
+
+### Core Capabilities:
+- **AI Vision Food Analysis**: Analyzes food photographs and voice inputs to estimate calories, macro-nutrients (protein, carbs, fats), and micro-nutrients.
+- **On-Device Health Sync**: Integrates with Google Health Connect with 100% on-device local processing for steps, weight, hydration, and activity tracking.
+- **Privacy First & Data Sovereignty**: Dual account deletion channels (immediate in-app self-service purge and public web request portal). No health data sale or third-party ad brokers.
+- **Pricing & Availability**: Currently offered free of charge during the initial release and waitlist beta phase.
+
+---
+
+## 2. Web Routes & API Specifications
+
+- `GET /` — Home landing page with feature showcase, FAQs, and waitlist registration.
+- `POST /api/waitlist` — Accepts JSON payload `{ "name": string, "email": string, "address": string }`. Performs honeypot spam protection (`address` must be empty) and registers user for beta access.
+- `GET /delete-account` — Account & Data Deletion portal detailing self-service in-app deletion steps and web email request CTAs.
+- `GET /legal/privacy_policies` — Official Privacy Policy.
+- `GET /legal/terms_of_service` — Official Terms of Service.
+- `GET /sitemap.xml` — XML sitemap listing active routes.
+- `GET /llms.txt` — High-level LLM summary.
+- `GET /llms-full.txt` — Full exhaustive LLM documentation.
+
+---
+
+## 3. Privacy Policy (Complete Document)
+
+# Annura AI: Privacy Policy
+
+**Last Updated: August 27, 2026**
+
+At **Annura AI** ("we", "us", "our"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Annura AI mobile application (the "App" or "Service"). 
+
+By using the Service, you consent to the data practices described in this policy.
+
+### Information We Collect
+We collect information that you directly provide to us, data processing from device integrations, and diagnostic data.
+
+#### A. Personal Information You Provide
+* **Account Credentials & Contact:** Email address, Name, and optional Phone number when managing your profile.
+* **User Identifiers:** Unique user IDs (Firebase UID) to associate your data with your account securely.
+* **User Input & Meal Photos:** Text inputs, food photos uploaded for AI vision meal scanning, meal logs, and queries submitted to the Annura AI assistant.
+* **Health & Profile Measurements:** Profile details such as age, biological sex/gender, height, weight, dietary restrictions (e.g., allergies), and fitness goals.
+
+#### B. Google Health Connect Data (Processed 100% Locally)
+With your explicit consent, Annura AI reads health metrics via Google Health Connect.
+* **Metrics Accessed:** Step count, body weight, active energy burned, basal energy burned, water/hydration, body fat percentage, height, sleep duration, and workout logs.
+* **On-Device Processing:** In compliance with Google Play Health Connect Data Minimization policies, all metrics retrieved via Health Connect are **processed 100% locally on your device** for dashboard visualization and on-device nutritional math.
+
+#### C. Technical, Performance and Device Identifiers
+* **App Performance & Crash Logs:** Anonymous crash logs and diagnostic metrics collected via Firebase Crashlytics and Firebase Performance Monitoring.
+* **Device Identifiers:** Push notification tokens (Firebase Cloud Messaging - FCM) to send meal, fasting, and hydration reminders.
+
+### How We Use Your Information
+We use the collected information for the following purposes:
+* **App Functionality & Account Management:** To authenticate users, enable profile management, manage accounts, and deliver push notifications.
+* **Personalized AI Nutrition & Coaching:** To generate customized meal advice, estimate calories/macros from food photos, and power the Annura AI Chat Assistant.
+* **Analytics & Performance:** To monitor app health, diagnose bugs, and improve system performance.
+
+### Google Health Connect & Consumer Health Data Privacy
+Because health and wellness data is highly sensitive, we adhere to strict Google Play Health Connect developer policies and applicable consumer health privacy laws:
+* **Limited Use Requirement:** Data retrieved from Health Connect is used **solely** to provide and display nutrition tracking and wellness metrics within the App.
+* **On-Device Processing:** Health Connect data is handled locally on your device and is not sold, transferred, or used for external profiling.
+* **Strict Prohibition on Data Sale:** We will **never** sell, rent, license, or broker your health data to any third party, advertising platform, or information reseller.
+* **No Advertising or Marketing:** Consumer health metrics are never used to target advertisements or commercial promotions.
+
+### How Your Data is Shared and Processed
+* **Generative AI API Processing:** Text queries and food photos submitted to the AI assistant are processed securely via enterprise generative AI APIs for instant nutritional analysis. Data processed via AI APIs is subject to enterprise privacy commitments and is not used to train public models.
+* **Firebase Cloud Infrastructure:** Account profile details and meal log histories are stored securely using Firebase Firestore. All data in transit is encrypted using HTTPS / TLS 1.3 protocols.
+* **No Third-Party Ad Networks:** We do not include third-party ad networks or data-broker trackers in Annura AI.
+
+### Security of Your Data
+We implement administrative, technical, and physical security measures to protect your personal data:
+* All network communications are encrypted in transit via HTTPS / TLS 1.3.
+* Firebase Firestore security rules enforce strict authentication checks ensuring users can only access their own data.
+
+### User Rights & Account / Data Deletion
+You have complete control over your personal data:
+* **In-App Account Deletion:** You can delete your account and all associated data at any time via **Settings > Account > Delete Account** in the Annura AI app. This immediately purges your account, profile, meal history, and local cached data.
+* **Web Deletion Request:** If you do not have the app installed, you can submit a public deletion request on our website at: [https://app.ay7.me/delete-account](https://app.ay7.me/delete-account) or by emailing support@app.ay7.me.
+* **Revoking Permissions:** You can revoke Annura AI's access to Health Connect or Notification permissions at any time through your Android System Settings.
+
+### Age Restriction (18+ Only)
+Annura AI is **exclusively intended for adults aged 18 and older**. We do not knowingly collect personal information from individuals under the age of 18. Age verification is enforced during onboarding. If we learn that an account belongs to a minor under 18, we will immediately terminate the account and purge associated data.
+
+### Medical Disclaimer
+**Annura AI is not a medical device and does not diagnose, treat, cure, or prevent any medical condition.** All nutritional estimates, macro breakdowns, and AI recommendations are provided for informational and educational purposes only. Always consult a qualified physician or healthcare professional before making diet, fasting, or lifestyle changes.
+
+---
+
+## 4. Terms of Service (Complete Document)
+
+# Annura AI: Terms of Service
+
+**Last Updated: August 27, 2026**
+
+Welcome to **Annura AI** (referred to as "Annura", "we", "us", or "our"). These Terms of Service ("Terms") govern your access to and use of the Annura AI mobile application and related services (collectively, the "Service").
+
+### 1. Eligibility and Account Registration
+* **Age Requirement:** You must be at least 18 years of age (or the age of legal majority in your jurisdiction) to use the Service.
+* **Account Security:** To use Annura AI, you may be required to register an account. You agree to provide accurate, complete information during onboarding and to keep your credentials confidential. You are solely responsible for all activities occurring under your account.
+
+### 2. Description of the Service
+Annura AI is a health, diet, and nutrition application designed to help users track nutritional goals, log meals, sync fitness metrics, and receive personalized nutritional advice.
+* **AI Nutrition Assistant:** Annura AI integrates advanced generative AI models to process user parameters and generate dietary insights.
+* **Google Health Connect:** The Service integrates with Google Health Connect to read and write activity and health data (such as Steps, Weight, Calories, Sleep, and Workouts) to optimize tracking and recommendations.
+
+### 3. MEDICAL DISCLAIMER (CRITICAL)
+> **ANNURA AI IS NOT A MEDICAL PROFESSIONAL AND DOES NOT PROVIDE MEDICAL ADVICE.**
+
+* **No Professional Advice:** The Service—including all insights, meal plans, nutritional estimates, and responses generated by the AI assistant—is provided for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, treatment, or management of any health condition.
+* **Consult Your Doctor:** You should always consult with a qualified healthcare professional (such as a physician or registered dietitian) before starting a new diet program, making significant dietary changes, or interpreting health and fitness metrics.
+* **Allergen and Food Safety Warning:** Artificial Intelligence models can hallucinate or produce incorrect information. You are solely responsible for verifying allergen information, ingredients, and nutritional content before consuming any food item recommended by or logged in the Service.
+* **Emergency Situations:** Never disregard professional medical advice or delay seeking it because of something you have read or received through the Service. In case of a medical emergency, contact your local emergency services immediately.
+
+### 4. Pricing & Service Availability
+* **Free / Beta Access:** Annura AI is currently provided free of charge during its current release and beta phase. We do not currently charge recurring subscription fees, paid memberships, or in-app purchases.
+* **Future Feature Changes:** We reserve the right to introduce optional premium features, paid tiers, or subscriptions in future updates. Should paid features be introduced, clear pricing details will be displayed and your explicit authorization will be required prior to any charges.
+
+### 5. Integration with Google Health Connect
+By enabling Google Health Connect permissions:
+* You grant Annura AI permission to access and sync specific metrics (Calories, Weight, Steps, Sleep, Workouts) with your on-device Health Connect database.
+* Our use of information received from Health Connect adheres to the Google Play Health Connect Developer Policy, including the Limited Use requirements.
+* You can disable Health Connect sync at any time in your device settings or via the Annura AI app settings.
+
+### 6. AI-Generated Content Declaration & Disclaimers
+* **Generative AI Disclosure:** The Service utilizes generative artificial intelligence models to process user queries, estimate macro and micro-nutrients from food photographs, and generate personalized dietary suggestions. All AI-generated outputs are clearly identified as machine-generated content.
+* **AI Hallucinations & Accuracy:** Generative AI models can hallucinate or produce inaccurate estimates regarding ingredient breakdown, portion size, calories, or allergens. AI-generated outputs are provided strictly on an **"as is"** basis for educational reference and should never replace personal verification or clinical judgement.
+* **In-App Content Reporting & Safety Flagging:** In compliance with store developer policies, Annura AI provides built-in reporting and safety flagging mechanisms across all AI touchpoints. Users can flag objectionable, inappropriate, or inaccurate AI content directly within the application for review.
+* **Guardrails & Prohibited Misuse:** Users are strictly prohibited from attempting to jailbreak, bypass safety guardrails, or submit prompt injections designed to induce the AI model to output harmful, illegal, or deceptive content.
+
+### 7. Data Ownership and Deletion Rights
+* **Your Data:** You retain ownership of the data you input into the Service.
+* **Right to Deletion (GDPR/CCPA Compliance):** You have the right to delete your user account and all associated personal data at any time. You can initiate data deletion directly in the app settings (`Settings > Account > Delete Account`) or via our public web portal at https://app.ay7.me/delete-account.
+
+### 8. Contact Information
+- **Support Email**: play.ay11@gmail.com
+- **Official Portal**: https://app.ay7.me

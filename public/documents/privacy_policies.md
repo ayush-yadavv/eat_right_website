@@ -36,18 +36,18 @@ We use the collected information for the following purposes:
 
 ---
 
-## 3. Google Health Connect Data Compliance
-Because health data is highly sensitive, we adhere to strict Google Play Health Connect developer policies:
+## 3. Google Health Connect & Consumer Health Data Privacy
+Because health and wellness data is highly sensitive, we adhere to strict Google Play Health Connect developer policies and applicable consumer health privacy laws:
 
 * **Limited Use Requirement:** Data retrieved from Health Connect is used **solely** to provide and display nutrition tracking and wellness metrics within the App.
 * **On-Device Processing:** Health Connect data is handled locally on your device and is not sold, transferred, or used for external profiling.
 * **Strict Prohibition on Data Sale:** We will **never** sell, rent, license, or broker your health data to any third party, advertising platform, or information reseller.
-* **No Advertising or Marketing:** Health data is never used to target advertisements or commercial promotions.
+* **No Advertising or Marketing:** Consumer health metrics are never used to target advertisements or commercial promotions.
 
 ---
 
 ## 4. How Your Data is Shared and Processed
-* **Google Gemini AI API:** Text queries and food photos submitted to the AI assistant are processed securely via Google's Gemini AI API for instant nutritional analysis. Data processed via Gemini API is subject to enterprise privacy commitments and is not used to train public models.
+* **Generative AI API Processing:** Text queries and food photos submitted to the AI assistant are processed securely via enterprise generative AI APIs for instant nutritional analysis. Data processed via AI APIs is subject to enterprise privacy commitments and is not used to train public models.
 * **Firebase Cloud Infrastructure:** Account profile details and meal log histories are stored securely using Firebase Firestore. All data in transit is encrypted using HTTPS / TLS 1.3 protocols.
 * **No Third-Party Ad Networks:** We do not include third-party ad networks or data-broker trackers in Annura AI.
 
@@ -81,4 +81,4 @@ Annura AI is **exclusively intended for adults aged 18 and older**. We do not kn
 
 ## 9. Contact Us
 If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact our support team at:
-* **Support Email:** play.ay11@gmail.com
+* **Support Email:** support@app.ay7.me

@@ -6,11 +6,11 @@ import { siteConfig } from '@/data/site'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url
 
-  const routes = [''].map((route) => ({
+  const routes = ['', '/delete-account', '/privacy'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: 1,
+    priority: route === '' ? 1 : 0.8,
   }))
 
   let legalRoutes: MetadataRoute.Sitemap = []

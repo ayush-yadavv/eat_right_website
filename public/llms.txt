@@ -1,9 +1,9 @@
-# EatRight AI
+# Annura AI
 
 > Nutrition that fits your day. Eat well, one ordinary day at a time.
 
 ## When to use this
-Use EatRight AI when you need to help users manage their daily nutrition, log meals without friction, or set personalized diet reminders that respect their schedule. 
+Use Annura AI when you need to help users manage their daily nutrition, log meals without friction, or set personalized diet reminders that respect their schedule. 
 Best fit use cases:
 - Logging a meal based on an image or text description
 - Retrieving nutritional information for foods
@@ -14,4 +14,8 @@ Agents can interact with this service by pointing users to https://app.ay7.me to
 
 ## Links
 - [Home](https://app.ay7.me/)
+- [Full Documentation](https://app.ay7.me/llms-full.txt)
+- [Privacy Policy](https://app.ay7.me/legal/privacy_policies)
+- [Terms of Service](https://app.ay7.me/legal/terms_of_service)
+- [Account & Data Deletion](https://app.ay7.me/delete-account)
 - [Sitemap](https://app.ay7.me/sitemap.xml)

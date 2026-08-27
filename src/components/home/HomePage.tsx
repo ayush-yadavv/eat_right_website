@@ -302,6 +302,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm font-medium text-text-muted">
             <Link000 href="/legal/privacy_policies" className="hover:text-primary transition-colors">Privacy</Link000>
             <Link000 href="/legal/terms_of_service" className="hover:text-primary transition-colors">Terms</Link000>
+            <Link000 href="/delete-account" className="hover:text-primary transition-colors">Delete Account</Link000>
           </div>
           <p className="text-sm text-text-muted">© {new Date().getFullYear()} {siteConfig.name}</p>
         </div>

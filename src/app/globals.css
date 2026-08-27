@@ -362,4 +362,45 @@ h2 { margin-bottom: 1rem; font-size: clamp(2.2rem, 4vw, 3.8rem); letter-spacing:
     scrollbar-width: thin;
     scrollbar-color: hsl(var(--border)) transparent;
   }
+
+  /* Prose typography explicit theme bindings to prevent white-on-white text */
+  .prose {
+    --tw-prose-body: hsl(var(--text-main));
+    --tw-prose-headings: hsl(var(--text-main));
+    --tw-prose-lead: hsl(var(--text-muted));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-bold: hsl(var(--text-main));
+    --tw-prose-counters: hsl(var(--text-muted));
+    --tw-prose-bullets: hsl(var(--primary));
+    --tw-prose-hr: hsl(var(--border));
+    --tw-prose-quotes: hsl(var(--text-main));
+    --tw-prose-quote-borders: hsl(var(--primary));
+    --tw-prose-captions: hsl(var(--text-muted));
+    --tw-prose-code: hsl(var(--text-main));
+    --tw-prose-pre-code: hsl(var(--text-main));
+    --tw-prose-pre-bg: hsl(var(--surface));
+    --tw-prose-th-borders: hsl(var(--border));
+    --tw-prose-td-borders: hsl(var(--border));
+    color: hsl(var(--text-main));
+  }
+
+  .dark .prose {
+    --tw-prose-body: hsl(var(--text-main));
+    --tw-prose-headings: hsl(var(--text-main));
+    --tw-prose-lead: hsl(var(--text-muted));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-bold: hsl(var(--text-main));
+    --tw-prose-counters: hsl(var(--text-muted));
+    --tw-prose-bullets: hsl(var(--primary));
+    --tw-prose-hr: hsl(var(--border));
+    --tw-prose-quotes: hsl(var(--text-main));
+    --tw-prose-quote-borders: hsl(var(--primary));
+    --tw-prose-captions: hsl(var(--text-muted));
+    --tw-prose-code: hsl(var(--text-main));
+    --tw-prose-pre-code: hsl(var(--text-main));
+    --tw-prose-pre-bg: hsl(var(--surface-hi));
+    --tw-prose-th-borders: hsl(var(--border));
+    --tw-prose-td-borders: hsl(var(--border));
+    color: hsl(var(--text-main));
+  }
 }
