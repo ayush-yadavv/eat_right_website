@@ -1,4 +1,4 @@
-# Annura — Next.js & Shadcn UI Design System Specification (Web v2.3)
+# Annura - Next.js & Shadcn UI Design System Specification (Web v2.3)
 
 **Brand Identity:** Ann (Sustenance/Grain) + Aura (The Soul/Energy)
 **Framework:** Next.js (React), Tailwind CSS, Shadcn UI
@@ -30,7 +30,7 @@
   * *Grain (Physical):* Organic pill shapes (seeds), tactile muted greens (Matcha Sage), grounded typography, subtle tactile directional gradients.
   * *Aura (Metaphysical/AI):* Glowing low-opacity radial shadows, ambient gradient backdrops, translucent glass shimmer panels, ambient slate blues (Slate Clarity).
 * **Calm Contrast:** We never use pure `#000000` or `#FFFFFF` for primary text/background contrasts. Off-white Oat Milk and Deep Obsidian eliminate visual glare.
-* **Semantic Honesty:** Every color that carries meaning — success, warning, error, info — is drawn from the *same* Grain/Aura palette family. Error states use a warm Terracotta instead of a generic alarming red.
+* **Semantic Honesty:** Every color that carries meaning - success, warning, error, info - is drawn from the *same* Grain/Aura palette family. Error states use a warm Terracotta instead of a generic alarming red.
 
 ---
 

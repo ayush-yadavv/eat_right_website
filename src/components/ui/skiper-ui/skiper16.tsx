@@ -3,39 +3,7 @@
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
-
-const projects = [
-  {
-    title: "Daily Nutrition & Meal Tracking",
-    description: "Seamless logging designed to keep you consistent without the friction.",
-    src: "/images/lummi/img8.png",
-    tag: "Tracking",
-  },
-  {
-    title: "Gentle Rhythm Reminders",
-    description: "Adaptive cues that fit into your daily flow instead of interrupting it.",
-    src: "/images/lummi/img14.png",
-    tag: "Reminders",
-  },
-  {
-    title: "Whole Food Insights",
-    description: "Clear, actionable nutrient breakdowns focused on balance over restriction.",
-    src: "/images/lummi/img10.png",
-    tag: "Insights",
-  },
-  {
-    title: "Cross-Device Continuity",
-    description: "Your routine stays in sync whether preparing breakfast at home or dining out.",
-    src: "/images/lummi/img15.png",
-    tag: "Sync",
-  },
-  {
-    title: "Private & Calibrated",
-    description: "Zero algorithmic noise. Built entirely around your health goals.",
-    src: "/images/lummi/img12.png",
-    tag: "Privacy",
-  },
-];
+import { projects } from "@/data/site";
 
 const StickyCard_001 = ({
   i,
@@ -148,7 +116,7 @@ const Skiper16 = () => {
 export { Skiper16, StickyCard_001 };
 
 /**
- * Skiper 16 StickyCard_001 — React + Framer Motion
+ * Skiper 16 StickyCard_001 - React + Framer Motion
  * Author: @gurvinder-singh02
  * Website: https://gxuri.me | https://skiper-ui.com/v1/skiper16
  */

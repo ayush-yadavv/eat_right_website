@@ -1,8 +1,10 @@
 import HomePage from '@/components/home/HomePage';
 
+import { siteConfig } from '@/data/site';
+
 export const metadata = {
-  title: 'Annura AI',
-  description: 'Nutrition that fits your day.',
+  title: `${siteConfig.name} | ${siteConfig.tagLine}`,
+  description: siteConfig.description,
 };
 
 export default function Page() {
@@ -13,15 +15,13 @@ export default function Page() {
         so AI crawlers (and SEO bots) can read the raw HTML without executing JavaScript.
       */}
       <div className="sr-only" aria-hidden="true">
-        <h1>Annura AI: Nutrition that fits your day</h1>
+        <h1>Annura AI: Timeless wisdom for the modern plate</h1>
         <p>
-          Annura AI keeps your meals, reminders, and nutrition habits clear enough to return to every day, without the friction of spreadsheets.
-          Build a routine around what you already eat. Log without overthinking.
-          Remember the moments that matter. Set reminders that support your schedule instead of interrupting it.
-          Pick up on any device. Your daily routine stays close whether you are at home or out.
-          Made for the parts of tracking that need less friction.
-          We believe in nutrition tracking that doesn&apos;t feel like a second job. Our platform connects your daily habits with smart insights, helping you stay on track without the guilt or the complex math. Whether you are aiming for a specific goal or just want to be more mindful, Annura AI is designed to fade into the background of your life while keeping you accountable.
-          Join the invite-only beta today and secure your spot. Leave your email and we will send an invite code directly to your inbox as soon as server capacity allows.
+          In ancient philosophy, food is not just calories it is the very foundation of your life force and energy. They mastered the art of eating for holistic wellbeing.
+          Annura brings this timeless mastery into the modern world. Named after the Sanskrit word for food and grain (Anna), combined with your energetic wellbeing (Aura), our app bridges the gap between ancient wisdom and cutting-edge artificial intelligence.
+          By deeply understanding your meals, Annura helps you align what you eat with how you feel.
+          Master your nutrition with gentle, effortless intelligence. Snap a photo to effortlessly log your meal and gain deep nutritional understanding without obsessive math. Scan product labels to look beyond basic macros, spot processed ingredients, and choose pure, balancing foods that truly nourish you. Chat with your personalized AI wellness coach to find harmony in your diet, balance your energy levels, and reach your unique health goals.
+          Join the invite-only beta today and secure your spot. Reclaim the ancient mastery of eating. Nourish your body, fuel your aura.
         </p>
       </div>
       <script

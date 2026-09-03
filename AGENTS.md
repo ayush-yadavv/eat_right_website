@@ -1,7 +1,7 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+This version has breaking changes - APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
 # Agent Instructions
@@ -60,4 +60,4 @@ AI agents MUST read and adhere to:
 
 - `./DESIGN.md`
 - `./laws_of_ux.md`
-- `./docs/*` *(Optional — reference when needed as it may contain legacy or updated docs)*
+- `./docs/*` *(Optional - reference when needed as it may contain legacy or updated docs)*

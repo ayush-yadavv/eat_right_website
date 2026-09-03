@@ -207,7 +207,7 @@ const Skiper40 = () => {
 export { Link000, Link001, Link002, Link003, Link004, Link005, Skiper40 };
 
 /**
- * Skiper 40 Animated Link — React + Next.js
+ * Skiper 40 Animated Link - React + Next.js
  * Author: @gurvinder-singh02
  * Website: https://gxuri.me | https://skiper-ui.com/v1/skiper40
  */

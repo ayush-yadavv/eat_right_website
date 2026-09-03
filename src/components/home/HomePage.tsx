@@ -6,8 +6,7 @@ import Link from 'next/link';
 import { WaitlistForm } from '@/components/waitlist-form';
 import { AnnuraButton } from '@/components/annura-button';
 import { AnnuraAuraCard } from '@/components/annura-aura-card';
-import { siteConfig } from '@/data/site';
-import { testimonials, faqs, features } from '@/data/home';
+import { siteConfig, testimonials, faqs, features, navLinks, footerLinks, workflowSteps } from '@/data/site';
 import { Link000 } from '@/components/skiper40';
 import { ThemeToggleButton3 } from '@/components/skiper4';
 
@@ -68,14 +67,13 @@ export default function Home() {
       
       {/* Navigation - Glass Pill */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl rounded-full bg-surface/70 backdrop-blur-xl border border-border/60 shadow-sm flex items-center justify-between px-6 py-3">
-        <Link href="/" className="font-heading font-bold tracking-tight text-lg">
+        <Link href="/" className="font-heading font-bold tracking-tight text-xl z-50">
           {siteConfig.name}
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-text-muted">
-          <Link000 href="#workflow" className="hover:text-primary transition-colors">Workflow</Link000>
-          <Link000 href="#showcase" className="hover:text-primary transition-colors">Showcase</Link000>
-          <Link000 href="#features" className="hover:text-primary transition-colors">Features</Link000>
-          <Link000 href="#faq" className="hover:text-primary transition-colors">FAQ</Link000>
+          {navLinks.map((link) => (
+            <Link000 key={link.label} href={link.href} className="hover:text-primary transition-colors">{link.label}</Link000>
+          ))}
         </div>
         <div className="flex items-center gap-3">
           <ThemeToggleButton3
@@ -106,10 +104,10 @@ export default function Home() {
             Invite-Only Beta
           </motion.div>
           <motion.h1 variants={heroVariants} className="font-heading text-[3.5rem] md:text-[5vw] leading-[1.02] tracking-tight font-bold mb-8 max-w-3xl text-balance">
-            Eat well, one ordinary day at a time.
+            Timeless wisdom for the modern plate.
           </motion.h1>
           <motion.p variants={heroVariants} className="text-lg md:text-xl text-text-muted max-w-xl leading-relaxed mb-10 text-pretty">
-            {siteConfig.name} keeps your meals, reminders, and nutrition habits clear enough to return to every day, without the friction of spreadsheets.
+            More than a tracker, {siteConfig.name} is a mindful companion for your holistic health. We bridge ancient wisdom with gentle intelligence to help you align what you eat with how you feel.
           </motion.p>
           <motion.div variants={heroVariants} className="flex flex-col sm:flex-row gap-4">
             <AnnuraButton asChild className="h-14 px-8 text-sm shadow-aura-sage">
@@ -168,15 +166,11 @@ export default function Home() {
 
       {/* Workflow (Scrubbing Text Reveals) */}
       <section id="workflow" className="py-32 md:py-48 px-6 max-w-5xl mx-auto flex flex-col gap-32">
-        <ScrubText>
-          Build a routine around what you already eat. <span className="text-primary">Log without overthinking.</span>
-        </ScrubText>
-        <ScrubText>
-          Remember the moments that matter. <span className="text-warning-text">Set reminders that support your schedule</span> instead of interrupting it.
-        </ScrubText>
-        <ScrubText>
-          Pick up on any device. Your daily routine <span className="text-slate">stays close whether you are at home or out.</span>
-        </ScrubText>
+        {workflowSteps.map((step, idx) => (
+          <ScrubText key={idx}>
+            {step.prefix} <span className={idx === 0 ? "text-primary" : idx === 1 ? "text-warning-text" : "text-slate"}>{step.highlight}</span>
+          </ScrubText>
+        ))}
       </section>
 
       {/* App UI Showcase (Skiper16 Stacked Sticky Cards) */}
@@ -189,7 +183,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-24 max-w-3xl">
             <h2 className="font-heading text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">
-              Made for the parts of tracking that need less friction.
+              Designed for a life of balance, not a life of tracking.
             </h2>
           </div>
           
@@ -203,8 +197,8 @@ export default function Home() {
                 </div>
                 <div className="absolute right-0 bottom-0 w-[80%] md:w-[60%] h-[80%] translate-x-12 translate-y-12 rounded-tl-[2rem] overflow-hidden shadow-2xl transition-transform duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-2 group-hover:-translate-x-2">
                   <Image
-                    src="https://picsum.photos/seed/dashboard/1200/900"
-                    alt="App interface"
+                    src={features[0].image || "https://picsum.photos/seed/dashboard/1200/900"}
+                    alt={features[0].imageAlt || "App interface"}
                     fill
                     className="object-cover object-left-top contrast-125"
                   />
@@ -224,8 +218,8 @@ export default function Home() {
             <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 row-span-1">
               <AnnuraAuraCard className="h-full group border-none bg-surface p-0 overflow-hidden relative">
                  <Image
-                    src="https://picsum.photos/seed/sync/800/800"
-                    alt="Sync"
+                    src={features[2].image || "https://picsum.photos/seed/sync/800/800"}
+                    alt={features[2].imageAlt || "Sync"}
                     fill
                     className="object-cover grayscale mix-blend-luminosity transition-transform duration-1000 ease-out group-hover:scale-110"
                   />
@@ -244,8 +238,8 @@ export default function Home() {
                 </div>
                 <div className="w-full md:w-1/2 aspect-square relative rounded-[2rem] overflow-hidden shadow-aura-sage transition-transform duration-700 ease-out group-hover:scale-105">
                   <Image
-                    src="https://picsum.photos/seed/privacybowl/800/800"
-                    alt="Privacy"
+                    src={features[3].image || "https://picsum.photos/seed/privacybowl/800/800"}
+                    alt={features[3].imageAlt || "Privacy"}
                     fill
                     className="object-cover contrast-125 opacity-90 mix-blend-luminosity"
                   />
@@ -296,13 +290,16 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 border-t border-border px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <Link href="/" className="font-heading font-bold tracking-tight text-xl">
-            {siteConfig.name.substring(0, 3)}<span className="text-primary">{siteConfig.name.substring(3)}</span>
-          </Link>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <Link href="/" className="font-heading font-bold tracking-tight text-2xl">
+              {siteConfig.name.substring(0, 3)}<span className="text-primary">{siteConfig.name.substring(3)}</span>
+            </Link>
+            <p className="text-sm font-medium text-text-muted">{siteConfig.tagLine}</p>
+          </div>
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm font-medium text-text-muted">
-            <Link000 href="/legal/privacy_policies" className="hover:text-primary transition-colors">Privacy</Link000>
-            <Link000 href="/legal/terms_of_service" className="hover:text-primary transition-colors">Terms</Link000>
-            <Link000 href="/delete-account" className="hover:text-primary transition-colors">Delete Account</Link000>
+            {footerLinks.map((link) => (
+              <Link000 key={link.label} href={link.href} className="hover:text-primary transition-colors">{link.label}</Link000>
+            ))}
           </div>
           <p className="text-sm text-text-muted">© {new Date().getFullYear()} {siteConfig.name}</p>
         </div>
