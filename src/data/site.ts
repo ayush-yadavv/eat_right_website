@@ -4,7 +4,7 @@ export const siteConfig = {
   description: 'The ancient art of mindful eating, powered by modern AI. Know your food, fuel your energy.',
   logo: '/images/logo/annura-icon.svg',
   url: 'https://app.ay7.me',
-  ogImage: 'https://app.ay7.me/og-image.jpg',
+  ogImage: 'https://app.ay7.me/og-image.webp',
   contact: {
     email: 'play.ay11@gmail.com',
     phone: '+1 (234) 567-890',

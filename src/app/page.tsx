@@ -33,7 +33,7 @@ export default function Page() {
               "@type": "Organization",
               "name": "Annura AI",
               "url": "https://app.ay7.me",
-              "logo": "https://app.ay7.me/og-image.jpg",
+              "logo": "https://app.ay7.me/og-image.webp",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-234-567-890",
