@@ -26,9 +26,9 @@ export const siteConfig = {
 
 export type SiteConfig = typeof siteConfig
 export const testimonials = [
-  { quote: "So quiet and out of the way.", name: "Sarah L.", role: "Early Adopter" },
-  { quote: "Doesn't feel like a spreadsheet.", name: "Mark T.", role: "Beta Tester" },
-  { quote: "Reminders that actually help.", name: "Elena G.", role: "Early Adopter" },
+  { quote: "Snapping a photo of my meal and getting instant macros feels like magic.", name: "Priya Patel", role: "Beta Tester" },
+  { quote: "The fasting timers are seamless, and I love how private and secure it all feels.", name: "Lukas Wagner", role: "Early Adopter" },
+  { quote: "Chatting with the AI for healthy recipe ideas completely transformed my weekly prep.", name: "Chloe Murphy", role: "Beta Tester" },
 ];
 
 export const faqs = [

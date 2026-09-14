@@ -38,34 +38,34 @@ const StickyCard_001 = ({
           scale,
           top: `calc(4vh + ${i * 24}px)`,
         }}
-        className="relative flex h-[55vh] min-h-[440px] max-h-[640px] w-full max-w-6xl origin-top flex-col overflow-hidden rounded-[2rem] border border-border/80 bg-surface shadow-2xl md:flex-row"
+        className="relative flex h-[75vh] min-h-[580px] max-h-[800px] md:h-[55vh] md:min-h-[440px] md:max-h-[640px] w-full max-w-6xl origin-top flex-col overflow-hidden rounded-[2rem] border border-border/80 bg-surface shadow-2xl md:flex-row"
       >
-        <div className="relative flex flex-1 flex-col justify-between p-8 md:p-12 lg:p-14 z-10 bg-surface/95 backdrop-blur-md">
+        <div className="relative flex flex-1 flex-col justify-between p-6 sm:p-8 md:p-12 lg:p-14 z-10 bg-surface/95 backdrop-blur-md">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 md:mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">
               {tag}
             </div>
-            <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-text-main mb-4">
+            <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-text-main mb-3 md:mb-4">
               {title}
             </h3>
-            <p className="text-base sm:text-lg text-text-muted max-w-md leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-text-muted max-w-md leading-relaxed">
               {description}
             </p>
           </div>
-          <div className="flex items-center gap-3 pt-6 border-t border-border/50 text-xs text-text-muted font-mono">
+          <div className="flex items-center gap-3 pt-4 md:pt-6 border-t border-border/50 text-xs text-text-muted font-mono mt-4 md:mt-0">
             <span>0{i + 1}</span>
             <span className="h-px w-8 bg-border" />
             <span>0{projects.length}</span>
           </div>
         </div>
 
-        <div className="relative flex-[1.4] h-64 md:h-full w-full overflow-hidden bg-surface-hi/20 flex items-center justify-center">
+        <div className="relative flex-[1.6] min-h-[300px] md:h-full w-full overflow-hidden bg-surface-hi/20 flex items-center justify-center">
           <Image
             src={src}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain p-6 transition-transform duration-700 hover:scale-105 drop-shadow-2xl"
+            className="object-contain p-2 sm:p-4 md:p-6 transition-transform duration-700 hover:scale-105 drop-shadow-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface/80 via-transparent to-transparent pointer-events-none" />
         </div>

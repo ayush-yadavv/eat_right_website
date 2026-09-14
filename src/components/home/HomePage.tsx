@@ -9,6 +9,7 @@ import { AnnuraAuraCard } from '@/components/annura-aura-card';
 import { siteConfig, testimonials, faqs, features, navLinks, footerLinks, workflowSteps } from '@/data/site';
 import { Link000 } from '@/components/skiper40';
 import { ThemeToggleButton3 } from '@/components/skiper4';
+import { User } from 'lucide-react';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ReactLenis from 'lenis/react';
@@ -142,19 +143,19 @@ export default function Home() {
         <div className="w-full relative flex overflow-hidden">
           <motion.div 
             animate={{ x: [0, "-50%"] }}
-            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 42, ease: "linear" }}
             className="flex gap-12 items-center whitespace-nowrap pl-12 min-w-max"
           >
             {[...Array(4)].map((_, index) => (
               <React.Fragment key={index}>
                 {testimonials.map((t, i) => (
                   <div key={`${index}-${i}`} className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-matcha-fill overflow-hidden relative shadow-sm">
-                       <Image src={`https://picsum.photos/seed/${t.name.split(' ')[0].toLowerCase()}/100/100`} alt={t.name} fill className="object-cover mix-blend-luminosity opacity-80" />
+                    <div className="w-12 h-12 rounded-full bg-surface border border-border/50 flex items-center justify-center text-primary/60 shadow-sm">
+                       <User size={20} strokeWidth={2} />
                     </div>
                     <div className="flex flex-col">
                       <span className="font-heading font-semibold text-text-main text-lg">&quot;{t.quote}&quot;</span>
-                      <span className="text-xs text-text-muted">{t.name}</span>
+                      <span className="text-xs text-text-muted">{t.name} <span className="opacity-50 mx-1">&bull;</span> {t.role}</span>
                     </div>
                   </div>
                 ))}
