@@ -59,13 +59,13 @@ const StickyCard_001 = ({
           </div>
         </div>
 
-        <div className="relative flex-[1.4] h-64 md:h-full w-full overflow-hidden bg-surface-hi/20">
+        <div className="relative flex-[1.4] h-64 md:h-full w-full overflow-hidden bg-surface-hi/20 flex items-center justify-center">
           <Image
             src={src}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-center transition-transform duration-700 hover:scale-105"
+            className="object-contain p-6 transition-transform duration-700 hover:scale-105 drop-shadow-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface/80 via-transparent to-transparent pointer-events-none" />
         </div>

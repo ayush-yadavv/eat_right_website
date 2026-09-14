@@ -32,15 +32,15 @@ export function WaitlistForm() {
       const body = (await response.json()) as { error?: string; message?: string }
 
       if (!response.ok) {
-        throw new Error(body.error ?? 'We could not add you to the waitlist. Please try again.')
+        throw new Error(body.error ?? 'We could not process your request. Please try again.')
       }
 
       form.reset()
       setStatus('success')
-      setMessage(body.message ?? 'You are on the waitlist. We will be in touch.')
+      setMessage(body.message ?? 'Beta request received. We will send your invite soon.')
     } catch (error) {
       setStatus('error')
-      setMessage(error instanceof Error ? error.message : 'We could not add you to the waitlist. Please try again.')
+      setMessage(error instanceof Error ? error.message : 'We could not process your request. Please try again.')
     }
   }
 
@@ -52,8 +52,8 @@ export function WaitlistForm() {
           <AnnuraTextField id="waitlist-name" name="name" type="text" autoComplete="name" placeholder="Your name" />
         </div>
         <div className="field">
-          <label htmlFor="waitlist-email">Email address</label>
-          <AnnuraTextField id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
+          <label htmlFor="waitlist-email">Google Email</label>
+          <AnnuraTextField id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@gmail.com" required />
         </div>
         
         {/* Honeypot field - Bots will fill this, humans won't see it */}
@@ -63,7 +63,7 @@ export function WaitlistForm() {
         </div>
       </div>
       <AnnuraButton type="submit" isLoading={status === 'submitting'} className="w-full mt-4">
-        {status === 'submitting' ? 'Joining waitlist' : 'Join waitlist'}
+        {status === 'submitting' ? 'Requesting Access' : 'Request Beta Access'}
       </AnnuraButton>
       <p className="form-note">
         By joining, you agree to receive {siteConfig.name} updates. Read our{' '}

@@ -20,6 +20,7 @@ export const siteConfig = {
   links: {
     twitter: 'https://twitter.com/eatright',
     github: 'https://github.com/eatright',
+    playStore: 'https://play.google.com/store/apps/details?id=com.annura.ai',
   },
 }
 
@@ -32,8 +33,12 @@ export const testimonials = [
 
 export const faqs = [
   {
-    question: "How do I get an invite to the beta?",
-    answer: "We are rolling out invites on a weekly basis to ensure server stability. Join the waitlist below to reserve your spot in line."
+    question: "How do I join the Closed Beta?",
+    answer: "We are currently in Google Play Closed Testing. Submit your Google Play email address via the form at the bottom of this page. We will manually add you to the testing list and send you the official download link!"
+  },
+  {
+    question: "Is the app available on iOS?",
+    answer: "Currently, Annura AI is available exclusively on Android via the Google Play Store. We are working hard on an iOS version for the future."
   },
   {
     question: "Is my health data private?",
@@ -50,7 +55,7 @@ export const features = [
     id: "ai-vision",
     title: "The Art of Presence",
     description: "Pause. Breathe. Nourish. We've replaced the anxiety of data-entry with a gentle, visual way to remain present and grateful for every meal.",
-    image: "https://picsum.photos/seed/dashboard/1200/900",
+    image: "/images/app/featured-graphic.webp",
     imageAlt: "Aesthetic lifestyle imagery",
     layout: "col-span-1 md:col-span-2 row-span-1",
     type: "image-right"
@@ -84,34 +89,34 @@ export const features = [
 
 export const projects = [
   {
-    title: "The Art of Presence",
-    description: "A gentle, visual way to remain present and grateful for every meal, without the anxiety of tracking.",
-    src: "/images/lummi/img8.png",
-    tag: "Mindfulness",
+    title: "AI Meal Logging",
+    description: "Snap a photo and let Annura's AI break down the nutrition instantly. Log your meals, estimate calories, and get macronutrients in seconds.",
+    src: "/images/app/meal-analysis.webp",
+    tag: "AI Logging",
   },
   {
-    title: "Harmony in Motion",
-    description: "Adaptive, gentle cues that fit seamlessly into your natural daily rhythm.",
-    src: "/images/lummi/img14.png",
-    tag: "Rhythm",
+    title: "Annura AI Chat",
+    description: "Chat with Annura AI anytime for personalized meal suggestions, recipe ideas, nutritional breakdowns, and healthy eating advice.",
+    src: "/images/app/ai-chat.webp",
+    tag: "AI Assistant",
   },
   {
-    title: "Uncompromising Purity",
-    description: "Effortlessly uncover what nourishes you, empowering you to choose foods that elevate your life force.",
-    src: "/images/lummi/img10.png",
-    tag: "Purity",
+    title: "Intermittent Fasting",
+    description: "Stay on track with customizable fasting timers. Choose from popular protocols, monitor your fasting stages, and track progress.",
+    src: "/images/app/fasting.webp",
+    tag: "Fasting Tracker",
   },
   {
-    title: "Your Digital Sanctuary",
-    description: "A peaceful space that travels with you, keeping your wellness journey close at hand wherever you go.",
-    src: "/images/lummi/img15.png",
-    tag: "Sanctuary",
+    title: "Meal Planning",
+    description: "Discover personalized healthy recipes, generate weekly meal plans, and organize your grocery lists to keep nutrition stress-free.",
+    src: "/images/app/weekly-plan.webp",
+    tag: "Meal Plans",
   },
   {
-    title: "Sacred Privacy",
-    description: "Built as a secure vault. Your personal health journey remains entirely yours, free from algorithmic noise.",
-    src: "/images/lummi/img12.png",
-    tag: "Trust",
+    title: "Streaks & Scores",
+    description: "Stay motivated with daily health scores, streak tracking, and milestone achievements designed to help you build lasting healthy habits.",
+    src: "/images/app/achievements.webp",
+    tag: "Milestones",
   },
 ];
 

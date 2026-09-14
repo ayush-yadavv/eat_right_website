@@ -24,7 +24,7 @@ export async function POST(request: Request) {
 
   // Honeypot Check: if a bot filled out the hidden 'address' field, silently succeed.
   if (typeof payload.address === 'string' && payload.address.length > 0) {
-    return Response.json({ message: 'You are on the waitlist. We will be in touch.' })
+    return Response.json({ message: 'Beta request received. We will be in touch.' })
   }
 
   const email = typeof payload.email === 'string' ? payload.email.trim().toLowerCase() : ''
@@ -54,10 +54,10 @@ export async function POST(request: Request) {
       <div style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
         <div style="background-color: #111827; padding: 24px; text-align: center;">
           <h2 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">${siteConfig.name}</h2>
-          <p style="color: #9ca3af; margin: 8px 0 0 0; font-size: 14px;">New Waitlist Signup</p>
+          <p style="color: #9ca3af; margin: 8px 0 0 0; font-size: 14px;">New Closed Beta Request</p>
         </div>
         <div style="padding: 32px 24px;">
-          <p style="color: #374151; font-size: 16px; margin: 0 0 24px 0;">You have a new subscriber who just joined the waitlist.</p>
+          <p style="color: #374151; font-size: 16px; margin: 0 0 24px 0;">Please add the following email to the Google Play Closed Testing list.</p>
           <div style="background-color: #f3f4f6; border-radius: 8px; padding: 20px;">
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
@@ -85,10 +85,10 @@ export async function POST(request: Request) {
           <h2 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.025em;">${siteConfig.name}</h2>
         </div>
         <div style="padding: 40px 32px;">
-          <h3 style="color: #111827; font-size: 20px; font-weight: 600; margin: 0 0 20px 0;">You're on the list! 🎉</h3>
+          <h3 style="color: #111827; font-size: 20px; font-weight: 600; margin: 0 0 20px 0;">Thanks for your interest! 🎉</h3>
           <p style="color: #4b5563; font-size: 16px; margin: 0 0 24px 0; line-height: 1.6;">
             Hi ${safeName || 'there'},<br><br>
-            Thanks for joining the waitlist for ${siteConfig.name}. We're working hard to get things ready and will let you know as soon as we launch!
+            We received your Google Play email. We will manually add you to our Closed Testing list shortly. Keep an eye out for a follow-up email containing your official download link!
           </p>
           <p style="color: #4b5563; font-size: 16px; margin: 0; line-height: 1.6;">
             Stay tuned,<br>
@@ -104,22 +104,22 @@ export async function POST(request: Request) {
       from,
       to: recipient,
       replyTo: email,
-      subject: `🚀 New Waitlist Signup: ${safeEmail}`,
+      subject: `🚀 New Closed Beta Request: ${safeEmail}`,
       html: adminHtmlContent,
-      text: `New waitlist signup for ${siteConfig.name}.\n\nName: ${safeName || 'Not provided'}\nEmail: ${safeEmail}`,
+      text: `Please add the following email to the Google Play Closed Testing list for ${siteConfig.name}.\n\nName: ${safeName || 'Not provided'}\nEmail: ${safeEmail}`,
     }),
     resend.emails.send({
       from,
       to: email,
-      subject: `You're on the ${siteConfig.name} waitlist! 🎉`,
+      subject: `Welcome to the ${siteConfig.name} Closed Beta! 🎉`,
       html: userHtmlContent,
-      text: `Hi ${safeName || 'there'},\n\nThanks for joining the waitlist for ${siteConfig.name}. We're working hard to get things ready and will let you know as soon as we launch!\n\nStay tuned,\nThe ${siteConfig.name} Team`,
+      text: `Hi ${safeName || 'there'},\n\nWe received your Google Play email. We will manually add you to our Closed Testing list shortly. Keep an eye out for a follow-up email containing your official download link!\n\nStay tuned,\nThe ${siteConfig.name} Team`,
     })
   ])
 
   if (adminResponse.error || userResponse.error) {
-    return Response.json({ error: 'We could not add you to the waitlist. Please try again.' }, { status: 502 })
+    return Response.json({ error: 'We could not process your request. Please try again.' }, { status: 502 })
   }
 
-  return Response.json({ message: 'You are on the waitlist. We will be in touch.' })
+  return Response.json({ message: 'Beta request received. We will send your invite soon.' })
 }

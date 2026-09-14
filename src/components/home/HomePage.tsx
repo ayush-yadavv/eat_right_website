@@ -83,7 +83,7 @@ export default function Home() {
             className="size-9 p-2 rounded-full border border-border/80 bg-surface/80 hover:bg-surface text-text-main shadow-xs"
           />
           <AnnuraButton asChild variant="default" className="h-10 px-6 text-xs tracking-wide">
-            <Link href="#invite">Request Invite</Link>
+            <Link href="#invite">Join Closed Beta</Link>
           </AnnuraButton>
         </div>
       </nav>
@@ -101,7 +101,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-warning opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-warning"></span>
             </span>
-            Invite-Only Beta
+            Closed Beta
           </motion.div>
           <motion.h1 variants={heroVariants} className="font-heading text-[3.5rem] md:text-[5vw] leading-[1.02] tracking-tight font-bold mb-8 max-w-3xl text-balance">
             Timeless wisdom for the modern plate.
@@ -111,7 +111,7 @@ export default function Home() {
           </motion.p>
           <motion.div variants={heroVariants} className="flex flex-col sm:flex-row gap-4">
             <AnnuraButton asChild className="h-14 px-8 text-sm shadow-aura-sage">
-              <Link href="#invite">Reserve your spot</Link>
+              <Link href="#invite">Join Closed Beta</Link>
             </AnnuraButton>
             <AnnuraButton asChild variant="secondary" className="h-14 px-8 text-sm">
               <Link href="#features">Explore Features</Link>
@@ -123,14 +123,14 @@ export default function Home() {
           initial={{ y: 80, opacity: 0, scale: 0.95 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
-          className="relative w-full max-w-md lg:w-[45%] aspect-[3/4] lg:translate-y-12"
+          className="relative w-full max-w-md lg:w-[35%] aspect-[1446/1985] lg:translate-y-12"
         >
           <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-border shadow-2xl z-10">
             <Image 
-              src="https://picsum.photos/seed/nutritionapp/800/1200" 
+              src="/images/app/home-screen.webp" 
               alt="App interface" 
               fill 
-              className="object-cover contrast-125 opacity-90"
+              className="object-cover object-top opacity-95"
             />
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 blur-[100px] -z-10 rounded-full" />
@@ -276,10 +276,10 @@ export default function Home() {
         
         <div className="max-w-3xl w-full mx-auto text-center flex flex-col items-center">
           <h2 className="font-heading text-[3.5rem] md:text-[5vw] font-bold tracking-tight mb-8 leading-[1.1] text-balance">
-            Secure your spot.
+            Join the Closed Beta.
           </h2>
           <p className="text-xl md:text-2xl text-text-muted mb-12 text-balance max-w-2xl">
-            Leave your email and we will send an invite code directly to your inbox as soon as server capacity allows.
+            Leave your Google Play email below. We&apos;ll manually add you to the testing list and send you the download link.
           </p>
           <div className="w-full max-w-lg text-left bg-background/50 backdrop-blur-xl p-8 rounded-3xl border border-border/50 shadow-2xl">
             <WaitlistForm />
