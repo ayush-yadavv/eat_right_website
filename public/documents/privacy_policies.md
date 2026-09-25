@@ -26,6 +26,11 @@ With your explicit consent, Annura AI reads health metrics via Google Health Con
 * **App Performance & Crash Logs:** Anonymous crash logs and diagnostic metrics collected via Firebase Crashlytics and Firebase Performance Monitoring.
 * **Device Identifiers:** Push notification tokens (Firebase Cloud Messaging - FCM) to send meal, fasting, and hydration reminders.
 
+### D. Voice Assistant & App Action Interactions (Google Assistant / Gemini)
+When you interact with Annura AI using system voice assistants or platform shortcuts (such as App Actions via Google Assistant or Gemini on Android):
+* **Intent & Parameters:** Spoken commands and parameters (such as a requested food item, meal type, or fasting timer command) are interpreted by your operating system's voice platform and transmitted to the App via secure on-device deep links to fulfill your request.
+* **Ambient Display & Voice Privacy:** We restrict voice-surfaced and ambient display outputs to general tracking metrics (e.g., elapsed fasting duration, meal logged status). We do not broadcast sensitive medical conditions, allergies, or private profile records to unauthenticated ambient or shared smart displays.
+
 ---
 
 ## 2. How We Use Your Information
@@ -49,6 +54,7 @@ Because health and wellness data is highly sensitive, we adhere to strict Google
 ## 4. How Your Data is Shared and Processed
 * **Generative AI API Processing:** Text queries and food photos submitted to the AI assistant are processed securely via enterprise generative AI APIs for instant nutritional analysis. Data processed via AI APIs is subject to enterprise privacy commitments and is not used to train public models.
 * **Firebase Cloud Infrastructure:** Account profile details and meal log histories are stored securely using Firebase Firestore. All data in transit is encrypted using HTTPS / TLS 1.3 protocols.
+* **Voice Assistant & System Integrations:** When you trigger voice actions or system shortcuts via Google Assistant or Gemini, intent data is processed in accordance with Google's API policies and the [Actions on Google Policies](https://developers.google.com/actions/terms). User health profiles are never shared with advertising networks.
 * **No Third-Party Ad Networks:** We do not include third-party ad networks or data-broker trackers in Annura AI.
 
 ---

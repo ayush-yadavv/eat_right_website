@@ -85,11 +85,21 @@ These Terms shall be governed by and construed in accordance with the laws of th
 
 ---
 
-## 12. Changes to These Terms
+## 12. Voice Assistants, Shortcuts, and Third-Party System Integrations (Actions on Google / App Actions)
+* **Voice-Enabled Interactions:** The Service may offer integration with system voice assistants, platform shortcuts, and assistive services such as Google Assistant, Gemini on Android, and Actions on Google ("App Actions").
+* **Speech Recognition & Interpretation:** Voice-based interactions rely on speech recognition and natural language interpretation provided by third-party operating systems and devices. We do not guarantee the error-free transcription or execution of spoken commands. You are responsible for reviewing logged meals, timers, or parameter changes executed via voice inputs.
+* **Non-Medical Nature of Voice Summaries:** Voice responses, spoken nutrition summaries, or smart display cards generated via App Actions are strictly subject to Section 3 (Medical Disclaimer). Auditory outputs do not constitute medical diagnoses, treatments, or clinical advice.
+* **In-App Digital Purchases Only:** In compliance with platform policies, voice assistant transaction interfaces are not used for the purchase of digital subscriptions or memberships. Any digital purchases or subscriptions must be completed directly within the Annura AI application utilizing authorized platform billing (Google Play In-App Billing).
+* **Third-Party Platform Terms:** By utilizing platform voice or shortcut features to access the Service, you acknowledge that your use is additionally governed by the applicable platform terms, including the [Terms of Service for Actions on Google](https://developers.google.com/actions/terms) and Google APIs Terms of Service.
+
+---
+
+## 13. Changes to These Terms
 We reserve the right to modify these Terms at any time. We will notify you of any material changes by updating the "Last Updated" date at the top of these Terms and, where appropriate, through in-app notifications. Your continued use of the Service following the posting of changes constitutes acceptance of those changes.
 
 ---
 
-## 13. Contact Us
+## 14. Contact Us
 If you have any questions, concerns, or feedback regarding these Terms, please contact us at:
 * **Email:** support@app.ay7.me
+
