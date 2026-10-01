@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { useState, useEffect, useSyncExternalStore } from 'react'
 import { Gift, Copy, Check, ExternalLink, QrCode } from 'lucide-react'
 import { AnnuraButton } from '@/components/annura-button'
 import { Link001 } from '@/components/skiper40'
@@ -10,27 +9,39 @@ interface ReferralClientProps {
   code: string
   playStoreUrl: string
   shareUrl: string
+  appIntentUrl?: string
 }
 
-export function ReferralClient({ code, playStoreUrl, shareUrl }: ReferralClientProps) {
+export function ReferralClient({
+  code,
+  playStoreUrl,
+  shareUrl,
+  appIntentUrl,
+}: ReferralClientProps) {
   const [copied, setCopied] = useState(false)
-  const [isAndroid, setIsAndroid] = useState(false)
+
+  // UA never changes during a page session; the subscribe is intentionally a no-op.
+  // useSyncExternalStore is used here solely to suppress SSR/client hydration mismatches
+  // (server always returns false, client reads the real UA after hydration).
+  const isAndroid = useSyncExternalStore(
+    () => () => {},
+    () => /android/i.test(navigator.userAgent),
+    () => false
+  )
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const ua = navigator.userAgent.toLowerCase()
-      const android = ua.includes('android')
-      setIsAndroid(android)
-
-      // Automatic redirect on Android mobile devices after brief delay
-      if (android) {
-        const timer = setTimeout(() => {
-          window.location.href = playStoreUrl
-        }, 1200)
-        return () => clearTimeout(timer)
-      }
+    // On Android mobile: attempt to launch the installed app directly via Android Intent.
+    // If installed: OS directly opens com.annura.ai with the referral code.
+    // If not installed: Chrome seamlessly falls back to the Play Store with referral attribution.
+    // Timer is 200ms (not 600ms) because this effect only fires post-hydration, after the
+    // page is already fully painted — no additional delay needed for visual readiness.
+    if (isAndroid && appIntentUrl) {
+      const timer = setTimeout(() => {
+        window.location.href = appIntentUrl
+      }, 200)
+      return () => clearTimeout(timer)
     }
-  }, [playStoreUrl])
+  }, [isAndroid, appIntentUrl])
 
   const handleCopy = async () => {
     try {
@@ -110,15 +121,35 @@ export function ReferralClient({ code, playStoreUrl, shareUrl }: ReferralClientP
         </div>
 
         {/* CTA Actions */}
-        <div className="utility-page__actions flex flex-col sm:flex-row items-center justify-center gap-4">
-          <AnnuraButton asChild className="w-full sm:w-auto">
-            <a href={playStoreUrl} rel="noopener noreferrer">
-              <span>{isAndroid ? 'Opening Google Play...' : 'Get on Google Play'}</span>
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
-          </AnnuraButton>
+        <div className="utility-page__actions flex flex-col sm:flex-row items-center justify-center gap-3">
+          {isAndroid && appIntentUrl ? (
+            <>
+              <AnnuraButton asChild className="w-full sm:w-auto">
+                <a href={appIntentUrl}>
+                  <span>Open in Annura AI</span>
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </AnnuraButton>
 
-          <Link001 href="/" className="text-primary font-medium">
+              <a
+                href={playStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-semibold text-[hsl(var(--text-muted))] hover:text-primary transition py-1"
+              >
+                Don&apos;t have the app? Get on Google Play
+              </a>
+            </>
+          ) : (
+            <AnnuraButton asChild className="w-full sm:w-auto">
+              <a href={playStoreUrl} target="_blank" rel="noopener noreferrer">
+                <span>Get on Google Play</span>
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </AnnuraButton>
+          )}
+
+          <Link001 href="/" className="text-primary font-medium text-sm">
             Learn more about Annura
           </Link001>
         </div>

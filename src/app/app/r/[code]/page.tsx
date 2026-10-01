@@ -36,12 +36,16 @@ export default async function ReferralPage({ params }: PageProps) {
     cleanCode
   )}`
   const shareUrl = `${siteConfig.url}/app/r/${cleanCode}`
+  const appIntentUrl = `intent://r/${cleanCode}#Intent;scheme=annura;package=com.annura.ai;S.browser_fallback_url=${encodeURIComponent(
+    playStoreUrl
+  )};end`
 
   return (
     <ReferralClient
       code={cleanCode}
       playStoreUrl={playStoreUrl}
       shareUrl={shareUrl}
+      appIntentUrl={appIntentUrl}
     />
   )
 }
