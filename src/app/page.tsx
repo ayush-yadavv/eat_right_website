@@ -32,12 +32,12 @@ export default function Page() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Annura AI",
-              "url": "https://app.ay7.me",
-              "logo": "https://app.ay7.me/og-image.webp",
+              "url": "https://annura.ay7.me",
+              "logo": "https://annura.ay7.me/og-image.webp",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-234-567-890",
-                "email": "support@app.ay7.me",
+                "email": "support@annura.ay7.me",
                 "contactType": "customer support"
               },
               "address": {
