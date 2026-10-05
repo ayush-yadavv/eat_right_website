@@ -128,8 +128,8 @@ export const navLinks = [
 ];
 
 export const footerLinks = [
-  { label: "Privacy", href: "/legal/privacy_policies" },
-  { label: "Terms", href: "/legal/terms_of_service" },
+  { label: "Privacy", href: "/legal/privacy-policy" },
+  { label: "Terms", href: "/legal/terms-of-service" },
   { label: "Delete Account", href: "/delete-account" },
 ];
 

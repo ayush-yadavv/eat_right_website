@@ -18,6 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -42,6 +45,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     images: ['/og-image.webp'],
+  },
+  verification: {
+    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_CODE', // Replace with your actual Search Console code
   },
 }
 

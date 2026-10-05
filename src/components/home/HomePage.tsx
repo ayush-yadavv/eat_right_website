@@ -131,6 +131,7 @@ export default function Home() {
               src="/images/app/home-screen.webp" 
               alt="App interface" 
               fill 
+              priority
               className="object-cover object-top opacity-95"
             />
           </div>

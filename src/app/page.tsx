@@ -1,6 +1,5 @@
 import HomePage from '@/components/home/HomePage';
-
-import { siteConfig } from '@/data/site';
+import { siteConfig, faqs } from '@/data/site';
 
 export const metadata = {
   title: `${siteConfig.name} | ${siteConfig.tagLine}`,
@@ -8,14 +7,23 @@ export const metadata = {
 };
 
 export default function Page() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
-      {/* 
-        We add a visually hidden server-rendered block with an H1 and > 500 characters of text
-        so AI crawlers (and SEO bots) can read the raw HTML without executing JavaScript.
-      */}
       <div className="sr-only" aria-hidden="true">
-        <h1>Annura AI: Timeless wisdom for the modern plate</h1>
+        <h2>Annura AI: Timeless wisdom for the modern plate</h2>
         <p>
           In ancient philosophy, food is not just calories it is the very foundation of your life force and energy. They mastered the art of eating for holistic wellbeing.
           Annura brings this timeless mastery into the modern world. Named after the Sanskrit word for food and grain (Anna), combined with your energetic wellbeing (Aura), our app bridges the gap between ancient wisdom and cutting-edge artificial intelligence.
@@ -58,7 +66,8 @@ export default function Page() {
               "sameAs": [
                 "https://github.com/eatright"
               ]
-            }
+            },
+            faqSchema
           ])
         }}
       />
