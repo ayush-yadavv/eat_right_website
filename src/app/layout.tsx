@@ -46,9 +46,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.webp'],
   },
-  verification: {
-    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_CODE', // Replace with your actual Search Console code
-  },
 }
 
 import { ThemeProvider } from '@/components/theme-provider';
