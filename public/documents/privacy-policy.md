@@ -70,7 +70,7 @@ We implement administrative, technical, and physical security measures to protec
 You have complete control over your personal data:
 
 * **In-App Account Deletion:** You can delete your account and all associated data at any time via **Settings > Account > Delete Account** in the Annura AI app. This immediately purges your account, profile, meal history, and local cached data.
-* **Web Deletion Request:** If you do not have the app installed, you can submit a public deletion request on our website at: [https://app.ay7.me/delete-account](https://app.ay7.me/delete-account) or by emailing support.
+* **Web Deletion Request:** If you do not have the app installed, you can submit a public deletion request on our website at: [https://annura.ay7.me/delete-account](https://annura.ay7.me/delete-account) or by emailing play.ay11@gmail.com.
 * **Revoking Permissions:** You can revoke Annura AI's access to Health Connect or Notification permissions at any time through your Android System Settings.
 
 ---
@@ -87,4 +87,4 @@ Annura AI is **exclusively intended for adults aged 18 and older**. We do not kn
 
 ## 9. Contact Us
 If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact our support team at:
-* **Support Email:** support@app.ay7.me
+* **Support Email:** play.ay11@gmail.com

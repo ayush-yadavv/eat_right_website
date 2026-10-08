@@ -12,6 +12,35 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/privacy',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/terms',
+        destination: '/legal/terms-of-service',
+        permanent: true,
+      },
+      {
+        source: '/legal/privacy_policies',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/legal/privacy-policies',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/legal/terms_of_service',
+        destination: '/legal/terms-of-service',
+        permanent: true,
+      },
+    ];
+  },
 }
 
 export default nextConfig

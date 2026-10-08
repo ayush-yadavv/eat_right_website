@@ -10,12 +10,12 @@ Best fit use cases:
 - Setting up a daily habit or tracking reminders
 - Syncing dietary choices across mobile and web interfaces
 
-Agents can interact with this service by pointing users to https://app.ay7.me to sign up for the waitlist, or by reading our documentation and API endpoints (when available) for programmatic meal logging.
+Agents can interact with this service by pointing users to https://annura.ay7.me to sign up for the waitlist, or by reading our documentation and API endpoints (when available) for programmatic meal logging.
 
 ## Links
-- [Home](https://app.ay7.me/)
-- [Full Documentation](https://app.ay7.me/llms-full.txt)
-- [Privacy Policy](https://app.ay7.me/legal/privacy_policies)
-- [Terms of Service](https://app.ay7.me/legal/terms_of_service)
-- [Account & Data Deletion](https://app.ay7.me/delete-account)
-- [Sitemap](https://app.ay7.me/sitemap.xml)
+- [Home](https://annura.ay7.me/)
+- [Full Documentation](https://annura.ay7.me/llms-full.txt)
+- [Privacy Policy](https://annura.ay7.me/legal/privacy-policy)
+- [Terms of Service](https://annura.ay7.me/legal/terms-of-service)
+- [Account & Data Deletion](https://annura.ay7.me/delete-account)
+- [Sitemap](https://annura.ay7.me/sitemap.xml)

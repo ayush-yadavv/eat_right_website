@@ -56,7 +56,7 @@ By enabling Google Health Connect permissions:
 
 ## 7. Data Ownership and Deletion Rights
 * **Your Data:** You retain ownership of the data you input into the Service.
-* **Right to Deletion (GDPR/CCPA Compliance):** You have the right to delete your user account and all associated personal data at any time. You can initiate data deletion directly in the app settings (`Settings > Account > Delete Account`) or via our public web portal at [https://app.ay7.me/delete-account](https://app.ay7.me/delete-account).
+* **Right to Deletion (GDPR/CCPA Compliance):** You have the right to delete your user account and all associated personal data at any time. You can initiate data deletion directly in the app settings (`Settings > Account > Delete Account`) or via our public web portal at [https://annura.ay7.me/delete-account](https://annura.ay7.me/delete-account).
 
 ---
 
@@ -101,5 +101,5 @@ We reserve the right to modify these Terms at any time. We will notify you of an
 
 ## 14. Contact Us
 If you have any questions, concerns, or feedback regarding these Terms, please contact us at:
-* **Email:** support@app.ay7.me
+* **Email:** play.ay11@gmail.com
 

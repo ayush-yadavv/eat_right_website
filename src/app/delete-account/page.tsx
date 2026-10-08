@@ -168,8 +168,8 @@ export default function DeleteAccountPage() {
         <footer className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-muted">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/legal/privacy_policies" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/legal/terms_of_service" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/legal/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/legal/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </footer>
       </div>

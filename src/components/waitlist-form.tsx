@@ -67,7 +67,7 @@ export function WaitlistForm() {
       </AnnuraButton>
       <p className="form-note">
         By joining, you agree to receive {siteConfig.name} updates. Read our{' '}
-        <Link000 href="/legal/privacy_policies" className="text-primary font-medium">privacy policy</Link000>.
+        <Link000 href="/legal/privacy-policy" className="text-primary font-medium">privacy policy</Link000>.
       </p>
       {status !== 'idle' && (
         <p className={`form-status form-status--${status}`} role={status === 'error' ? 'alert' : 'status'} aria-live="polite">

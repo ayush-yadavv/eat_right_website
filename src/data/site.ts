@@ -18,8 +18,6 @@ export const siteConfig = {
     }
   },
   links: {
-    twitter: 'https://twitter.com/eatright',
-    github: 'https://github.com/eatright',
     playStore: 'https://play.google.com/store/apps/details?id=com.annura.ai',
   },
 }
