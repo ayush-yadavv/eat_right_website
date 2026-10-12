@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/terms',
-        destination: '/legal/terms-of-service',
+        destination: '/legal/terms-of-use',
         permanent: true,
       },
       {
@@ -35,8 +35,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/legal/terms-of-service',
+        destination: '/legal/terms-of-use',
+        permanent: true,
+      },
+      {
         source: '/legal/terms_of_service',
-        destination: '/legal/terms-of-service',
+        destination: '/legal/terms-of-use',
+        permanent: true,
+      },
+      {
+        source: '/legal/terms_of_use',
+        destination: '/legal/terms-of-use',
         permanent: true,
       },
     ];

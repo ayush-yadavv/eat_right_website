@@ -127,7 +127,7 @@ export const navLinks = [
 
 export const footerLinks = [
   { label: "Privacy", href: "/legal/privacy-policy" },
-  { label: "Terms", href: "/legal/terms-of-service" },
+  { label: "Terms of Use", href: "/legal/terms-of-use" },
   { label: "Delete Account", href: "/delete-account" },
 ];
 

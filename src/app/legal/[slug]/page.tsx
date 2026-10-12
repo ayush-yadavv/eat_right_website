@@ -13,7 +13,7 @@ interface LegalDocInfo {
   fileName: string;
   title: string;
   isPrivacy: boolean;
-  canonicalSlug: 'privacy-policy' | 'terms-of-service';
+  canonicalSlug: 'privacy-policy' | 'terms-of-use';
 }
 
 function resolveLegalDocument(slug: string): LegalDocInfo | null {
@@ -26,12 +26,12 @@ function resolveLegalDocument(slug: string): LegalDocInfo | null {
       canonicalSlug: 'privacy-policy',
     };
   }
-  if (['terms-of-service', 'terms_of_service', 'terms'].includes(normalized)) {
+  if (['terms-of-use', 'terms_of_use', 'terms-of-service', 'terms_of_service', 'terms'].includes(normalized)) {
     return {
-      fileName: 'terms-of-service.md',
-      title: 'Terms of Service',
+      fileName: 'terms-of-use.md',
+      title: 'Terms of Use',
       isPrivacy: false,
-      canonicalSlug: 'terms-of-service',
+      canonicalSlug: 'terms-of-use',
     };
   }
 
@@ -41,6 +41,7 @@ function resolveLegalDocument(slug: string): LegalDocInfo | null {
 export async function generateStaticParams() {
   return [
     { slug: 'privacy-policy' },
+    { slug: 'terms-of-use' },
     { slug: 'terms-of-service' },
   ];
 }
@@ -117,7 +118,7 @@ export default async function LegalPage({
             <span>Privacy Policy</span>
           </Link>
           <Link
-            href="/legal/terms-of-service"
+            href="/legal/terms-of-use"
             className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
               !isPrivacy
                 ? 'bg-primary text-primary-foreground shadow-sm'
@@ -125,7 +126,7 @@ export default async function LegalPage({
             }`}
           >
             <FileText className="w-4 h-4" />
-            <span>Terms of Service</span>
+            <span>Terms of Use</span>
           </Link>
           <Link
             href="/delete-account"
@@ -148,7 +149,7 @@ export default async function LegalPage({
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/legal/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link>
-            <Link href="/legal/terms-of-service" className="hover:text-primary transition-colors">Terms</Link>
+            <Link href="/legal/terms-of-use" className="hover:text-primary transition-colors">Terms of Use</Link>
             <Link href="/delete-account" className="hover:text-primary transition-colors">Delete Account</Link>
           </div>
         </footer>

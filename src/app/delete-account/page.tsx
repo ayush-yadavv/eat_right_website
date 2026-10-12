@@ -169,7 +169,7 @@ export default function DeleteAccountPage() {
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/legal/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/legal/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/legal/terms-of-use" className="hover:text-primary transition-colors">Terms of Use</Link>
           </div>
         </footer>
       </div>

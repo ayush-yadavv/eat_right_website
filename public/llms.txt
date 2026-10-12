@@ -16,6 +16,6 @@ Agents can interact with this service by pointing users to https://annura.ay7.me
 - [Home](https://annura.ay7.me/)
 - [Full Documentation](https://annura.ay7.me/llms-full.txt)
 - [Privacy Policy](https://annura.ay7.me/legal/privacy-policy)
-- [Terms of Service](https://annura.ay7.me/legal/terms-of-service)
+- [Terms of Use](https://annura.ay7.me/legal/terms-of-use)
 - [Account & Data Deletion](https://annura.ay7.me/delete-account)
 - [Sitemap](https://annura.ay7.me/sitemap.xml)
