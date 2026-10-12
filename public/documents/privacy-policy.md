@@ -32,7 +32,7 @@ When you interact with Annura AI using system voice assistants or platform short
 * **Ambient Display & Voice Privacy:** We restrict voice-surfaced and ambient display outputs to general tracking metrics (e.g., elapsed fasting duration, meal logged status). We do not broadcast sensitive medical conditions, allergies, or private profile records to unauthenticated ambient or shared smart displays.
 
 ### E. Website Telemetry (Privacy-First, Cookieless Web Analytics)
-When you browse our informational website ([https://annura.ai](https://annura.ai)), we use **Vercel Web Analytics** to measure aggregated, anonymous web traffic.
+When you browse our informational website ([https://annura.ay7.me](https://annura.ay7.me)), we use **Vercel Web Analytics** to measure aggregated, anonymous web traffic.
 * **Privacy-First & Cookieless Architecture:** Vercel Web Analytics operates completely without cookies. It does not set or store any cookies on your browser, does not access device local storage for tracking, does not log or collect personal identifiers, and does not track users across websites.
 * **Telemetry Collected:** Aggregated page views, referring domain, browser engine, operating system, and geographic region (country/city level derived without storing your IP address).
 * **No Cookie Consent Required:** Because our website does not utilize advertising cookies or cross-site tracking technologies, no cookie banner or intrusive consent prompts are necessary under the EU ePrivacy Directive and GDPR.
@@ -84,7 +84,7 @@ We retain personal and sensitive user data only for as long as necessary to prov
 * **AI Chat Queries & Vision Processing:** Text queries and food images submitted for AI analysis are processed securely via Google Gemini APIs to return real-time nutritional breakdowns and conversational guidance. In accordance with enterprise AI data privacy standards, query inputs are processed ephemerally and are not retained or used to train public AI foundation models. Conversational chat context is stored with your user account in Firestore while your account is active and deleted upon account termination.
 * **Device Identifiers & Push Notification Tokens (FCM Tokens):** Retained only while your device remains registered to receive notifications. Push tokens are automatically deleted from our database upon user logout, device deregistration, or app uninstallation.
 * **Technical Performance Telemetry & Crash Diagnostics:** Anonymized crash logs collected via Firebase Crashlytics and diagnostic metrics collected via Firebase Performance Monitoring are retained for a maximum of **90 days** solely for technical diagnostics, debugging, and service stability, after which they are automatically and permanently purged.
-* **Website Analytics Telemetry (Vercel Web Analytics):** Aggregated, cookieless web performance and traffic statistics collected on `annura.ai` are retained in de-identified aggregate reports by Vercel for operational reporting and service optimization. No individual personal records or user tracking identifiers are stored or retained.
+* **Website Analytics Telemetry (Vercel Web Analytics):** Aggregated, cookieless web performance and traffic statistics collected on `annura.ay7.me` are retained in de-identified aggregate reports by Vercel for operational reporting and service optimization. No individual personal records or user tracking identifiers are stored or retained.
 
 ### B. Retention Criteria
 In determining retention periods for personal data, we adhere to the data minimization principle and evaluate:
@@ -100,7 +100,7 @@ You have full ownership and control over your personal data. We provide clear, a
 
 ### A. How to Request Account and Data Deletion
 * **In-App Account Deletion (Immediate Self-Service):** You can delete your account and all associated data at any time directly within the mobile application. Navigate to **Settings > Danger Zone > Delete Account**, type **DELETE** in the confirmation dialog, and confirm. Your user account, profile credentials, meal logs, and local device cache will be permanently purged immediately from active production databases.
-* **Public Web Deletion Request Portal:** If you have uninstalled the app or do not have access to your mobile device, you can submit a deletion request through our public web deletion page at: [https://annura.ai/delete-account](https://annura.ai/delete-account) (or [https://annura.ay7.me/delete-account](https://annura.ay7.me/delete-account)) or by emailing **play.ay11@gmail.com** with the subject *"Account Deletion Request"*. Web deletion requests are verified and fulfilled within 48 hours.
+* **Public Web Deletion Request Portal:** If you have uninstalled the app or do not have access to your mobile device, you can submit a deletion request through our public web deletion page at: [https://annura.ay7.me/delete-account](https://annura.ay7.me/delete-account) or by emailing **play.ay11@gmail.com** with the subject *"Account Deletion Request"*. Web deletion requests are verified and fulfilled within 48 hours.
 * **Selective In-App Data Erasure:** Users can delete individual meal consumption logs or update their dietary restrictions, goals, and health profile metrics at any time directly in the app without deleting their entire account.
 
 ### B. Data Purge Timelines
@@ -158,7 +158,7 @@ Annura AI collects Sensitive Personal Information (specifically, consumer health
 In the preceding 12 months, we have collected the following statutory categories of personal information:
 * **Identifiers:** Name, email address, unique online identifier, Firebase UID, and IP address (masked on website).
 * **Commercial / Dietary Records:** Records of meals logged, calories tracked, macro targets, and food scan analyses.
-* **Internet / Network Activity:** App performance telemetry, crash logs, and non-identifiable web visit metrics on `annura.ai`.
+* **Internet / Network Activity:** App performance telemetry, crash logs, and non-identifiable web visit metrics on `annura.ay7.me`.
 * **Sensitive Personal Information:** Health and physiological metrics (weight, height, allergies, dietary goals, Health Connect activity data).
 
 ### D. California Consumer Rights
@@ -168,7 +168,7 @@ California consumers possess the following rights under the CCPA/CPRA:
 * **Right to Correct:** Request correction of inaccurate personal information.
 * **Right to Non-Discrimination:** We will never deny services, charge different prices, or provide a different level of quality for exercising your CCPA/CPRA rights.
 
-To submit a verifiable consumer request, contact us at **play.ay11@gmail.com** or use our web portal at [https://annura.ai/delete-account](https://annura.ai/delete-account).
+To submit a verifiable consumer request, contact us at **play.ay11@gmail.com** or use our web portal at [https://annura.ay7.me/delete-account](https://annura.ay7.me/delete-account).
 
 ---
 
