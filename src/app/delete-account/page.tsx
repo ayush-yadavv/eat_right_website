@@ -62,15 +62,15 @@ export default function DeleteAccountPage() {
             </li>
             <li className="flex items-start gap-3">
               <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/15 text-primary text-xs font-bold shrink-0 mt-0.5">2</span>
-              <span>Navigate to <strong>Settings</strong> &gt; <strong>Account Management</strong>.</span>
+              <span>Navigate to <strong>Settings</strong> and scroll to the <strong>Danger Zone</strong> section.</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/15 text-primary text-xs font-bold shrink-0 mt-0.5">3</span>
-              <span>Tap <strong className="text-error font-semibold">Delete Account</strong> and review the final confirmation dialog.</span>
+              <span>Tap <strong className="text-error font-semibold">Delete Account</strong>.</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/15 text-primary text-xs font-bold shrink-0 mt-0.5">4</span>
-              <span>Confirm deletion. Your user profile, token credentials, and saved logs will be purged immediately from our active database.</span>
+              <span>Type <strong>DELETE</strong> in the confirmation dialog and confirm. Your user account, profile credentials, and saved logs will be purged immediately from our active database.</span>
             </li>
           </ol>
         </section>

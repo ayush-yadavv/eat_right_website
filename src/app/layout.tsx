@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 }
 
 import { ThemeProvider } from '@/components/theme-provider';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
@@ -82,15 +83,8 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-322ZCZXYX8" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-322ZCZXYX8');
-          `}
-        </Script>
+        {/* Privacy-first, cookieless Vercel Analytics (GDPR/ePrivacy compliant without cookie banners) */}
+        <Analytics />
         <Script id="structured-data" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(jsonLd)}
         </Script>
