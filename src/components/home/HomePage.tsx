@@ -6,10 +6,9 @@ import Link from 'next/link';
 import { WaitlistForm } from '@/components/waitlist-form';
 import { AnnuraButton } from '@/components/annura-button';
 import { AnnuraAuraCard } from '@/components/annura-aura-card';
-import { siteConfig, testimonials, faqs, features, navLinks, footerLinks, workflowSteps } from '@/data/site';
+import { siteConfig, brandHighlights, faqs, features, navLinks, footerLinks, workflowSteps } from '@/data/site';
 import { Link000 } from '@/components/skiper40';
 import { ThemeToggleButton3 } from '@/components/skiper4';
-import { User } from 'lucide-react';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ReactLenis from 'lenis/react';
@@ -129,9 +128,10 @@ export default function Home() {
           <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-border shadow-2xl z-10">
             <Image 
               src="/images/app/home-screen.webp" 
-              alt="App interface" 
+              alt="Annura AI mindful meal tracking app interface displaying daily health score and meal log" 
               fill 
               priority
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 35vw, 450px"
               className="object-cover object-top opacity-95"
             />
           </div>
@@ -139,25 +139,21 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Social Proof (Infinite Marquee) */}
-      <section className="py-24 border-y border-border bg-surface-hi/10 overflow-hidden flex flex-col items-center">
+      {/* Value & Capability Highlights (Infinite Marquee) */}
+      <section className="py-16 border-y border-border bg-surface-hi/10 overflow-hidden flex flex-col items-center">
         <div className="w-full relative flex overflow-hidden">
           <motion.div 
             animate={{ x: [0, "-50%"] }}
-            transition={{ repeat: Infinity, duration: 42, ease: "linear" }}
-            className="flex gap-12 items-center whitespace-nowrap pl-12 min-w-max"
+            transition={{ repeat: Infinity, duration: 38, ease: "linear" }}
+            className="flex gap-6 items-center whitespace-nowrap pl-6 min-w-max"
           >
             {[...Array(4)].map((_, index) => (
               <React.Fragment key={index}>
-                {testimonials.map((t, i) => (
-                  <div key={`${index}-${i}`} className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-surface border border-border/50 flex items-center justify-center text-primary/60 shadow-sm">
-                       <User size={20} strokeWidth={2} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="font-heading font-semibold text-text-main text-lg">&quot;{t.quote}&quot;</span>
-                      <span className="text-xs text-text-muted">{t.name} <span className="opacity-50 mx-1">&bull;</span> {t.role}</span>
-                    </div>
+                {brandHighlights.map((item, i) => (
+                  <div key={`${index}-${i}`} className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-surface/90 border border-border/80 shadow-xs">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <span className="font-heading font-medium text-text-main text-sm">{item.label}</span>
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full">{item.tag}</span>
                   </div>
                 ))}
               </React.Fragment>
@@ -166,22 +162,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Workflow (Scrubbing Text Reveals) */}
-      <section id="workflow" className="py-32 md:py-48 px-6 max-w-5xl mx-auto flex flex-col gap-32">
+      {/* Mindful Philosophy & Rituals (Scrubbing Text Reveals) */}
+      <section id="philosophy" aria-label="Mindful Philosophy" className="py-32 md:py-48 px-6 max-w-5xl mx-auto flex flex-col gap-32">
         {workflowSteps.map((step, idx) => (
           <ScrubText key={idx}>
-            {step.prefix} <span className={idx === 0 ? "text-primary" : idx === 1 ? "text-warning-text" : "text-slate"}>{step.highlight}</span>
+            {step.prefix}{' '}
+            <span className={idx === 0 ? "text-primary" : idx === 1 ? "text-warning-text" : "text-slate"}>{step.highlight}</span>
           </ScrubText>
         ))}
       </section>
 
-      {/* App UI Showcase (Skiper16 Stacked Sticky Cards) */}
-      <div id="showcase">
+      {/* Core App Features (Skiper16 Stacked Sticky Cards) */}
+      <section id="features" aria-label="Core App Features">
         <Skiper16 />
-      </div>
+      </section>
 
-      {/* Features (Gapless Bento Grid) */}
-      <section id="features" className="py-32 px-6 lg:px-12 bg-surface-hi/10 border-y border-border">
+      {/* Brand Pillars & Guiding Principles (Gapless Bento Grid) */}
+      <section id="pillars" aria-label="Brand Pillars" className="py-32 px-6 lg:px-12 bg-surface-hi/10 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-24 max-w-3xl">
             <h2 className="font-heading text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">
@@ -199,9 +196,10 @@ export default function Home() {
                 </div>
                 <div className="absolute right-0 bottom-0 w-[80%] md:w-[60%] h-[80%] translate-x-12 translate-y-12 rounded-tl-[2rem] overflow-hidden shadow-2xl transition-transform duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-2 group-hover:-translate-x-2">
                   <Image
-                    src={features[0].image || "https://picsum.photos/seed/dashboard/1200/900"}
+                    src={features[0].image || "/images/app/featured-graphic.webp"}
                     alt={features[0].imageAlt || "App interface"}
                     fill
+                    sizes="(max-width: 768px) 100vw, 60vw"
                     className="object-cover object-left-top contrast-125"
                   />
                 </div>
@@ -220,9 +218,10 @@ export default function Home() {
             <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 row-span-1">
               <AnnuraAuraCard className="h-full group border-none bg-surface p-0 overflow-hidden relative">
                  <Image
-                    src={features[2].image || "https://picsum.photos/seed/sync/800/800"}
-                    alt={features[2].imageAlt || "Sync"}
+                    src={features[2].image || "/images/app/sync-guidance.webp"}
+                    alt={features[2].imageAlt || "AI Guidance"}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover grayscale mix-blend-luminosity transition-transform duration-1000 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent p-10 flex flex-col justify-end">
@@ -240,9 +239,10 @@ export default function Home() {
                 </div>
                 <div className="w-full md:w-1/2 aspect-square relative rounded-[2rem] overflow-hidden shadow-aura-sage transition-transform duration-700 ease-out group-hover:scale-105">
                   <Image
-                    src={features[3].image || "https://picsum.photos/seed/privacybowl/800/800"}
+                    src={features[3].image || "/images/app/privacy-sanctuary.webp"}
                     alt={features[3].imageAlt || "Privacy"}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover contrast-125 opacity-90 mix-blend-luminosity"
                   />
                 </div>
@@ -283,7 +283,7 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-text-muted mb-12 text-balance max-w-2xl">
             Leave your Google Play email below. We&apos;ll manually add you to the testing list and send you the download link.
           </p>
-          <div className="w-full max-w-lg text-left bg-background/50 backdrop-blur-xl p-8 rounded-3xl border border-border/50 shadow-2xl">
+          <div className="w-full max-w-lg text-left bg-surface/80 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-border shadow-2xl">
             <WaitlistForm />
           </div>
         </div>

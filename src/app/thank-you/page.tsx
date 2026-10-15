@@ -3,9 +3,18 @@ import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
 import { Link001 } from '@/components/skiper40'
 
+import { siteConfig } from '@/data/site'
+
 export const metadata: Metadata = {
   title: 'Thank you',
   description: 'Your message has been received.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/thank-you`,
+  },
 }
 
 export default function ThankYouPage() {

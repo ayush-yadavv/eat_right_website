@@ -7,6 +7,10 @@ import { siteConfig } from '@/data/site'
 export const metadata: Metadata = {
   title: 'App link',
   description: 'This route is reserved for app-specific links.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function AppFallbackPage() {

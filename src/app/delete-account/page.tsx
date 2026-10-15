@@ -8,6 +8,9 @@ import { DeleteAccountRequestActions } from '@/components/delete-account-request
 export const metadata: Metadata = {
   title: `Request Account & Data Deletion`,
   description: `Official instructions and web request options to request permanent account and personal data deletion for ${siteConfig.name}.`,
+  alternates: {
+    canonical: `${siteConfig.url}/delete-account`,
+  },
 };
 
 export default function DeleteAccountPage() {

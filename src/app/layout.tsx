@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import './globals.css'
 import { siteConfig } from '@/data/site'
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
@@ -18,9 +17,6 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  alternates: {
-    canonical: '/',
-  },
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -58,22 +54,61 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: siteConfig.name,
-    '@id': siteConfig.url,
-    url: siteConfig.url,
-    description: siteConfig.description,
-    applicationCategory: 'HealthApplication',
-    operatingSystem: 'iOS, Android',
-    offers: {
-      '@type': 'Offer',
-      category: 'Waitlist access',
-      availability: 'https://schema.org/PreOrder',
-    },
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${siteConfig.url}/#website`,
+        url: siteConfig.url,
+        name: siteConfig.name,
+        description: siteConfig.description,
+        publisher: { '@id': `${siteConfig.url}/#organization` },
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': `${siteConfig.url}/#app`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        description: siteConfig.description,
+        applicationCategory: 'HealthApplication',
+        operatingSystem: 'Android',
+        downloadUrl: siteConfig.links.playStore,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD',
+          category: 'Beta access',
+          availability: 'https://schema.org/PreOrder',
+        },
+        author: { '@id': `${siteConfig.url}/#organization` },
+      },
+      {
+        '@type': 'Organization',
+        '@id': `${siteConfig.url}/#organization`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        logo: `${siteConfig.url}/images/logo/annura-icon.svg`,
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: siteConfig.contact.email,
+          contactType: 'customer support',
+        },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${siteConfig.url}/#founder`,
+        name: 'Ayush Yadav',
+        jobTitle: 'Founder & Software Engineer',
+        url: 'https://ay7.me',
+        sameAs: ['https://github.com/eatright'],
+      },
+    ],
   }
 
   return (
     <html lang="en" suppressHydrationWarning className={`${jakarta.variable} ${inter.variable}`}>
+      <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Documentation" />
+      </head>
       <body className="font-sans bg-background text-text-main">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={false}>
           <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-surface focus:text-primary focus:rounded-lg focus:shadow-md">
@@ -85,9 +120,10 @@ export default function RootLayout({
         </ThemeProvider>
         {/* Privacy-first, cookieless Vercel Analytics (GDPR/ePrivacy compliant without cookie banners) */}
         <Analytics />
-        <Script id="structured-data" type="application/ld+json" strategy="afterInteractive">
-          {JSON.stringify(jsonLd)}
-        </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   )

@@ -13,6 +13,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `You've been invited to Annura AI · Code ${cleanCode}`,
     description: `Join Annura AI with invite code ${cleanCode}. Mindful eating and nutrition powered by modern AI.`,
+    robots: {
+      index: false,
+      follow: true,
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/app/r/${cleanCode}`,
+    },
     openGraph: {
       title: `You've received an invitation to Annura AI`,
       description: `Use invite code ${cleanCode} for AI meal tracking and mindful health insights.`,

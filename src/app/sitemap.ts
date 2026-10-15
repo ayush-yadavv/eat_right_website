@@ -5,13 +5,34 @@ import { siteConfig } from '@/data/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url
+  const fallbackDate = new Date('2026-10-14T00:00:00.000Z')
 
-  const routes = ['', '/delete-account'].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
-  }))
+  const getFileDate = (relativeFilePath: string) => {
+    try {
+      const fullPath = path.join(process.cwd(), relativeFilePath)
+      if (fs.existsSync(fullPath)) {
+        return fs.statSync(fullPath).mtime
+      }
+    } catch {
+      // Fallback
+    }
+    return fallbackDate
+  }
+
+  const routes = [
+    {
+      url: baseUrl,
+      lastModified: getFileDate('src/app/page.tsx'),
+      changeFrequency: 'weekly' as const,
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/delete-account`,
+      lastModified: getFileDate('src/app/delete-account/page.tsx'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+  ]
 
   let legalRoutes: MetadataRoute.Sitemap = []
   try {
@@ -22,9 +43,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         .filter((file) => file.endsWith('.md'))
         .map((file) => {
           const slug = file.replace('.md', '')
+          let mtime = fallbackDate
+          try {
+            mtime = fs.statSync(path.join(docsDir, file)).mtime
+          } catch {
+            // Keep fallback
+          }
           return {
             url: `${baseUrl}/legal/${slug}`,
-            lastModified: new Date(),
+            lastModified: mtime,
             changeFrequency: 'monthly' as const,
             priority: 0.5,
           }

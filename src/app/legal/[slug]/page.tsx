@@ -59,10 +59,10 @@ export async function generateMetadata({
     };
   }
   return {
-    title: `${doc.title} | ${siteConfig.name}`,
+    title: doc.title,
     description: `Official ${doc.title} for ${siteConfig.name}.`,
     alternates: {
-      canonical: `/legal/${doc.canonicalSlug}`,
+      canonical: `${siteConfig.url}/legal/${doc.canonicalSlug}`,
     },
   };
 }

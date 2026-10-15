@@ -200,12 +200,12 @@ h2 { margin-bottom: 1rem; font-size: clamp(2.2rem, 4vw, 3.8rem); letter-spacing:
 .waitlist-section__grid { align-items: start; }
 .waitlist-section h2 { max-width: 12ch; }
 .waitlist-section p { max-width: 31rem; }
-.waitlist-form { padding: clamp(1.4rem, 3vw, 2.25rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--canvas); box-shadow: 0 16px 42px rgb(25 61 35 / .06); }
+.waitlist-form { width: 100%; }
 .waitlist-form__fields { display: grid; gap: 1rem; }
 .field { display: grid; gap: .5rem; }
 .field label { font-size: .86rem; font-weight: 680; }
-.field input { width: 100%; min-height: 3rem; padding: .75rem .85rem; border: 1px solid var(--line); border-radius: .7rem; background: var(--surface); color: var(--ink); }
-.field input::placeholder { color: color-mix(in srgb, var(--ink-soft) 70%, transparent); }
+.field input { width: 100%; border: none; outline: none; background: transparent; }
+.field input:focus-visible { outline: none; }
 .waitlist-form .button { width: 100%; margin-top: 1.2rem; }
 .form-note, .form-status { margin: 1rem 0 0; font-size: .82rem; line-height: 1.5; color: var(--ink-soft); }
 .form-status--error { color: #a83232; }
