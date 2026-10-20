@@ -9,6 +9,8 @@ import { AnnuraAuraCard } from '@/components/annura-aura-card';
 import { siteConfig, brandHighlights, faqs, features, navLinks, footerLinks, workflowSteps } from '@/data/site';
 import { Link000 } from '@/components/skiper40';
 import { ThemeToggleButton3 } from '@/components/skiper4';
+import { ExternalLink, Sparkles, CheckCircle2, Smartphone, Bell } from 'lucide-react';
+import { GooglePlayIcon } from '@/components/google-play-icon';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ReactLenis from 'lenis/react';
@@ -82,8 +84,11 @@ export default function Home() {
             blur={true}
             className="size-9 p-2 rounded-full border border-border/80 bg-surface/80 hover:bg-surface text-text-main shadow-xs"
           />
-          <AnnuraButton asChild variant="default" className="h-10 px-6 text-xs tracking-wide">
-            <Link href="#invite">Join Closed Beta</Link>
+          <AnnuraButton asChild variant="default" className="h-10 px-5 text-xs tracking-wide">
+            <a href={siteConfig.links.playStore} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <GooglePlayIcon className="size-4 shrink-0" />
+              <span>Pre-Register</span>
+            </a>
           </AnnuraButton>
         </div>
       </nav>
@@ -96,12 +101,12 @@ export default function Home() {
           animate="visible"
           className="flex-1 z-10 w-full lg:w-1/2"
         >
-          <motion.div variants={heroVariants} className="inline-flex items-center gap-2 px-3 py-1.5 mb-8 rounded-full bg-warning/15 border border-warning/20 text-warning-text text-[10px] font-bold tracking-widest uppercase">
+          <motion.div variants={heroVariants} className="inline-flex items-center gap-2 px-3.5 py-1.5 mb-8 rounded-full bg-primary/10 border border-primary/25 text-primary text-[10px] font-bold tracking-widest uppercase">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-warning opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-warning"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Closed Beta
+            Pre-Registration &amp; Open Testing Live
           </motion.div>
           <motion.h1 variants={heroVariants} className="font-heading text-[3.5rem] md:text-[5vw] leading-[1.02] tracking-tight font-bold mb-8 max-w-3xl text-balance">
             Timeless wisdom for the modern plate.
@@ -111,10 +116,13 @@ export default function Home() {
           </motion.p>
           <motion.div variants={heroVariants} className="flex flex-col sm:flex-row gap-4">
             <AnnuraButton asChild className="h-14 px-8 text-sm shadow-aura-sage">
-              <Link href="#invite">Join Closed Beta</Link>
+              <a href={siteConfig.links.playStore} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2.5">
+                <GooglePlayIcon className="size-[22px] shrink-0" />
+                <span>Pre-Register on Google Play</span>
+              </a>
             </AnnuraButton>
             <AnnuraButton asChild variant="secondary" className="h-14 px-8 text-sm">
-              <Link href="#features">Explore Features</Link>
+              <Link href="#get-app">Open Testing &amp; Details</Link>
             </AnnuraButton>
           </motion.div>
         </motion.div>
@@ -258,7 +266,7 @@ export default function Home() {
         <div className="shell grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 max-w-7xl mx-auto px-6 lg:px-12">
           <div className="lg:col-span-5">
             <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight mb-6">Frequently asked questions</h2>
-            <p className="text-text-muted text-lg text-balance">Everything you need to know about the beta program and how {siteConfig.name} handles your data.</p>
+            <p className="text-text-muted text-lg text-balance">Everything you need to know about the pre-registration &amp; open testing phase and how {siteConfig.name} handles your data.</p>
           </div>
           <div className="lg:col-span-7 flex flex-col gap-12">
             {faqs.map((faq, index) => (
@@ -271,20 +279,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Action / Waitlist */}
-      <section id="invite" className="py-48 px-6 relative overflow-hidden flex flex-col items-center">
+      {/* Action / Pre-Registration & Open Testing */}
+      <section id="get-app" className="py-32 md:py-48 px-6 relative overflow-hidden flex flex-col items-center">
+        {/* Support anchor for previous invite links */}
+        <span id="invite" className="absolute -top-24 pointer-events-none" aria-hidden="true" />
         <div className="absolute inset-0 bg-surface-hi/40 -z-10" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[150%] bg-[radial-gradient(ellipse_at_center,hsl(var(--sage)/0.15),transparent_70%)] -z-10" />
         
-        <div className="max-w-3xl w-full mx-auto text-center flex flex-col items-center">
-          <h2 className="font-heading text-[3.5rem] md:text-[5vw] font-bold tracking-tight mb-8 leading-[1.1] text-balance">
-            Join the Closed Beta.
+        <div className="max-w-6xl w-full mx-auto flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 mb-6 rounded-full bg-primary/10 border border-primary/25 text-primary text-[10px] font-bold tracking-widest uppercase">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Now Live on Google Play</span>
+          </div>
+          <h2 className="font-heading text-[3rem] md:text-[4.5vw] font-bold tracking-tight mb-6 leading-[1.1] text-balance text-center">
+            Pre-Register &amp; Join Open Testing.
           </h2>
-          <p className="text-xl md:text-2xl text-text-muted mb-12 text-balance max-w-2xl">
-            Leave your Google Play email below. We&apos;ll manually add you to the testing list and send you the download link.
+          <p className="text-lg md:text-xl text-text-muted mb-16 text-balance max-w-2xl text-center">
+            {siteConfig.name} is officially live in Google Play Pre-Registration and Open Testing. Be among the first to experience mindful AI nutrition tracking.
           </p>
-          <div className="w-full max-w-lg text-left bg-surface/80 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-border shadow-2xl">
-            <WaitlistForm />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full max-w-5xl">
+            {/* Card 1: Google Play Direct Access */}
+            <div className="lg:col-span-7 bg-surface/90 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-border shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/15 text-primary text-xs font-semibold">
+                    <Smartphone className="w-3.5 h-3.5" />
+                    <span>Android Early Access</span>
+                  </div>
+                  <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+                    Free Early Access
+                  </span>
+                </div>
+
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-4 text-text-main">
+                  Get it on Google Play
+                </h3>
+                <p className="text-text-muted text-base leading-relaxed mb-6">
+                  Pre-register to have {siteConfig.name} automatically install upon official release, or join the open testing track right now to download and test the latest build immediately.
+                </p>
+
+                <ul className="space-y-3 mb-8 text-sm text-text-main">
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>Instant AI Vision meal &amp; macro breakdown</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>Barcode food purity &amp; harmful additive alerts</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>Intermittent fasting timers &amp; mindful daily health score</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>100% free with zero intrusive ads or data selling</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-6 border-t border-border/60">
+                <AnnuraButton asChild className="h-13 px-8 text-sm shadow-aura-sage flex-1">
+                  <a href={siteConfig.links.playStore} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2.5">
+                    <GooglePlayIcon className="size-[22px] shrink-0" />
+                    <span>Pre-Register on Google Play</span>
+                  </a>
+                </AnnuraButton>
+                {siteConfig.links.openTestingOptIn && (
+                  <a
+                    href={siteConfig.links.openTestingOptIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-xs font-semibold text-text-muted hover:text-primary transition-colors py-2 px-3 text-center sm:ml-auto"
+                  >
+                    <span>Web Testing Opt-In &rarr;</span>
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {/* Card 2: iOS Waitlist & Release Alerts */}
+            <div className="lg:col-span-5 bg-surface/80 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-border shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-surface-hi/60 border border-border text-text-muted text-xs font-semibold">
+                  <Bell className="w-3.5 h-3.5 text-primary" />
+                  <span>Stay In The Loop</span>
+                </div>
+
+                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-3 text-text-main">
+                  iOS &amp; Launch Alerts
+                </h3>
+                <p className="text-text-muted text-sm leading-relaxed mb-6">
+                  Waiting for our upcoming iOS release, or want major announcements and feature updates sent straight to your inbox?
+                </p>
+
+                <WaitlistForm />
+              </div>
+            </div>
           </div>
         </div>
       </section>

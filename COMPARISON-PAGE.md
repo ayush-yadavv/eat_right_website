@@ -14,7 +14,7 @@
 
 | If you want... | Choose | Why |
 | :--- | :--- | :--- |
-| **Effortless AI photo logging, fasting timers, and mindful nourishment without ads** | **Annura AI** | Snap a plate, receive instant macro breakdowns and ingredient purity analysis. Built-in 24/7 AI companion, zero intrusive ads, and free access during Google Play Closed Beta. |
+| **Effortless AI photo logging, fasting timers, and mindful nourishment without ads** | **Annura AI** | Snap a plate, receive instant macro breakdowns and ingredient purity analysis. Built-in 24/7 AI companion, zero intrusive ads, and free access during Google Play Pre-Registration & Open Testing. |
 | **A massive 14M+ legacy database and established social forums** | **MyFitnessPal** | Decades of user-contributed food entries, broad compatibility with niche third-party fitness hardware, and familiar interface if you're accustomed to manual entry. |
 
 ```
@@ -31,7 +31,7 @@
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-**[ Join the Annura AI Closed Beta — Free on Google Play ](#invite)**
+**[ Pre-Register & Join Open Testing — Free on Google Play ](https://play.google.com/store/apps/details?id=com.annura.ai)**
 
 ---
 
@@ -52,7 +52,7 @@
 | **Wearable & Health Sync** | ✅ Google Fit & Apple Health | ✅ Google Health Connect & Apple Health | ✅ Google Health Connect & Apple Health | **Tie** |
 | **Data Privacy Stance** | 🔒 Zero third-party data selling, private vault | ⚠️ Ad tracking, behavioral profiling | ⚠️ Targeted promotions | **Annura AI** |
 | **Doctor / Dietitian PDF Export** | ✅ Comprehensive Nutritional PDF | ❌ Not available | ⚠️ Basic CSV/Export | **Annura AI** |
-| **Price** | **Free (Google Play Closed Beta)** | Free with intrusive ads | **$19.99/mo or $79.99/yr** | **Annura AI** (Transparent & accessible) |
+| **Price** | **Free (Google Play Open Testing & Pre-Reg)** | Free with intrusive ads | **$19.99/mo or $79.99/yr** | **Annura AI** (Transparent & accessible) |
 
 ---
 
@@ -118,7 +118,7 @@ Traditional calorie trackers often induce food guilt, obsessive weighing, and an
 | :--- | :--- | :--- |
 | **Advertisements** | **Zero.** No banner ads, no video pop-ups, no tracking pixels. | **Heavy.** Ads appear in your feed, between meal entries, and in search results. |
 | **Data Commercialization** | **Private Vault.** Health data is encrypted and never monetized or sold to third parties. | Has experienced historical security breaches; serves ad networks. |
-| **Cost** | **100% Free** during current Closed Beta testing on Google Play. | **Free with heavy ads**, or **$79.99/year** to unlock barcode scanning and custom macros. |
+| **Cost** | **100% Free** during current Open Testing and Pre-Registration on Google Play. | **Free with heavy ads**, or **$79.99/year** to unlock barcode scanning and custom macros. |
 
 ---
 
@@ -151,8 +151,8 @@ Switching takes less than two minutes:
 
 1. **Step 1: Export Your Baseline Stats**  
    Note your current weight, daily caloric target, and target protein/carb/fat split from your MyFitnessPal profile.
-2. **Step 2: Join the Annura AI Closed Beta**  
-   Submit your Google Play email at [annura.ay7.me](#invite) to receive your verified Google Play Store tester download link.
+2. **Step 2: Pre-Register or Join Open Testing on Google Play**  
+   Visit the Google Play Store at [Annura AI on Google Play](https://play.google.com/store/apps/details?id=com.annura.ai) to pre-register or install the open beta build immediately.
 3. **Step 3: Complete the 60-Second Onboarding**  
    Set your wellness goals (Mindful Eating, Fat Loss, Muscle Gain, or Longevity) and select your preferred intermittent fasting window.
 4. **Step 4: Snap Your First Meal**  
@@ -187,4 +187,4 @@ While **MyFitnessPal** helped pioneer digital calorie counting in 2005, its ad-c
 
 Ready to transform your relationship with food?
 
-**[ 👉 Join the Annura AI Closed Beta on Google Play — Completely Free ](https://annura.ay7.me#invite)**
+**[ 👉 Pre-Register & Join Open Testing on Google Play — 100% Free ](https://play.google.com/store/apps/details?id=com.annura.ai)**

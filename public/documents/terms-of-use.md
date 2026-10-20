@@ -128,7 +128,7 @@ In accordance with developer safety guidelines, Annura AI provides built-in repo
 ## 6. Pricing, Beta Access, and Digital Purchases
 
 ### 6.1 Current Free / Beta Access
-Annura AI is currently offered free of charge during its closed beta and initial testing phase. We do not currently charge recurring subscription fees or mandatory payments to access core nutritional logging and tracking features.
+Annura AI is currently offered free of charge during its open testing and pre-registration phase. We do not currently charge recurring subscription fees or mandatory payments to access core nutritional logging and tracking features.
 
 ### 6.2 Future Premium Features & Billing
 We reserve the right to introduce optional premium features, subscription tiers, or paid enhancements in future updates. If paid features or subscriptions are introduced:

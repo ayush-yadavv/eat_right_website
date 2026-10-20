@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
 import { Link001 } from '@/components/skiper40'
+import { GooglePlayIcon } from '@/components/google-play-icon'
 import { siteConfig } from '@/data/site'
 
 export const metadata: Metadata = {
@@ -20,11 +21,14 @@ export default function AppFallbackPage() {
         <p className="section-kicker">App route</p>
         <h1>This link opens in the {siteConfig.name} app.</h1>
         <p className="section-intro">
-          If you are here before the app is available, join the waitlist and we will send the next update by email.
+          {siteConfig.name} is currently live in Pre-Registration and Open Testing on Google Play.
         </p>
-        <div className="utility-page__actions">
-          <AnnuraButton asChild>
-            <Link href="/#invite">Join the waitlist</Link>
+        <div className="utility-page__actions flex flex-col sm:flex-row items-center gap-4">
+          <AnnuraButton asChild className="h-12 px-6">
+            <a href={siteConfig.links.playStore} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <GooglePlayIcon className="size-[18px] shrink-0" />
+              <span>Get on Google Play</span>
+            </a>
           </AnnuraButton>
           <Link001 href="/" className="text-primary font-medium">
             Return to home

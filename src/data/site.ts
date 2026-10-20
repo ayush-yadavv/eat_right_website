@@ -11,6 +11,7 @@ export const siteConfig = {
   },
   links: {
     playStore: 'https://play.google.com/store/apps/details?id=com.annura.ai',
+    openTestingOptIn: 'https://play.google.com/apps/testing/com.annura.ai',
   },
 }
 
@@ -28,20 +29,20 @@ export const brandHighlights = [
 
 export const faqs = [
   {
-    question: "How do I join the Closed Beta?",
-    answer: "We are currently in Google Play Closed Testing. Submit your Google Play email address via the form at the bottom of this page. We will manually add you to the testing list and send you the official download link!"
+    question: "How do I pre-register or join Open Testing?",
+    answer: "Annura AI has entered Google Play Pre-Registration and Open Testing! You can pre-register or opt in directly via the Google Play Store to install and experience the app early on your Android device."
   },
   {
     question: "Is the app available on iOS?",
-    answer: "Currently, Annura AI is available exclusively on Android via the Google Play Store. We are working hard on an iOS version for the future."
+    answer: "Currently, Annura AI is available on Android via Google Play Pre-Registration and Open Testing. We are working hard on an iOS version for the future—you can sign up with your email below to be notified as soon as it launches."
   },
   {
     question: "Is my health data private?",
     answer: "Absolutely. We believe your health data is yours. We never sell your information to third parties, and your data is stored securely using industry best practices."
   },
   {
-    question: "Will the app always be free?",
-    answer: "During the invite-only beta period, Annura AI is completely free. We will introduce optional premium features later, but core tracking will remain accessible."
+    question: "Is Annura AI free during Open Testing?",
+    answer: "Yes! During the open testing and pre-registration phase, Annura AI is completely free. We will introduce optional premium features later, but core mindful tracking and AI meal logging will always remain accessible."
   }
 ]
 

@@ -76,7 +76,7 @@ export default function RootLayout({
           '@type': 'Offer',
           price: '0',
           priceCurrency: 'USD',
-          category: 'Beta access',
+          category: 'Pre-Registration & Open Testing',
           availability: 'https://schema.org/PreOrder',
         },
         author: { '@id': `${siteConfig.url}/#organization` },

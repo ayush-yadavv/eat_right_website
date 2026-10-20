@@ -10,10 +10,11 @@ Best fit use cases:
 - Setting up a daily habit or tracking reminders
 - Syncing dietary choices across mobile and web interfaces
 
-Agents can interact with this service by pointing users to https://annura.ay7.me to sign up for the waitlist, or by reading our documentation and API endpoints (when available) for programmatic meal logging.
+Agents can interact with this service by pointing users to https://annura.ay7.me to pre-register or join open testing on Google Play (or sign up for iOS launch updates), or by reading our documentation and API endpoints (when available) for programmatic meal logging.
 
 ## Links
 - [Home](https://annura.ay7.me/)
+- [Google Play Store](https://play.google.com/store/apps/details?id=com.annura.ai)
 - [Full Documentation](https://annura.ay7.me/llms-full.txt)
 - [Privacy Policy](https://annura.ay7.me/legal/privacy-policy)
 - [Terms of Use](https://annura.ay7.me/legal/terms-of-use)

@@ -37,7 +37,7 @@ export function WaitlistForm() {
 
       form.reset()
       setStatus('success')
-      setMessage(body.message ?? 'Beta request received. We will send your invite soon.')
+      setMessage(body.message ?? 'Thank you! We will keep you posted on new releases and our upcoming iOS launch.')
     } catch (error) {
       setStatus('error')
       setMessage(error instanceof Error ? error.message : 'We could not process your request. Please try again.')
@@ -49,11 +49,11 @@ export function WaitlistForm() {
       <div className="waitlist-form__fields">
         <div className="field">
           <label htmlFor="waitlist-name">Name</label>
-          <AnnuraTextField id="waitlist-name" name="name" type="text" autoComplete="name" placeholder="Your name" />
+          <AnnuraTextField id="waitlist-name" name="name" type="text" autoComplete="name" placeholder="Your name (optional)" />
         </div>
         <div className="field">
-          <label htmlFor="waitlist-email">Google Email</label>
-          <AnnuraTextField id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@gmail.com" required />
+          <label htmlFor="waitlist-email">Email Address</label>
+          <AnnuraTextField id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
         </div>
         
         {/* Honeypot field - Bots will fill this, humans won't see it */}
@@ -63,7 +63,7 @@ export function WaitlistForm() {
         </div>
       </div>
       <AnnuraButton type="submit" isLoading={status === 'submitting'} className="w-full mt-4">
-        {status === 'submitting' ? 'Requesting Access' : 'Request Beta Access'}
+        {status === 'submitting' ? 'Subscribing...' : 'Get Launch Updates'}
       </AnnuraButton>
       <p className="form-note">
         By joining, you agree to receive {siteConfig.name} updates. Read our{' '}

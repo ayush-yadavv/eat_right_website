@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
   if (!resend || !from || !recipient) {
     return Response.json(
-      { error: 'The waitlist is not configured yet. Please try again later.' },
+      { error: 'Email subscriptions are temporarily unavailable. Please pre-register directly on Google Play!' },
       { status: 503 },
     )
   }
@@ -54,10 +54,10 @@ export async function POST(request: Request) {
       <div style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
         <div style="background-color: #111827; padding: 24px; text-align: center;">
           <h2 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">${siteConfig.name}</h2>
-          <p style="color: #9ca3af; margin: 8px 0 0 0; font-size: 14px;">New Closed Beta Request</p>
+          <p style="color: #9ca3af; margin: 8px 0 0 0; font-size: 14px;">New Open Testing & Launch Updates Signup</p>
         </div>
         <div style="padding: 32px 24px;">
-          <p style="color: #374151; font-size: 16px; margin: 0 0 24px 0;">Please add the following email to the Google Play Closed Testing list.</p>
+          <p style="color: #374151; font-size: 16px; margin: 0 0 24px 0;">A new user has requested launch alerts and updates.</p>
           <div style="background-color: #f3f4f6; border-radius: 8px; padding: 20px;">
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
@@ -85,13 +85,15 @@ export async function POST(request: Request) {
           <h2 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.025em;">${siteConfig.name}</h2>
         </div>
         <div style="padding: 40px 32px;">
-          <h3 style="color: #111827; font-size: 20px; font-weight: 600; margin: 0 0 20px 0;">Thanks for your interest! 🎉</h3>
+          <h3 style="color: #111827; font-size: 20px; font-weight: 600; margin: 0 0 20px 0;">Welcome to ${siteConfig.name}! 🎉</h3>
           <p style="color: #4b5563; font-size: 16px; margin: 0 0 24px 0; line-height: 1.6;">
             Hi ${safeName || 'there'},<br><br>
-            We received your Google Play email. We will manually add you to our Closed Testing list shortly. Keep an eye out for a follow-up email containing your official download link!
-          </p>
-          <p style="color: #4b5563; font-size: 16px; margin: 0; line-height: 1.6;">
-            Stay tuned,<br>
+            Thank you for your interest in ${siteConfig.name}!<br><br>
+            We are excited to share that we have officially entered <strong>Pre-Registration and Open Testing</strong> on the Google Play Store.<br><br>
+            If you are an Android user, you can pre-register or join the open testing track right away on Google Play:<br>
+            <a href="${siteConfig.links.playStore}" style="display: inline-block; background-color: #15803d; color: #ffffff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 16px 0;">Pre-Register on Google Play &rarr;</a><br><br>
+            If you're waiting for our upcoming iOS release or future feature rollouts, we will ensure you are the first to be notified.<br><br>
+            Stay mindful,<br>
             <strong>The ${siteConfig.name} Team</strong>
           </p>
         </div>
@@ -104,16 +106,16 @@ export async function POST(request: Request) {
       from,
       to: recipient,
       replyTo: email,
-      subject: `🚀 New Closed Beta Request: ${safeEmail}`,
+      subject: `🚀 New Launch & Testing Signup: ${safeEmail}`,
       html: adminHtmlContent,
-      text: `Please add the following email to the Google Play Closed Testing list for ${siteConfig.name}.\n\nName: ${safeName || 'Not provided'}\nEmail: ${safeEmail}`,
+      text: `New signup for ${siteConfig.name} updates & open testing from ${safeName || 'Not provided'} (${safeEmail}).`,
     }),
     resend.emails.send({
       from,
       to: email,
-      subject: `Welcome to the ${siteConfig.name} Closed Beta! 🎉`,
+      subject: `Welcome to ${siteConfig.name} — Pre-Registration & Open Testing Live! 🎉`,
       html: userHtmlContent,
-      text: `Hi ${safeName || 'there'},\n\nWe received your Google Play email. We will manually add you to our Closed Testing list shortly. Keep an eye out for a follow-up email containing your official download link!\n\nStay tuned,\nThe ${siteConfig.name} Team`,
+      text: `Hi ${safeName || 'there'},\n\nThank you for your interest in ${siteConfig.name}! We have officially entered Pre-Registration and Open Testing on Google Play.\n\nYou can pre-register or join open testing directly: ${siteConfig.links.playStore}\n\nWe will also keep you notified as soon as our iOS version launches!\n\nStay mindful,\nThe ${siteConfig.name} Team`,
     })
   ])
 
@@ -121,5 +123,5 @@ export async function POST(request: Request) {
     return Response.json({ error: 'We could not process your request. Please try again.' }, { status: 502 })
   }
 
-  return Response.json({ message: 'Beta request received. We will send your invite soon.' })
+  return Response.json({ message: 'Thank you! You are subscribed to launch updates.' })
 }

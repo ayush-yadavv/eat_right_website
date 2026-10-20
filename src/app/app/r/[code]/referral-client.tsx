@@ -4,6 +4,7 @@ import { useState, useEffect, useSyncExternalStore } from 'react'
 import { Gift, Copy, Check, ExternalLink, QrCode } from 'lucide-react'
 import { AnnuraButton } from '@/components/annura-button'
 import { Link001 } from '@/components/skiper40'
+import { GooglePlayIcon } from '@/components/google-play-icon'
 
 interface ReferralClientProps {
   code: string
@@ -124,27 +125,25 @@ export function ReferralClient({
         <div className="utility-page__actions flex flex-col sm:flex-row items-center justify-center gap-3">
           {isAndroid && appIntentUrl ? (
             <>
-              <AnnuraButton asChild className="w-full sm:w-auto">
+              <AnnuraButton asChild className="w-full sm:w-auto h-12 px-6">
                 <a href={appIntentUrl}>
                   <span>Open in Annura AI</span>
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </AnnuraButton>
 
-              <a
-                href={playStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-semibold text-[hsl(var(--text-muted))] hover:text-primary transition py-1"
-              >
-                Don&apos;t have the app? Get on Google Play
-              </a>
+              <AnnuraButton asChild variant="secondary" className="w-full sm:w-auto h-12 px-6">
+                <a href={playStoreUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <GooglePlayIcon className="size-[18px] shrink-0" />
+                  <span>Get on Google Play</span>
+                </a>
+              </AnnuraButton>
             </>
           ) : (
-            <AnnuraButton asChild className="w-full sm:w-auto">
-              <a href={playStoreUrl} target="_blank" rel="noopener noreferrer">
+            <AnnuraButton asChild className="w-full sm:w-auto h-12 px-8">
+              <a href={playStoreUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2.5">
+                <GooglePlayIcon className="size-[22px] shrink-0" />
                 <span>Get on Google Play</span>
-                <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </AnnuraButton>
           )}

@@ -51,7 +51,7 @@
         "@type": "Offer",
         "price": "0.00",
         "priceCurrency": "USD",
-        "category": "Free during Closed Beta",
+        "category": "Free during Pre-Registration & Open Testing",
         "availability": "https://schema.org/InStock"
       },
       "aggregateRating": {
@@ -179,7 +179,7 @@
           "name": "Is Annura AI available on iOS?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Currently, Annura AI is available exclusively for Android devices via the Google Play Store closed beta. An iOS version is actively in development."
+            "text": "Currently, Annura AI is available exclusively for Android devices via Google Play Store pre-registration and open testing. An iOS version is actively in development."
           }
         },
         {

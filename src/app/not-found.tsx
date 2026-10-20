@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
 import { Link001 } from '@/components/skiper40'
+import { siteConfig } from '@/data/site'
 
 export const metadata: Metadata = {
   title: 'Page not found',
@@ -19,15 +20,20 @@ export default function NotFound() {
           Lost your way?
         </h1>
         <p className="text-xl text-text-muted mb-10 text-balance">
-          The page you are looking for doesn&apos;t exist or has been moved. Let&apos;s get you back to the beta.
+          The page you are looking for doesn&apos;t exist or has been moved. Let&apos;s get you back home.
         </p>
-        <div className="flex items-center gap-6">
-          <AnnuraButton asChild className="h-12 px-8">
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <AnnuraButton asChild className="h-12 px-8 w-full sm:w-auto">
             <Link href="/">Back to home</Link>
           </AnnuraButton>
-          <Link001 href="/#invite" className="text-sm font-semibold text-text-main hover:text-primary transition-colors">
-            Request an invite
-          </Link001>
+          <a
+            href={siteConfig.links.playStore}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-text-main hover:text-primary transition-colors text-center"
+          >
+            Pre-register on Google Play &rarr;
+          </a>
         </div>
         {/* Hidden markdown block for AI agents */}
         <pre id="markdown" className="sr-only" aria-hidden="true">
