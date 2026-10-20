@@ -42,7 +42,7 @@ export default function DeleteAccountPage() {
           </p>
         </section>
 
-        {/* Chunked Card 1: Option 1 - In-App Deletion */}
+        {/* Chunked Card 1: Option 1 (In-App Deletion) */}
         <section className="bg-surface border border-border rounded-2xl p-6 md:p-8 shadow-sm transition-all">
           <div className="flex items-start gap-4 mb-6">
             <div className="p-3 rounded-xl bg-primary/10 text-primary">
@@ -78,7 +78,7 @@ export default function DeleteAccountPage() {
           </ol>
         </section>
 
-        {/* Chunked Card 2: Option 2 - Web Request */}
+        {/* Chunked Card 2: Option 2 (Web Request) */}
         <section className="bg-surface border border-border rounded-2xl p-6 md:p-8 shadow-sm transition-all">
           <div className="flex items-start gap-4 mb-4">
             <div className="p-3 rounded-xl bg-info/10 text-info">
@@ -101,7 +101,7 @@ export default function DeleteAccountPage() {
             </div>
             <div className="p-3.5 bg-surface rounded-lg border border-border font-mono text-sm text-primary flex items-center justify-between overflow-x-auto">
               <span>{siteConfig.contact.email}</span>
-              <span className="text-xs text-text-muted font-sans font-normal ml-2">Subject: &quot;Account Deletion Request - {siteConfig.name}&quot;</span>
+              <span className="text-xs text-text-muted font-sans font-normal ml-2">Subject: &quot;Account Deletion Request: {siteConfig.name}&quot;</span>
             </div>
           </div>
 

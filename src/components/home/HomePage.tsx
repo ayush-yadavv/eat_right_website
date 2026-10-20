@@ -67,7 +67,7 @@ export default function Home() {
     <ReactLenis root>
       <main className="overflow-x-clip w-full max-w-full bg-background text-text-main selection:bg-primary/20">
       
-      {/* Navigation - Glass Pill */}
+      {/* Navigation: Glass Pill */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl rounded-full bg-surface/70 backdrop-blur-xl border border-border/60 shadow-sm flex items-center justify-between px-6 py-3">
         <Link href="/" className="font-heading font-bold tracking-tight text-xl z-50">
           {siteConfig.name}

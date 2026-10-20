@@ -113,7 +113,7 @@ export async function POST(request: Request) {
     resend.emails.send({
       from,
       to: email,
-      subject: `Welcome to ${siteConfig.name} — Pre-Registration & Open Testing Live! 🎉`,
+      subject: `Welcome to ${siteConfig.name}: Pre-Registration & Open Testing Live! 🎉`,
       html: userHtmlContent,
       text: `Hi ${safeName || 'there'},\n\nThank you for your interest in ${siteConfig.name}! We have officially entered Pre-Registration and Open Testing on Google Play.\n\nYou can pre-register or join open testing directly: ${siteConfig.links.playStore}\n\nWe will also keep you notified as soon as our iOS version launches!\n\nStay mindful,\nThe ${siteConfig.name} Team`,
     })

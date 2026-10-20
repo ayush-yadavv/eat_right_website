@@ -1,9 +1,9 @@
 # Annura AI: Privacy Policy
 
-**Version 1.0 — Last Revised: October 12, 2026**
+**Version 1.0 (Last Revised: October 12, 2026)**
 **Public Web URL:** [https://annura.ay7.me/legal/privacy-policy](https://annura.ay7.me/legal/privacy-policy)
 
-**Annura AI** ("**Annura AI**," "**Company**," "**we**," "**us**," or "**our**") provides an intelligent health, diet, and nutrition management platform. This Privacy Policy describes how Annura AI processes personal information and health data collected through our digital properties and services that link to this Privacy Policy — including our website located at [https://annura.ay7.me](https://annura.ay7.me) (the "**Site**"), the **Annura AI** mobile application (the "**App**"), and all associated software, AI models, features, content, and services (collectively, the "**Service**" or "**Services**").
+**Annura AI** ("**Annura AI**," "**Company**," "**we**," "**us**," or "**our**") provides an intelligent health, diet, and nutrition management platform. This Privacy Policy describes how Annura AI processes personal information and health data collected through our digital properties and services that link to this Privacy Policy, including our website located at [https://annura.ay7.me](https://annura.ay7.me) (the "**Site**"), the **Annura AI** mobile application (the "**App**"), and all associated software, AI models, features, content, and services (collectively, the "**Service**" or "**Services**").
 
 Please read this Privacy Policy carefully before accessing or using the Services. By accessing or using the Site or App, creating an account, or interacting with our Services, you acknowledge that you have read and understood this Privacy Policy. If you do not agree to the data practices described herein, please do not use the Services.
 

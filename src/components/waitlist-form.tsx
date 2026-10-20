@@ -56,7 +56,7 @@ export function WaitlistForm() {
           <AnnuraTextField id="waitlist-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
         </div>
         
-        {/* Honeypot field - Bots will fill this, humans won't see it */}
+        {/* Honeypot field: bots will fill this, humans won't see it */}
         <div className="field" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
           <label htmlFor="waitlist-address">Address</label>
           <input id="waitlist-address" name="address" type="text" tabIndex={-1} autoComplete="off" />

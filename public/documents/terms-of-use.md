@@ -1,6 +1,6 @@
 # Annura AI: Terms of Use
 
-**Version 1.0 — Last Revised:** October 12, 2026
+**Version 1.0 (Last Revised:** October 12, 2026)
 
 Welcome to **Annura AI**. These Terms of Use ("**Terms**") govern your download, installation, access to, and use of the Annura AI platform, including the mobile application (the "**App**", available on Google Play under package ID `com.annura.ai`), the website located at [https://annura.ay7.me](https://annura.ay7.me) (the "**Site**"), and all associated software, features, tools, nutritional algorithms, artificial intelligence models, cloud infrastructure, and services (collectively, the "**Platform**" or "**Services**"), owned and operated by **Annura AI** ("**Company**," "**us**," "**our**," or "**we**"). Certain features or offerings across the Platform may be subject to additional guidelines, rules, or policies posted on the Platform, which are incorporated by reference into these Terms.
 
@@ -10,7 +10,7 @@ By accessing, browsing, downloading, installing, registering an account on, or o
 > **PLEASE READ SECTION 15 CAREFULLY.** It contains an agreement to resolve disputes through binding individual arbitration instead of in court, and includes a waiver of class action rights and jury trial rights. You have thirty (30) days to opt out of the arbitration agreement, as further described in Section 15.
 
 > [!WARNING]
-> **CRITICAL MEDICAL DISCLAIMER — PLEASE READ SECTION 4 CAREFULLY.** Annura AI is not a healthcare professional, medical provider, or medical device, and does not provide medical advice, diagnosis, treatment, or clinical management.
+> **CRITICAL MEDICAL DISCLAIMER: PLEASE READ SECTION 4 CAREFULLY.** Annura AI is not a healthcare professional, medical provider, or medical device, and does not provide medical advice, diagnosis, treatment, or clinical management.
 
 ---
 
@@ -92,7 +92,7 @@ With your explicit consent, the Platform integrates with Google Health Connect t
 > **ANNURA AI IS NOT A HEALTHCARE PROFESSIONAL, MEDICAL PROVIDER, OR MEDICAL DEVICE, AND DOES NOT PROVIDE MEDICAL ADVICE.**
 
 ### 4.1 Informational & Wellness Tracking Purposes Only
-The Platform — including all food photograph analyses, caloric estimates, macronutrient and micronutrient breakdowns, intermittent fasting timers, personalized meal suggestions, recipe ideas, and AI assistant responses — is provided strictly for informational, educational, and general wellness tracking purposes. The Platform does **not** constitute medical advice, medical diagnosis, clinical treatment, medical dietary therapy, or clinical management of any medical condition, food allergy, metabolic disorder, or eating disorder.
+The Platform, including all food photograph analyses, caloric estimates, macronutrient and micronutrient breakdowns, intermittent fasting timers, personalized meal suggestions, recipe ideas, and AI assistant responses, is provided strictly for informational, educational, and general wellness tracking purposes. The Platform does **not** constitute medical advice, medical diagnosis, clinical treatment, medical dietary therapy, or clinical management of any medical condition, food allergy, metabolic disorder, or eating disorder.
 
 ### 4.2 Consultation with Healthcare Professionals
 You should always consult with a qualified physician, registered dietitian, or licensed healthcare professional before starting any new dietary routine, undertaking intermittent fasting, making significant changes to your caloric or nutrient intake, or interpreting fitness and health metrics. Never disregard professional medical advice or delay seeking it because of information, estimates, or recommendations received through the Platform.

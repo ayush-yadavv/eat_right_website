@@ -35,7 +35,7 @@ export function ReferralClient({
     // If installed: OS directly opens com.annura.ai with the referral code.
     // If not installed: Chrome seamlessly falls back to the Play Store with referral attribution.
     // Timer is 200ms (not 600ms) because this effect only fires post-hydration, after the
-    // page is already fully painted — no additional delay needed for visual readiness.
+    // page is already fully painted. No additional delay needed for visual readiness.
     if (isAndroid && appIntentUrl) {
       const timer = setTimeout(() => {
         window.location.href = appIntentUrl

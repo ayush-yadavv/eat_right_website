@@ -34,7 +34,7 @@ export const faqs = [
   },
   {
     question: "Is the app available on iOS?",
-    answer: "Currently, Annura AI is available on Android via Google Play Pre-Registration and Open Testing. We are working hard on an iOS version for the future—you can sign up with your email below to be notified as soon as it launches."
+    answer: "Currently, Annura AI is available on Android via Google Play Pre-Registration and Open Testing. We are working hard on an iOS version for the future. You can sign up with your email below to be notified as soon as it launches."
   },
   {
     question: "Is my health data private?",

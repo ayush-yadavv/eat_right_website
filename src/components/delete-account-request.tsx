@@ -10,7 +10,7 @@ export function DeleteAccountRequestActions() {
   const [copyError, setCopyError] = useState(false);
 
   const email = siteConfig.contact.email;
-  const subject = encodeURIComponent(`Account Deletion Request - ${siteConfig.name}`);
+  const subject = encodeURIComponent(`Account Deletion Request: ${siteConfig.name}`);
   const body = encodeURIComponent(
     `Hello ${siteConfig.name} Privacy Team,\n\nI would like to request the permanent deletion of my account and all associated personal data.\n\nAccount Email: [Enter your registered email address here]\nReason for deletion (optional): [Enter reason]\n\nThank you.`
   );

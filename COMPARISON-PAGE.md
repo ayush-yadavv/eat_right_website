@@ -31,7 +31,7 @@
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-**[ Pre-Register & Join Open Testing — Free on Google Play ](https://play.google.com/store/apps/details?id=com.annura.ai)**
+**[ Pre-Register & Join Open Testing: Free on Google Play ](https://play.google.com/store/apps/details?id=com.annura.ai)**
 
 ---
 
@@ -39,7 +39,7 @@
 
 *Note: Pricing and feature sets verified as of October 2026. Features subject to change by respective owners.*
 
-| Feature / Capability | Annura AI | MyFitnessPal (Free) | MyFitnessPal (Premium - $79.99/yr) | Advantage |
+| Feature / Capability | Annura AI | MyFitnessPal (Free) | MyFitnessPal (Premium: $79.99/yr) | Advantage |
 | :--- | :---: | :---: | :---: | :--- |
 | **Core Philosophy** | Mindful Eating & Food Purity | Calorie Deficit & Strict Counting | Calorie Deficit & Strict Counting | **Annura AI** (Sustainable, anti-anxiety) |
 | **AI Photo Meal Recognition** | ✅ Included (Instant Plate Vision) | ❌ Not available | ⚠️ Limited ("Meal Scan", hit-or-miss) | **Annura AI** |
@@ -58,7 +58,7 @@
 
 ## 2. In-Depth Analysis: The 6 Key Differences
 
-### Difference 1: Meal Logging Speed — AI Vision vs. Manual Database Search
+### Difference 1: Meal Logging Speed: AI Vision vs. Manual Database Search
 
 The number one reason users abandon diet apps within 14 days is **logging friction**.
 
@@ -73,7 +73,7 @@ The number one reason users abandon diet apps within 14 days is **logging fricti
 
 1,800 calories of ultra-processed food loaded with emulsifiers, inflammatory seed oils, and sodium does not affect your metabolic health the same way as 1,800 calories of whole, nutrient-dense foods.
 
-* **MyFitnessPal** treats all calories almost identically. As long as you stay under your daily target number, the app turns green—even if your lunch was packed with synthetic additives and preservatives linked to gut inflammation.
+* **MyFitnessPal** treats all calories almost identically. As long as you stay under your daily target number, the app turns green, even if your lunch was packed with synthetic additives and preservatives linked to gut inflammation.
 * **Annura AI** looks deeper than surface calories. Leveraging food purity algorithms, Annura highlights harmful additives, hidden artificial sweeteners, allergens, and excessive industrial processing. It cultivates an intuitive understanding of how food energizes or drains your body.
 
 > **Key Takeaway:** If you want to heal your relationship with food, nourish your microbiome, and maintain sustained energy, Annura AI provides the ingredient clarity MyFitnessPal ignores.
@@ -108,7 +108,7 @@ Intermittent fasting (IF) has become one of the most scientifically validated lo
 Traditional calorie trackers often induce food guilt, obsessive weighing, and anxiety around red numbers.
 
 * **MyFitnessPal** features a dense, legacy interface dominated by banner advertisements, promotional push notifications, and rigid deficit reminders.
-* **Annura AI** was intentionally built as an aesthetic sanctuary. Featuring a calming color palette, smooth fluid transitions, and a dynamic **Health Score**, the app celebrates consistency, ingredient purity, and mindful presence. It helps you focus on how you feel—not just arbitrary digits on a scale.
+* **Annura AI** was intentionally built as an aesthetic sanctuary. Featuring a calming color palette, smooth fluid transitions, and a dynamic **Health Score**, the app celebrates consistency, ingredient purity, and mindful presence. It helps you focus on how you feel, not just arbitrary digits on a scale.
 
 ---
 
@@ -163,7 +163,7 @@ Switching takes less than two minutes:
 ## 6. Frequently Asked Questions (FAQ)
 
 ### Is Annura AI really free compared to MyFitnessPal?
-Yes. During our Google Play Closed Testing phase, all core features—including AI photo meal logging, barcode scanning, additive analysis, intermittent fasting timers, and Annura AI Chat—are completely free. MyFitnessPal charges $19.99/month or $79.99/year for comparable premium features like barcode scanning and fasting.
+Yes. During our Google Play Pre-Registration & Open Testing phase, all core features, including AI photo meal logging, barcode scanning, additive analysis, intermittent fasting timers, and Annura AI Chat, are completely free. MyFitnessPal charges $19.99/month or $79.99/year for comparable premium features like barcode scanning and fasting.
 
 ### Can Annura AI estimate portion sizes from a single photo?
 Yes. Annura uses advanced computer vision trained on culinary volume benchmarks to estimate plate proportions, ingredients, and total macronutrients. You can also adjust portions manually with a single tap if you prefer exact measurements.
@@ -172,7 +172,7 @@ Yes. Annura uses advanced computer vision trained on culinary volume benchmarks 
 Yes. Annura integrates directly with the Open Food Facts global database. Scanning packaged foods provides instant macros, plus an automated purity breakdown highlighting harmful additives, allergens, and excessive processing.
 
 ### Is Annura AI available on iOS?
-Currently, Annura AI is available exclusively for Android devices via the Google Play Store closed beta. An iOS version is actively in development.
+Currently, Annura AI is available exclusively for Android devices via Google Play Pre-Registration and Open Testing. An iOS version is actively in development.
 
 ### How does Annura AI protect my health data?
 Unlike ad-monetized fitness platforms, Annura AI operates as a secure private vault. Your health records, logged photos, and conversation history are encrypted and will never be sold to brokers, advertisers, or insurance providers.
@@ -187,4 +187,4 @@ While **MyFitnessPal** helped pioneer digital calorie counting in 2005, its ad-c
 
 Ready to transform your relationship with food?
 
-**[ 👉 Pre-Register & Join Open Testing on Google Play — 100% Free ](https://play.google.com/store/apps/details?id=com.annura.ai)**
+**[ 👉 Pre-Register & Join Open Testing on Google Play (100% Free) ](https://play.google.com/store/apps/details?id=com.annura.ai)**
