@@ -9,7 +9,7 @@ import { AnnuraAuraCard } from '@/components/annura-aura-card';
 import { siteConfig, brandHighlights, faqs, features, navLinks, footerLinks, workflowSteps } from '@/data/site';
 import { Link000 } from '@/components/skiper40';
 import { ThemeToggleButton3 } from '@/components/skiper4';
-import { ExternalLink, Sparkles, CheckCircle2, Smartphone, Bell } from 'lucide-react';
+import { Sparkles, CheckCircle2, Smartphone, Bell } from 'lucide-react';
 import { GooglePlayIcon } from '@/components/google-play-icon';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -17,7 +17,7 @@ import ReactLenis from 'lenis/react';
 import { Skiper16 } from '@/components/skiper16';
 
 function ScrubText({ children }: { children: React.ReactNode }) {
-  const ref = useRef<HTMLHeadingElement>(null);
+  const ref = useRef<HTMLQuoteElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 85%", "start 40%"]
@@ -25,13 +25,13 @@ function ScrubText({ children }: { children: React.ReactNode }) {
   const opacity = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
   
   return (
-    <motion.h2 
+    <motion.blockquote 
       ref={ref} 
       style={{ opacity }} 
       className="font-heading text-[2.5rem] md:text-[4vw] font-bold tracking-tight text-center max-w-4xl mx-auto leading-tight"
     >
       {children}
-    </motion.h2>
+    </motion.blockquote>
   );
 }
 
@@ -172,6 +172,7 @@ export default function Home() {
 
       {/* Mindful Philosophy & Rituals (Scrubbing Text Reveals) */}
       <section id="philosophy" aria-label="Mindful Philosophy" className="py-32 md:py-48 px-6 max-w-5xl mx-auto flex flex-col gap-32">
+        <h2 className="sr-only">Mindful Nutrition Philosophy &amp; Rituals</h2>
         {workflowSteps.map((step, idx) => (
           <ScrubText key={idx}>
             {step.prefix}{' '}

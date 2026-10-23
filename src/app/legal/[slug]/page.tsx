@@ -42,7 +42,6 @@ export async function generateStaticParams() {
   return [
     { slug: 'privacy-policy' },
     { slug: 'terms-of-use' },
-    { slug: 'terms-of-service' },
   ];
 }
 
@@ -90,8 +89,34 @@ export default async function LegalPage({
 
   const isPrivacy = doc.isPrivacy;
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: siteConfig.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: doc.title,
+        item: `${siteConfig.url}/legal/${doc.canonicalSlug}`,
+      },
+    ],
+  };
+
   return (
-    <main className="min-h-screen bg-background text-text-main py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <main className="min-h-screen bg-background text-text-main py-12 px-4 sm:px-6 lg:px-8">
       {/* Header Navigation */}
       <header className="max-w-4xl mx-auto flex items-center justify-between mb-8 border-b border-border pb-6">
         <Link href="/" className="font-heading font-bold text-xl tracking-tight" aria-label={`${siteConfig.name} Home`}>
@@ -155,5 +180,6 @@ export default async function LegalPage({
         </footer>
       </div>
     </main>
+    </>
   );
 }

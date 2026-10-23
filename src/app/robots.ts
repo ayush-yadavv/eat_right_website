@@ -6,8 +6,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/app', '/thank-you', '/api/'],
+        allow: ['/', '/app/r/'],
+        disallow: ['/api/'],
       },
       {
         userAgent: [
@@ -20,9 +20,10 @@ export default function robots(): MetadataRoute.Robots {
           'Applebot-Extended',
         ],
         allow: ['/', '/llms.txt', '/llms-full.txt', '/legal/'],
-        disallow: ['/app', '/api/'],
+        disallow: ['/api/'],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
+    host: siteConfig.url,
   };
 }

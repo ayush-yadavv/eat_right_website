@@ -72,6 +72,12 @@ export default function RootLayout({
         applicationCategory: 'HealthApplication',
         operatingSystem: 'Android',
         downloadUrl: siteConfig.links.playStore,
+        screenshot: [
+          `${siteConfig.url}/images/app/home-screen.webp`,
+          `${siteConfig.url}/images/app/meal-analysis.webp`,
+          `${siteConfig.url}/images/app/fasting.webp`,
+          `${siteConfig.url}/images/app/ai-chat.webp`,
+        ],
         offers: {
           '@type': 'Offer',
           price: '0',

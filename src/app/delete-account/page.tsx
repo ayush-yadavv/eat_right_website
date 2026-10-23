@@ -14,8 +14,34 @@ export const metadata: Metadata = {
 };
 
 export default function DeleteAccountPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: siteConfig.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Request Account & Data Deletion',
+        item: `${siteConfig.url}/delete-account`,
+      },
+    ],
+  };
+
   return (
-    <main className="min-h-screen bg-background text-text-main py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <main className="min-h-screen bg-background text-text-main py-12 px-4 sm:px-6 lg:px-8">
       {/* Navigation Header */}
       <header className="max-w-4xl mx-auto flex items-center justify-between mb-12 border-b border-border pb-6">
         <Link href="/" className="font-heading font-bold text-xl tracking-tight" aria-label={`${siteConfig.name} Home`}>
@@ -177,5 +203,6 @@ export default function DeleteAccountPage() {
         </footer>
       </div>
     </main>
+    </>
   );
 }

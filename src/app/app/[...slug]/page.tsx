@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
 import { Link001 } from '@/components/skiper40'
 import { GooglePlayIcon } from '@/components/google-play-icon'

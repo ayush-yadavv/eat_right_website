@@ -28,6 +28,14 @@ const nextConfig: NextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://vitals.vercel-insights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+          },
         ],
       },
     ];
@@ -40,7 +48,37 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/privacy-policy',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/privacy_policy',
+        destination: '/legal/privacy-policy',
+        permanent: true,
+      },
+      {
         source: '/terms',
+        destination: '/legal/terms-of-use',
+        permanent: true,
+      },
+      {
+        source: '/terms-of-service',
+        destination: '/legal/terms-of-use',
+        permanent: true,
+      },
+      {
+        source: '/terms_of_service',
+        destination: '/legal/terms-of-use',
+        permanent: true,
+      },
+      {
+        source: '/terms-of-use',
+        destination: '/legal/terms-of-use',
+        permanent: true,
+      },
+      {
+        source: '/terms_of_use',
         destination: '/legal/terms-of-use',
         permanent: true,
       },

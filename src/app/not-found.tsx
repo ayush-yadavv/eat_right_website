@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AnnuraButton } from '@/components/annura-button'
-import { Link001 } from '@/components/skiper40'
 import { siteConfig } from '@/data/site'
 
 export const metadata: Metadata = {
