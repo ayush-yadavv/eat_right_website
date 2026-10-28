@@ -22,7 +22,7 @@ function ScrubText({ children }: { children: React.ReactNode }) {
     target: ref,
     offset: ["start 85%", "start 40%"]
   });
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.75, 1]);
   
   return (
     <motion.blockquote 
@@ -97,7 +97,7 @@ export default function Home() {
       <section className="relative pt-48 pb-24 md:pt-64 md:pb-32 px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-12 max-w-7xl mx-auto min-h-[90vh]">
         <motion.div 
           variants={staggerContainer}
-          initial="hidden"
+          initial={false}
           animate="visible"
           className="flex-1 z-10 w-full lg:w-1/2"
         >
@@ -128,9 +128,9 @@ export default function Home() {
         </motion.div>
         
         <motion.div 
-          initial={{ y: 80, opacity: 0, scale: 0.95 }}
+          initial={false}
           animate={{ y: 0, opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative w-full max-w-md lg:w-[35%] aspect-[1446/1985] lg:translate-y-12"
         >
           <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-border shadow-2xl z-10">
@@ -208,7 +208,7 @@ export default function Home() {
                     src={features[0].image || "/images/app/featured-graphic.webp"}
                     alt={features[0].imageAlt || "App interface"}
                     fill
-                    sizes="(max-width: 768px) 100vw, 60vw"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 720px"
                     className="object-cover object-left-top contrast-125"
                   />
                 </div>
@@ -230,7 +230,7 @@ export default function Home() {
                     src={features[2].image || "/images/app/sync-guidance.webp"}
                     alt={features[2].imageAlt || "AI Guidance"}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 33vw, 400px"
                     className="object-cover grayscale mix-blend-luminosity transition-transform duration-1000 ease-out group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent p-10 flex flex-col justify-end">
@@ -251,7 +251,7 @@ export default function Home() {
                     src={features[3].image || "/images/app/privacy-sanctuary.webp"}
                     alt={features[3].imageAlt || "Privacy"}
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 500px"
                     className="object-cover contrast-125 opacity-90 mix-blend-luminosity"
                   />
                 </div>

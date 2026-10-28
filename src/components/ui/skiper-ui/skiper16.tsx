@@ -64,7 +64,7 @@ const StickyCard_001 = ({
             src={src}
             alt={title}
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 640px) 300px, (max-width: 768px) 420px, (max-width: 1024px) 50vw, 580px"
             className="object-contain p-2 sm:p-4 md:p-6 transition-transform duration-700 hover:scale-105 drop-shadow-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface/80 via-transparent to-transparent pointer-events-none" />
