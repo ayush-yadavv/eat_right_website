@@ -125,16 +125,69 @@ In accordance with developer safety guidelines, Annura AI provides built-in repo
 
 ---
 
-## 6. Pricing, Beta Access, and Digital Purchases
+## 6. Subscriptions, In-App Purchases, Billing & Refund Policy
 
-### 6.1 Current Free / Beta Access
-Annura AI is currently offered free of charge during its open testing and pre-registration phase. We do not currently charge recurring subscription fees or mandatory payments to access core nutritional logging and tracking features.
+### 6.1 Scope of Paid Subscriptions & Membership Tiers
+Certain premium features of the Platform—including multimodal artificial intelligence food photograph analysis, circadian intermittent fasting tracking, the 24/7 contextual AI companion, AI leftover pantry recipe generation, and household family sharing—require an active, paid digital subscription ("**Subscription**") or participation in an introductory evaluation period ("**Free Trial**"). 
+1. **Tier Descriptions**: We offer different subscription tiers (such as **Annura Mindful Core**, **Annura Mindful Pro**, and **Annura Duo / Family**). The specific features, daily artificial intelligence camera allowances, chat limits, and pricing applicable to each tier are presented on our in-app paywall screens and website prior to enrollment.
+2. **Authorized Platforms & Payment Gateways**: Subscriptions and in-app digital purchases may be processed through:
+   * **Mobile Application Marketplaces**: Google Play In-App Billing (Google LLC) on Android, or Apple In-App Purchase / StoreKit (Apple Inc.) on iOS; or
+   * **Web & Direct Gateways**: If purchased directly through our website, via authorized PCI-DSS compliant third-party payment gateways (such as Stripe, Razorpay, UPI Auto-Pay, or PayPal).
 
-### 6.2 Future Premium Features & Billing
-We reserve the right to introduce optional premium features, subscription tiers, or paid enhancements in future updates. If paid features or subscriptions are introduced:
-1. Clear pricing, renewal frequencies, and billing terms will be disclosed prior to purchase;
-2. All digital purchases on mobile platforms will be processed through authorized store billing systems (such as Google Play In-App Billing); and
-3. Your explicit confirmation and authorization will be required before any fee is assessed.
+### 6.2 Free Trial Terms & Automatic Conversion
+We may offer introductory Free Trials to allow eligible users to evaluate premium features:
+1. **Standard Worldwide Trial Duration**: Unless explicitly stated otherwise during promotional onboarding, our standard Free Trial is **seven (7) calendar days** in duration worldwide.
+2. **Payment Authorization**: Enrolling in a Free Trial requires you to provide or select a valid, authorized payment method through your mobile app store account or payment gateway.
+3. **Automatic Conversion into Paid Subscription**: **Unless you cancel your Free Trial at least twenty-four (24) hours before the trial concludes, your Free Trial will automatically convert into a paid, recurring Subscription at the price, billing frequency, and currency disclosed during enrollment.**
+4. **Pre-Renewal Transparency Notifications**: In accordance with consumer protection standards and to prevent accidental billing, Company will provide automated pre-renewal reminders via in-app push notification and transactional email approximately **forty-eight (48) hours prior to the expiration of your Free Trial** (dispatched on Day 5 of a 7-day trial), detailing the upcoming renewal charge, billing date, and cancellation instructions.
+5. **Trial Eligibility**: Free Trials are available exclusively to new subscribers. Company reserves the right, in its sole discretion, to determine trial eligibility and to prevent trial abuse or multiple trial registrations by the same individual or device.
+
+### 6.3 Continuous Authorization, Billing Cycles & Auto-Renewal
+1. **Recurring Billing Authorization**: By purchasing a Subscription, you expressly authorize Company (or the applicable mobile app store) to charge the applicable subscription fee, plus any applicable taxes, on a recurring basis (e.g., annually or monthly) to your designated payment method until you cancel.
+2. **Continuous Auto-Renewal**: Your Subscription will automatically renew at the conclusion of each billing period for an identical renewal term and at the then-current standard subscription rate, unless you cancel auto-renewal at least **twenty-four (24) hours prior to the end of the current billing cycle**.
+3. **The 24-Hour Cancellation Deadline**: Because mobile operating system app stores (Google Play and Apple App Store) execute automated billing batches up to twenty-four (24) hours prior to the renewal timestamp, you must cancel your Subscription at least twenty-four (24) hours before your renewal date to ensure your account is not debited for the subsequent term.
+
+### 6.4 Cancellation Procedures & Policy
+You maintain the absolute right to cancel your Subscription or Free Trial at any time without penalty:
+1. **How to Cancel Based on Purchase Channel**:
+   * **Google Play Store (Android)**: Open the Google Play Store app > tap your profile icon (top right) > `Payments & subscriptions > Subscriptions > Annura AI > Cancel Subscription`. You may also access this directly within the App by navigating to `Settings > Subscription > Manage Subscription`.
+   * **Apple App Store (iOS)**: Open your device `Settings > tap your Apple ID / Name > Subscriptions > Annura AI > Cancel Subscription`.
+   * **Web & Direct Purchases**: If subscribed via our website, log in to your account at [https://annura.ay7.me](https://annura.ay7.me), navigate to `Account Settings > Manage Membership`, and toggle auto-renewal to Off, or email support at [support@annura.ai](mailto:support@annura.ai).
+2. **IMPORTANT: App Deletion Does NOT Constitute Cancellation**:
+   > [!WARNING]
+   > **UNINSTALLING, DELETING, OR REMOVING THE ANNURA AI APPLICATION FROM YOUR DEVICE DOES NOT CANCEL YOUR SUBSCRIPTION OR STOP AUTOMATIC RECURRING BILLING.** You must explicitly cancel your subscription through your app store account settings or web membership portal as described above.
+3. **Access Following Cancellation**: When you cancel auto-renewal, your paid subscription privileges remain fully active until the conclusion of your current paid billing period. At the end of that period, your account transitions into Alumni Read-Only Sanctuary as set forth in Section 6.7.
+
+### 6.5 Price Changes, Tax Adjustments & Billing Modifications
+1. **Subscription Option & Price Changes**: We may, from time to time, make changes to our subscription options, including recurring subscription fees, and will communicate any price changes to you in advance. Price changes will take effect at the start of the next subscription period following the date of the price change. If you do not agree with a price change, you have the right to reject the change by canceling your Subscription at least twenty-four (24) hours prior to the new billing cycle taking effect.
+2. **Tax Rates & Dynamic Local Fees**: Tax rates or other fees are based on the rates applicable at the time of your charge. These amounts can change over time depending on local tax requirements in your country, state, territory, or city. Any change in the applicable tax rate will be automatically applied based on the account information and storefront region you have provided. Unless required otherwise by local laws (such as statutory VAT/GST-inclusive retail pricing), fees are exclusive of applicable transaction taxes.
+
+### 6.6 Comprehensive Refund Policy (The 14-Day Mindful Fair Play Standard)
+Because Annura AI is delivered through native mobile marketplaces, refund administration is governed by the platform through which your purchase was executed:
+1. **Google Play Store Purchases (Android)**:
+   * **First 48 Hours (Automated Self-Service)**: Under Google Play Developer Policies, transactions made within forty-eight (48) hours of purchase can be refunded directly and automatically by Google via [play.google.com/store/account/orderhistory](https://play.google.com/store/account/orderhistory).
+   * **Days 3 to 14 (Annual Subscriptions - Fair Play Window)**: If an unintended trial rollover occurs on an annual subscription, you may contact our customer support team at [support@annura.ai](mailto:support@annura.ai) (or [play.ay11@gmail.com](mailto:play.ay11@gmail.com)) with your Google Play Order ID (`GPA.XXXX-XXXX-XXXX-XXXXX`) within fourteen (14) calendar days of the charge date. We will issue a 100% full refund directly through the Google Play Developer Console provided you satisfy our **Fair Play Usage Clause**: you must have logged fewer than five (5) AI photo scans after the charge date (confirming an accidental rollover rather than active consumption).
+   * **Subsequent Renewals & Beyond 14 Days**: Renewal charges older than fourteen (14) days are non-refundable. Canceling prevents future renewals while preserving your access through the current paid term.
+   * **Monthly Subscriptions**: Monthly plans deliver immediate, short-term utility upon charge and carry no trial; monthly subscriptions are non-refundable once the monthly billing cycle commences.
+2. **Apple App Store Purchases (iOS)**:
+   * Apple strictly enforces exclusive jurisdiction over all StoreKit financial transactions. Apple prohibits third-party developers from issuing direct refunds for App Store purchases. iOS users must submit refund requests directly to Apple via [reportaproblem.apple.com](https://reportaproblem.apple.com).
+3. **Direct Website Purchases (Stripe / Razorpay)**:
+   * Direct annual subscriptions purchased through our website carry a fourteen (14) day money-back guarantee, subject to the same Fair Play Usage Clause (<5 AI scans logged). Refund requests must be emailed to [support@annura.ai](mailto:support@annura.ai). Approved refunds are credited to the original payment rail within 5 to 10 business days.
+4. **Statutory Cooling-Off Rights (EU / UK / International)**:
+   * If you are a consumer residing in the European Union, European Economic Area, or United Kingdom, you possess the statutory right to withdraw from this digital contract within fourteen (14) calendar days without stating a reason. Where local statutory consumer protection laws mandate a refund, Company strictly honors all applicable statutory rights.
+
+### 6.7 The Alumni Sanctuary Guarantee (Zero Data Hostage)
+Annura AI operates on the permanent commercial principle that **your personal health and nutritional data belongs to you**:
+1. **Lifetime Historical Access**: If your Subscription concludes, is canceled, or is refunded, your account transitions automatically into our free **Alumni Read-Only Sanctuary**.
+2. **No Data Deletion or Hostage**: **We will NEVER delete your historical food photographs, meal logs, macro charts, fasting milestones, or personal reflections because your subscription ended.**
+3. **Permanent Free PDF Export**: Alumni users retain lifetime free access to browse their historical diary and export high-resolution, formatted PDF nutritional and fasting reports to share with their physician, dietitian, or personal trainer.
+4. **Re-Activation**: You may re-subscribe to Annura AI at any time to resume active photo recognition, circadian timers, and companion AI features without losing a single day of your historical records.
+
+### 6.8 Failed Payments, Delinquency & Account Hold
+If a recurring subscription charge fails due to an expired credit card, insufficient funds, or banking e-mandate failure:
+1. **Grace Period**: Your account may enter a brief grace period (typically 3 to 16 days as configured in Google Play or Apple StoreKit) during which the store will automatically retry the charge.
+2. **Account Hold & Suspension**: If payment is not successfully recovered during the grace period, active premium features and daily AI allowances will be suspended, and your account will enter Alumni Read-Only Sanctuary until a valid payment method is provided.
+3. **No Hidden Collections**: Company will never send past-due subscription balances to third-party collection agencies or assess punitive late fees.
 
 ---
 
@@ -212,9 +265,11 @@ THE EXISTENCE OF ONE OR MORE CLAIMS WILL NOT ENLARGE THIS LIMIT. SOME JURISDICTI
 
 ## 12. Term and Termination
 
-These Terms remain in full force and effect while you access or use the Platform. We may suspend or terminate your rights to access or use the Platform (including suspending or terminating your account and deleting associated data) at any time and for any reason at our sole discretion, including if we believe in good faith that you have violated these Terms or applicable store policies.
+These Terms remain in full force and effect while you access or use the Platform. 
 
-We are not liable to you or any third party for any suspension or termination of your access to the Platform. Upon termination of your rights under these Terms, your account and right to access the Platform will terminate immediately. Sections 2.2, 2.5, 2.6, 4, 5, 7, 8, 9, 10, 11, 13, 14, and 15 shall survive any expiration or termination of these Terms.
+Annura AI may terminate your access to or use of the Platform, software, programs, and services at any time, without notice, if you breach any of these terms and conditions. Upon termination, you must immediately stop using Annura AI and destroy any copies of the content, materials, or data derived from the Platform that you have made.
+
+We are not liable to you or any third party for any suspension or termination of your access to the Platform. Upon termination of your rights under these Terms, your account and right to access active features will terminate immediately. Sections 2.2, 2.5, 2.6, 4, 5, 7, 8, 9, 10, 11, 13, 14, and 15 shall survive any expiration or termination of these Terms.
 
 ---
 
