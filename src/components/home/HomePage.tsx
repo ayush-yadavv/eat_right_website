@@ -197,7 +197,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[28rem] gap-6 grid-flow-dense">
             
-            <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 md:col-span-2 row-span-1">
+            <motion.div variants={cardVariants} initial={false} whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 md:col-span-2 row-span-1">
               <AnnuraAuraCard className="h-full group border-none bg-surface p-10 flex flex-col justify-between overflow-hidden relative">
                 <div className="relative z-10 max-w-sm">
                   <h3 className="text-3xl font-heading font-semibold mb-4">{features[0].title}</h3>
@@ -215,7 +215,7 @@ export default function Home() {
               </AnnuraAuraCard>
             </motion.div>
 
-            <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 row-span-1">
+            <motion.div variants={cardVariants} initial={false} whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 row-span-1">
               <AnnuraAuraCard glowType="none" className="h-full group border-none bg-primary/10 p-10 flex flex-col justify-center overflow-hidden relative">
                 <div className="relative z-10 transition-transform duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-1">
                   <h3 className="text-3xl font-heading font-semibold mb-4 text-text-main">{features[1].title}</h3>
@@ -224,7 +224,7 @@ export default function Home() {
               </AnnuraAuraCard>
             </motion.div>
 
-            <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 row-span-1">
+            <motion.div variants={cardVariants} initial={false} whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 row-span-1">
               <AnnuraAuraCard className="h-full group border-none bg-surface p-0 overflow-hidden relative">
                  <Image
                     src={features[2].image || "/images/app/sync-guidance.webp"}
@@ -240,7 +240,7 @@ export default function Home() {
               </AnnuraAuraCard>
             </motion.div>
 
-            <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 md:col-span-2 row-span-1">
+            <motion.div variants={cardVariants} initial={false} whileInView="visible" viewport={{ once: true, margin: "-15%" }} className="col-span-1 md:col-span-2 row-span-1">
               <AnnuraAuraCard className="h-full group border-none bg-surface p-10 flex flex-col md:flex-row items-center gap-10 overflow-hidden relative">
                 <div className="flex-1 relative z-10">
                   <h3 className="text-3xl font-heading font-semibold mb-4">{features[3].title}</h3>

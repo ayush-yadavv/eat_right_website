@@ -26,7 +26,11 @@ export function ReferralClient({
   // (server always returns false, client reads the real UA after hydration).
   const isAndroid = useSyncExternalStore(
     () => () => {},
-    () => /android/i.test(navigator.userAgent),
+    () => {
+      const ua = navigator.userAgent
+      const isBot = /bot|google|crawler|spider|robot|crawling|headless/i.test(ua)
+      return !isBot && /android/i.test(ua)
+    },
     () => false
   )
 

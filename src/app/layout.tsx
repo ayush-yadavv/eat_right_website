@@ -125,6 +125,17 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${jakarta.variable} ${inter.variable}`}>
       <head>
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Documentation" />
+        <noscript>
+          <style>{`
+            [style*="opacity:0"], [style*="opacity: 0"] {
+              opacity: 1 !important;
+              transform: none !important;
+            }
+            .waitlist-form input {
+              caret-color: auto !important;
+            }
+          `}</style>
+        </noscript>
       </head>
       <body className="font-sans bg-background text-text-main">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={false}>

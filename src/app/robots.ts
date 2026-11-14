@@ -61,13 +61,13 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/'],
-        disallow: ['/api/'],
+        allow: ['/', '/app/r/'],
+        disallow: ['/api/', '/thank-you'],
       },
       {
         userAgent: aiSearchBots,
-        allow: ['/'],
-        disallow: ['/api/'],
+        allow: ['/', '/app/r/'],
+        disallow: ['/api/', '/thank-you'],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
