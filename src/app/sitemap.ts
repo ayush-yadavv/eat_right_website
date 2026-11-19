@@ -32,6 +32,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // Competitor and roundup pages. Static, hand-written; no dynamic route segments.
+    ...[
+      { slug: 'vs/myfitnesspal', priority: 0.9 },
+      { slug: 'vs/cal-ai', priority: 0.8 },
+      { slug: 'alternatives/calorie-trackers', priority: 0.8 },
+      { slug: 'best/photo-calorie-trackers', priority: 0.8 },
+    ].map(({ slug, priority }) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: getFileDate(`src/app/${slug}/page.tsx`),
+      changeFrequency: 'monthly' as const,
+      priority,
+    })),
   ]
 
   let legalRoutes: MetadataRoute.Sitemap = []
