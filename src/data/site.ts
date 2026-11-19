@@ -41,8 +41,8 @@ export const faqs = [
     answer: "Absolutely. We believe your health data is yours. We never sell your information to third parties, and your data is stored securely using industry best practices."
   },
   {
-    question: "Is Annura AI free during Open Testing?",
-    answer: "Yes! During the open testing and pre-registration phase, Annura AI is completely free. We will introduce optional premium features later, but core mindful tracking and AI meal logging will always remain accessible."
+    question: "How much does Annura AI cost?",
+    answer: "Annura AI is a paid app with a 7-day free trial. Every new account gets full Pro access free for 7 days — after that it renews as a paid subscription unless you cancel. There's also a lighter Core plan, and both are priced on Google Play, where you'll see the exact amount in your local currency before you subscribe. We're ad-free and funded entirely by subscriptions, which is why there's no permanent free tier. If you choose not to subscribe, your account becomes read-only: your history stays visible, and you can export a complete copy of your data at any time."
   }
 ]
 

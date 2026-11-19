@@ -310,7 +310,7 @@ export default function Home() {
                     <span>Android Early Access</span>
                   </div>
                   <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">
-                    Free Early Access
+                    7-Day Free Trial
                   </span>
                 </div>
 
@@ -336,7 +336,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                    <span>100% free with zero intrusive ads or data selling</span>
+                    <span>Ad-free with zero data selling — 7 days free, then a paid plan</span>
                   </li>
                 </ul>
               </div>

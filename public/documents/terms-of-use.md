@@ -180,7 +180,7 @@ Because Annura AI is delivered through native mobile marketplaces, refund admini
 Annura AI operates on the permanent commercial principle that **your personal health and nutritional data belongs to you**:
 1. **Lifetime Historical Access**: If your Subscription concludes, is canceled, or is refunded, your account transitions automatically into our free **Alumni Read-Only Sanctuary**.
 2. **No Data Deletion or Hostage**: **We will NEVER delete your historical food photographs, meal logs, macro charts, fasting milestones, or personal reflections because your subscription ended.**
-3. **Permanent Free PDF Export**: Alumni users retain lifetime free access to browse their historical diary and export high-resolution, formatted PDF nutritional and fasting reports to share with their physician, dietitian, or personal trainer.
+3. **Permanent Free Data Export**: Alumni users retain lifetime free access to browse their historical diary and export a complete machine-readable archive (JSON) of their nutritional, fasting, and reflection data — suitable for import into other tools or for sharing with a physician, dietitian, or personal trainer. Formatted PDF reports are not currently provided.
 4. **Re-Activation**: You may re-subscribe to Annura AI at any time to resume active photo recognition, circadian timers, and companion AI features without losing a single day of your historical records.
 
 ### 6.8 Failed Payments, Delinquency & Account Hold
