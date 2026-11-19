@@ -57,6 +57,8 @@ export const metadata: Metadata = {
 
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/react';
+import { CampaignAttribution } from '@/components/campaign-attribution';
+import { ConsentBanner } from '@/components/consent-banner';
 
 export default function RootLayout({
   children,
@@ -138,6 +140,8 @@ export default function RootLayout({
         </noscript>
       </head>
       <body className="font-sans bg-background text-text-main">
+        <CampaignAttribution />
+        <ConsentBanner />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={false}>
           <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-surface focus:text-primary focus:rounded-lg focus:shadow-md">
             Skip to main content

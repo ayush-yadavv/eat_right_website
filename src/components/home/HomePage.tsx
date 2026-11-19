@@ -7,6 +7,7 @@ import { WaitlistForm } from '@/components/waitlist-form';
 import { AnnuraButton } from '@/components/annura-button';
 import { AnnuraAuraCard } from '@/components/annura-aura-card';
 import { siteConfig, brandHighlights, faqs, features, navLinks, footerLinks, workflowSteps } from '@/data/site';
+import { openConsentBanner } from '@/lib/consent';
 import { Link000 } from '@/components/skiper40';
 import { ThemeToggleButton3 } from '@/components/skiper4';
 import { Sparkles, CheckCircle2, Smartphone, Bell } from 'lucide-react';
@@ -395,6 +396,13 @@ export default function Home() {
             {footerLinks.map((link) => (
               <Link000 key={link.label} href={link.href} className="hover:text-primary transition-colors">{link.label}</Link000>
             ))}
+            <button
+              type="button"
+              onClick={openConsentBanner}
+              className="hover:text-primary transition-colors"
+            >
+              Cookie settings
+            </button>
           </div>
           <p className="text-sm text-text-muted">© {new Date().getFullYear()} {siteConfig.name}</p>
         </div>

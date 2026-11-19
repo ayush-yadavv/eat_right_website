@@ -3,10 +3,14 @@
     "apps": [],
     "details": [
       {
-        "appID": "TEAMID.com.annura.ai",
-        "paths": [
-          "/app/*",
-          "/app"
+        "appID": "REPLACE_WITH_TEAM_ID.com.annura.ai",
+        "components": [
+          {
+            "/": "/app/*"
+          },
+          {
+            "/": "/app"
+          }
         ]
       }
     ]

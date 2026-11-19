@@ -6,7 +6,30 @@ This version has breaking changes - APIs, conventions, and file structure may al
 
 # Agent Instructions
 
-AI agent instructions for this repository (Cursor, Claude Code, and similar). Keep project facts aligned with `CLAUDE.md`; when you change migration numbers, commands, or module lists, update **both** files.
+AI agent instructions for this repository (Cursor, Claude Code, and similar). `CLAUDE.md` redirects to this file.
+
+---
+
+## Commands & Repo Quirks
+
+Run from `eat_right_website/`:
+
+```bash
+npm install
+npm run dev      # next dev --webpack
+npm run build    # next build --webpack
+npm run lint     # bare eslint
+```
+
+- `npm run test` runs Vitest; validate with `npm run test`, `npm run lint`, and `npm run build`.
+- Keep the `--webpack` flags in `package.json`; do not switch these scripts to Turbopack.
+- This is Next.js 16: `src/proxy.ts` replaces `middleware.ts` and adds `Vary: Accept, Accept-Encoding`. Do not rename it. Read `node_modules/next/dist/docs/` before writing code.
+- UI primitives use Base UI (`@base-ui/react`), not Radix. `components.json` uses shadcn style `base-nova`. Consult `.agents/skills/shadcn/` and `.agents/skills/migrate-radix-to-base/` before adding or migrating components.
+- Marketing copy and FAQs live in `src/data/site.ts`. Legal pages render `public/documents/*.md` through `src/app/legal/[slug]/page.tsx`.
+- This is a static marketing site with no database. Runtime integrations are Resend (`src/lib/resend.ts`, waitlist email) and an optional Google Analytics tag; GA only loads when `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set and the visitor granted consent (`localStorage.analytics_consent === 'granted'`, set by `src/components/consent-banner.tsx`).
+- Campaign attribution lives in `src/lib/attribution.ts` and `src/components/campaign-attribution.tsx`. It is **aggregate-only**: UTM params are stored in `localStorage.campaign_attribution` for 30 days (only after analytics consent) and copied onto Play Store links as the install `referrer`; App Store links get `pt`/`ct`. Click IDs and web-to-install tokens are deliberately not supported — no per-user identifier is collected anywhere on the site. The Android app reads the same campaign data from App Links (`/app/...`) and the Play install referrer.
+- `public/.well-known/apple-app-site-association` must contain the real Apple Team ID before universal links work; `REPLACE_WITH_TEAM_ID` is a placeholder.
+- The waitlist endpoint (`src/app/api/waitlist/route.ts`) returns 503 unless `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `WAITLIST_RECIPIENT_EMAIL` are set.
 
 ---
 
@@ -59,5 +82,5 @@ AI agent instructions for this repository (Cursor, Claude Code, and similar). Ke
 AI agents MUST read and adhere to:
 
 - `./DESIGN.md`
-- `./laws_of_ux.md`
-- `./docs/*` *(Optional - reference when needed as it may contain legacy or updated docs)*
+- `../docs/ARCHITECTURE.md` (system context)
+- `../brand/BRAND_GUIDELINES.md`
