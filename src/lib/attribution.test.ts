@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest'
 
 import {
   buildReferrer,
-  channelFor,
   cleanUtm,
   extract,
   mergeReferrer,
@@ -151,16 +150,8 @@ describe('storage', () => {
 })
 
 describe('taxonomy', () => {
-  it('collapses aliases', () => {
-    expect(channelFor({ utm_source: 'facebook' })).toBe('meta')
-    expect(channelFor({ utm_source: 'newsletter' })).toBe('email')
-    expect(channelFor({ utm_source: 'google' })).toBe('google')
-    expect(channelFor({})).toBe('direct')
-  })
-
-  it('derives the channel from utm_source only', () => {
-    // A click ID is never read, so it cannot influence the channel.
-    expect(channelFor({ gclid: 'x' })).toBe('direct')
-    expect(channelFor({ fbclid: 'x' })).toBe('direct')
+  it('never derives a channel from a click ID', () => {
+    // Click IDs are not read at all, so they cannot influence anything.
+    expect(extract('?gclid=x&fbclid=y&ttclid=z')).toEqual({})
   })
 })

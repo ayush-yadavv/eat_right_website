@@ -1,11 +1,10 @@
 /**
  * Campaign attribution helpers shared by the marketing site.
  *
- * Attribution here is aggregate-only: campaign parameters are stored locally so
- * they can be copied onto store links, and never include a click ID, install
- * token, or any other per-user identifier. The contract lives in
- * `eat_right_backend/docs/ATTRIBUTION.md`. Keep the parameter list,
- * normalization, and limits in sync with the Flutter client.
+ * Campaign measurement is client-side only: UTM values are stored locally so
+ * they can be copied onto store links, and GA4 owns the reporting. Nothing here
+ * contacts our backend, and no click ID, install token, or other per-user
+ * identifier is ever read or forwarded.
  */
 
 export type Touch = Record<string, string>
@@ -31,29 +30,6 @@ const PHONE = /^\+?\d{10,15}$/
 const JWT = /^[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}$/
 const BEARER = /^bearer\s/i
 const UTM_SANITIZE = /[^a-z0-9._-]+/g
-
-const CHANNEL_ALIASES: Record<string, string> = {
-  google: 'google',
-  googleads: 'google',
-  adwords: 'google',
-  facebook: 'meta',
-  fb: 'meta',
-  meta: 'meta',
-  instagram: 'meta',
-  ig: 'meta',
-  tiktok: 'tiktok',
-  twitter: 'x',
-  x: 'x',
-  linkedin: 'linkedin',
-  pinterest: 'pinterest',
-  microsoft: 'microsoft',
-  bing: 'microsoft',
-  newsletter: 'email',
-  email: 'email',
-  referral: 'referral',
-  partner: 'referral',
-  organic: 'organic',
-}
 
 export function looksLikePii(value: string): boolean {
   return EMAIL.test(value) || PHONE.test(value) || JWT.test(value) || BEARER.test(value)
@@ -98,18 +74,6 @@ export function parseReferrer(raw: string): Touch {
     // Malformed escape sequences: parse the raw string instead.
   }
   return extract(decoded)
-}
-
-/** Keep only keys the attribution API accepts. */
-export function attributionOnly(params: Touch): Touch {
-  const allowed = new Set<string>(UTM_KEYS)
-  return Object.fromEntries(Object.entries(params).filter(([key]) => allowed.has(key)))
-}
-
-export function channelFor(params: Touch): string {
-  const source = params.utm_source
-  if (source && CHANNEL_ALIASES[source]) return CHANNEL_ALIASES[source]
-  return source || 'direct'
 }
 
 const REFERRER_ORDER = [...PASSTHROUGH_KEYS, ...UTM_KEYS] as const

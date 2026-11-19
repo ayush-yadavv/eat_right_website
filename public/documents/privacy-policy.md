@@ -51,9 +51,9 @@ If you utilize referral or invite features to share Annura AI with colleagues or
 ## 2. Tracking, Artificial Intelligence (AI) & Device Technologies
 
 ### 2.1 Cookies and Cookieless Architecture
-* **Website:** Our informational website does not utilize tracking cookies, advertising pixels, or cross-site tracking scripts. Telemetry is collected in aggregated form via cookieless Vercel Web Analytics. Because no non-essential cookies or personal identifiers are set, no intrusive cookie consent banner is required under the EU ePrivacy Directive or GDPR.
+* **Website:** Our informational website does not utilize advertising pixels or cross-site tracking scripts. Aggregate page performance is measured with cookieless Vercel Web Analytics, and Google Analytics is only loaded if you accept analytics in the site's privacy banner. You can change that choice at any time via "Cookie settings".
 * **Mobile App:** The mobile application does not employ web tracking cookies or commercial ad trackers.
-* **Campaign Measurement (Aggregate Only):** When you arrive through a campaign link, we record the campaign parameters (for example the campaign, source, and medium) as an anonymous count. These counts are stored in aggregate — broken down by day, channel, and platform — and are never linked to your account, device, or an individual ad click. We do not collect advertising identifiers, click identifiers, or cross-device identifiers for this purpose, and no campaign data is shared with advertising networks.
+* **Campaign Measurement (Aggregate Only):** When you arrive through a campaign link, the campaign parameters (for example the source, medium, and campaign name) are stored on your own device and reported to our analytics provider as anonymous event parameters. Reporting is aggregate — broken down by campaign, channel, and platform — and is never linked to your account, device, or an individual ad click. We do not collect advertising identifiers, click identifiers, or cross-device identifiers for this purpose, and no campaign data is sold or shared with advertising networks.
 
 ### 2.2 Generative Artificial Intelligence (AI) Models
 Annura AI integrates state-of-the-art generative artificial intelligence models (including Google Gemini models through Google GenAI APIs) to deliver intelligent nutrition assistance, meal photo breakdowns, and personalized dietary advice:
@@ -110,9 +110,10 @@ We partner with specialized third-party infrastructure providers that process da
 * **Generative AI Processing:** Google GenAI APIs (Google Gemini) for real-time, ephemeral in-memory meal photo recognition and conversational dietary suggestions.
 * **Crash Reporting & Diagnostic Telemetry:** Firebase Crashlytics and Firebase Performance Monitoring for anonymized diagnostic telemetry.
 * **Website Telemetry:** Vercel Inc. for cookieless, aggregated web traffic analytics on `annura.ay7.me`.
+* **Website Analytics (Consent-Based):** Google Analytics for aggregate website traffic and campaign reporting, loaded only after you accept analytics in the site banner and configured with advertising features and data sharing disabled.
 
 ### 4.2 Authorized App Store Billing
-During the beta period, Annura AI is completely free. Should paid tiers or digital features be introduced in future updates, all payments will be processed exclusively through authorized platform billing systems (such as Google Play In-App Billing). We do not collect or store credit card numbers on our servers.
+Annura AI is a paid app with a 7-day free trial. After the trial, continued access requires an active subscription, and all payments are processed exclusively through authorized platform billing systems (such as Google Play In-App Billing). We do not collect or store credit card numbers on our servers.
 
 ### 4.3 Professional Advisors & Corporate Transactions
 * **Professional Advisors:** We may share necessary data with attorneys, auditors, accountants, and insurers where required for legal, compliance, and governance advice.
