@@ -157,7 +157,7 @@ In `src/app/vs/[competitor]/page.tsx`:
 
 1. **Above-the-Fold Sticky Decision Matrix:**
    * Place the "At-A-Glance" summary within the first 600px of vertical height.
-   * Prominently display the primary CTA: *"Join Closed Beta on Google Play (100% Free)"*.
+   * Prominently display the primary CTA: *"Get Annura AI on Google Play — 7 days free, then a paid plan"*. (Never "100% Free": the app is paid after the trial. See `RISK_REGISTER_ARCHIVE.md` R-01. Also note this is **Open Testing**, not a closed beta — the closed-beta CTA below is obsolete.)
 2. **Interactive Savings & Time Calculator:**
    * Embed a micro-interactive widget: *"Calculate how much time you save logging meals"* (e.g., 3.5 minutes/meal x 3 meals x 365 days = ~64 hours saved/year).
    * Show financial savings: MyFitnessPal ($79.99/yr) + Zero Fasting ($69.99/yr) + Yuka ($15/yr) = **$164.98 saved annually with Annura AI**.

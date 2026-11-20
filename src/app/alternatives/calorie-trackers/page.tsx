@@ -19,7 +19,7 @@ const entries: Entry[] = [
       'One photo per meal instead of search-and-portion entry',
       'Post-meal symptom capture and trigger-ingredient correlation',
       'Recipes and meal plans automatically avoid identified triggers',
-      'Ad-free, no data selling, full data export at any time',
+      'Ad-free, no data selling, full data export on request',
       'Intermittent fasting, additive flags, and AI chat in the same app',
     ],
     weaknesses: [

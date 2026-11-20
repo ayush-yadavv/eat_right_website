@@ -42,7 +42,7 @@ export const faqs = [
   },
   {
     question: "How much does Annura AI cost?",
-    answer: "Annura AI is a paid app with a 7-day free trial. Every new account gets full Pro access free for 7 days — after that it renews as a paid subscription unless you cancel. There's also a lighter Core plan, and both are priced on Google Play, where you'll see the exact amount in your local currency before you subscribe. We're ad-free and funded entirely by subscriptions, which is why there's no permanent free tier. If you choose not to subscribe, your account becomes read-only: your history stays visible, and you can export a complete copy of your data at any time."
+    answer: "Annura AI is a paid app with a 7-day free trial. Every new account gets full Pro access free for 7 days — after that it renews as a paid subscription unless you cancel. There's also a lighter Core plan, and both are priced on Google Play, where you'll see the exact amount in your local currency before you subscribe. We're ad-free and funded entirely by subscriptions, which is why there's no permanent free tier. If you choose not to subscribe, your account becomes read-only: your history stays visible, and you can still request a full copy of your data. Exports are emailed to your registered address within 48 hours, as a PDF report plus a machine-readable JSON archive."
   }
 ]
 
@@ -124,10 +124,12 @@ export const navLinks = [
   { label: "Philosophy", href: "#philosophy" },
   { label: "Features", href: "#features" },
   { label: "Pillars", href: "#pillars" },
+  { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "#faq" },
 ]
 
 export const footerLinks = [
+  { label: "Pricing", href: "/pricing" },
   { label: "Privacy", href: "/legal/privacy-policy" },
   { label: "Terms of Use", href: "/legal/terms-of-use" },
   { label: "Delete Account", href: "/delete-account" },

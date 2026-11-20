@@ -53,7 +53,7 @@ export default function Page() {
         },
         {
           q: 'What happens to my data if I stop paying?',
-          a: 'Your account becomes read-only. Your history stays visible and exportable — you can download a complete copy of your data at any time — but new logging requires an active subscription.',
+          a: 'Your account becomes read-only. Your history stays visible, and you can request a complete copy of your data at any time — it is emailed to you within 48 hours — but new logging requires an active subscription.',
         },
         {
           q: 'Does Annura AI work on iOS?',

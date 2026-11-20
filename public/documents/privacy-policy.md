@@ -288,6 +288,8 @@ Under Chapter III of the GDPR, you have the following enforceable rights:
 
 To exercise these rights, submit your request to **[play.ay11@gmail.com](mailto:play.ay11@gmail.com)** or use our self-service tools in the App. We respond to all verified requests within thirty (30) days.
 
+**Data portability requests (Art. 20) are fulfilled within forty-eight (48) hours.** Request a copy from **Settings > Request My Data** in the App, or by emailing **[play.ay11@gmail.com](mailto:play.ay11@gmail.com)**. Because a full archive can be large and is assembled outside the live request path, exports are queued rather than generated instantly: you will receive an email at your registered address containing both a formatted **PDF report** for human reading and a **machine-readable JSON archive** in a structured, commonly used format, which is the file that satisfies Art. 20 portability. Export is free, and remains available in read-only (Alumni) state after a subscription ends.
+
 ### 13.6 Right to Lodge a Complaint with a Supervisory Authority
 If you believe our processing of your personal data infringes European data protection legislation, you have the right to lodge a complaint with a supervisory authority:
 * **European Economic Area (EEA):** You may contact the Data Protection Authority in the EU Member State of your habitual residence, place of work, or place of the alleged infringement. Contact details for all EEA authorities are maintained by the European Data Protection Board (EDPB) at: [https://edpb.europa.eu/about-edpb/about-edpb/members_en](https://edpb.europa.eu/about-edpb/about-edpb/members_en).

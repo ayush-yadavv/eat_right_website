@@ -32,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: getFileDate('src/app/pricing/page.tsx'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
     // Competitor and roundup pages. Static, hand-written; no dynamic route segments.
     ...[
       { slug: 'vs/myfitnesspal', priority: 0.9 },
